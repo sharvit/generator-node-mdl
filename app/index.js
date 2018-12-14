@@ -38,6 +38,7 @@ module.exports = class extends Generator {
           {
             name: 'GitHub templates',
             value: 'githubTemplates',
+            checked: true,
           },
         ],
       },
