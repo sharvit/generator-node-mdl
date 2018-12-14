@@ -36,10 +36,6 @@ module.exports = class extends Generator {
             checked: true,
           },
           {
-            name: 'ESNext with Babel',
-            value: 'esnext',
-          },
-          {
             name: 'GitHub templates',
             value: 'githubTemplates',
           },
@@ -71,7 +67,6 @@ module.exports = class extends Generator {
         camelProject: camelCase(answers.projectName),
         description: answers.description,
         coverage: includes(answers.extras, 'coverage'),
-        esnext: includes(answers.extras, 'esnext'),
         githubTemplates: includes(answers.extras, 'githubTemplates'),
         name: answers.name,
         email: answers.email,
@@ -94,7 +89,6 @@ module.exports = class extends Generator {
     this.fs.copyTpl(
       [
         `${this.templatePath()}/**`,
-        '!**/_babelrc',
         '!**/_github/**',
         '!**/contributing.md',
         '!**/other/**',
@@ -112,17 +106,12 @@ module.exports = class extends Generator {
     mv('_gitignore', '.gitignore');
     mv('_package.json', 'package.json');
     mv('_prettierignore', '.prettierignore');
-    mv('_test.js', 'test.js');
     mv('_travis.yml', '.travis.yml');
 
-    if (this.props.esnext) {
-      mv('index.js', 'src/index.js');
-      mv('test.js', 'src/index.test.js');
-      this.fs.copy(
-        this.templatePath('_babelrc'),
-        this.destinationPath('.babelrc')
-      );
-    }
+    this.fs.copy(
+      this.templatePath('_babelrc'),
+      this.destinationPath('.babelrc')
+    );
 
     if (this.props.githubTemplates) {
       this.fs.copyTpl(

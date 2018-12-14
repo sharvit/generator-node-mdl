@@ -22,16 +22,10 @@ test('default files', () => {
       '.gitignore',
       '.prettierignore',
       '.travis.yml',
-      'index.js',
       'license',
       'package.json',
       'readme.md',
-      'test.js'
-    ]);
-
-    assert.noFile([
       '.babelrc',
-      '.yo-rc.json',
       'src/index.js',
       'src/index.test.js'
     ]);
@@ -153,46 +147,6 @@ describe('prompts', () => {
           assert.fileContent(
             'readme.md',
             '[![Coverage Status](https://img.shields.io/codecov/c/github/foo/bar/master.svg?style=flat-square)](https://codecov.io/gh/foo/bar)'
-          );
-        });
-    });
-
-    test('esnext', () => {
-      return helpers
-        .run(path.join(__dirname, './app'))
-        .withPrompts({
-          projectName: 'foo',
-          extras: ['esnext']
-        })
-        .then(() => {
-          assert.file(['.babelrc', 'src/index.js', 'src/index.test.js']);
-          assert.noFile(['index.js', 'test.js']);
-
-          assert.fileContent('.gitignore', 'dist');
-
-          assert.jsonFileContent('package.json', {
-            scripts: {
-              prebuild: 'rimraf dist',
-              build:
-                'babel src --out-dir dist --copy-files --ignore **/*.test.js'
-            },
-            main: 'dist/index.js',
-            files: ['dist']
-          });
-          assert.fileContent('package.json', '@babel/cli');
-          assert.fileContent('package.json', '@babel/core');
-          assert.fileContent('package.json', '@babel/preset-env');
-          assert.fileContent('package.json', 'babel-core');
-          assert.fileContent('package.json', 'babel-jest');
-          assert.fileContent('package.json', 'babel-plugin-add-module-exports');
-          assert.fileContent('package.json', 'rimraf');
-
-          assert.fileContent('.travis.yml', /npm run build/);
-
-          assert.fileContent('src/index.test.js', "import foo from '.';");
-          assert.fileContent(
-            'src/index.js',
-            "export default (input = 'No args passed!')"
           );
         });
     });

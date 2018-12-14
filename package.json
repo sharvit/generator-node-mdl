@@ -49,7 +49,8 @@
     "yeoman-test": "^2.0.0"
   },
   "jest": {
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": ["/node_modules/", "/templates/"]
   },
   "keywords": [
     "yeoman-generator",

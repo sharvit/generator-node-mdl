@@ -4,10 +4,10 @@ notifications:
 node_js:
   - '10'
   - '8'
-  - '6'<% if (esnext) { %>
+  - '6'
 script:
   - npm test
-  - npm run build<% } %><% if (coverage) { %>
+  - npm run build<% if (coverage) { %>
 after_success: if [[ `npm -v` > 4* ]]; then npx codecov; fi<% } %>
 branches:
   only:
