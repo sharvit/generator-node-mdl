@@ -32,7 +32,6 @@
   },
   "devDependencies": {
     "jest": "^23.6.0",
-    "lint-staged": "^8.1.0",
     "remove-lockfiles": "^2.0.4",
     "xo": "^0.23.0",
     "yeoman-assert": "^3.1.0",
@@ -40,16 +39,6 @@
   },
   "jest": {
     "testEnvironment": "node"
-  },
-  "lint-staged": {
-    "*.js": [
-      "xo --fix",
-      "git add"
-    ],
-    "*.{json,md}": [
-      "prettier --write",
-      "git add"
-    ]
   },
   "prettier": {
     "bracketSpacing": true,
