@@ -20,11 +20,6 @@
   "files": [
     "app"
   ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "remove-lockfiles && lint-staged"
-    }
-  },
   "dependencies": {
     "chalk": "^2.3.0",
     "command-exists": "^1.2.2",
@@ -36,7 +31,6 @@
     "yeoman-generator": "^3.1.1"
   },
   "devDependencies": {
-    "husky": "^1.2.0",
     "jest": "^23.6.0",
     "lint-staged": "^8.1.0",
     "remove-lockfiles": "^2.0.4",
