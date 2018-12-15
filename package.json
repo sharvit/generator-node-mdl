@@ -1,14 +1,14 @@
 {
-  "name": "generator-node-oss",
-  "version": "3.0.0",
+  "name": "generator-node-mdl",
+  "version": "0.1.0",
   "description": "Create a Node.js project with ease",
   "license": "MIT",
   "preferGlobal": true,
-  "repository": "https://github.com/luftywiranda13/generator-node-oss",
+  "repository": "https://github.com/sharvit/generator-node-mdl",
   "author": {
-    "name": "Lufty Wiranda",
-    "email": "lufty.wiranda@gmail.com",
-    "url": "https://www.instagram.com/luftywiranda13"
+    "name": "Avi Sharvit",
+    "email": "sharvita@gmail.com",
+    "url": "https://sharvit.github.io"
   },
   "engines": {
     "node": ">=6"
@@ -44,7 +44,6 @@
     "eslint-plugin-standard": "^4.0.0",
     "jest": "^23.6.0",
     "prettier": "^1.15.3",
-    "remove-lockfiles": "^2.0.4",
     "yeoman-assert": "^3.1.0",
     "yeoman-test": "^2.0.0"
   },

@@ -17,16 +17,16 @@ test('default files', () => {
   return helpers.run(path.join(__dirname, './app')).then(() => {
     assert.file([
       '.git',
+      '.babelrc',
+      '.eslintrc',
       '.editorconfig',
       '.gitattributes',
       '.gitignore',
-      '.prettierignore',
+      '.eslintignore',
       '.travis.yml',
       'license',
       'package.json',
       'readme.md',
-      '.babelrc',
-      '.eslintrc',
       'src/index.js',
       'src/index.test.js'
     ]);

@@ -1,11 +1,11 @@
-# generator-node-oss
+# generator-node-mdl
 
 > Create a Node.js project with ease
 
-[![Package Version](https://img.shields.io/npm/v/generator-node-oss.svg?style=flat-square)](https://www.npmjs.com/package/generator-node-oss)
-[![Downloads Status](https://img.shields.io/npm/dm/generator-node-oss.svg?style=flat-square)](https://npm-stat.com/charts.html?package=generator-node-oss&from=2016-04-01)
-[![Build Status: Linux](https://img.shields.io/travis/luftywiranda13/generator-node-oss/master.svg?style=flat-square)](https://travis-ci.org/luftywiranda13/generator-node-oss)
-[![Coverage Status](https://coveralls.io/repos/github/sharvit/generator-node-oss/badge.svg?branch=master)](https://coveralls.io/github/sharvit/generator-node-oss?branch=master)
+[![Package Version](https://img.shields.io/npm/v/generator-node-mdl.svg?style=flat-square)](https://www.npmjs.com/package/generator-node-mdl)
+[![Downloads Status](https://img.shields.io/npm/dm/generator-node-mdl.svg?style=flat-square)](https://npm-stat.com/charts.html?package=generator-node-mdl&from=2016-04-01)
+[![Build Status: Linux](https://img.shields.io/travis/sharvit/generator-node-mdl/master.svg?style=flat-square)](https://travis-ci.org/sharvit/generator-node-mdl)
+[![Coverage Status](https://coveralls.io/repos/github/sharvit/generator-node-mdl/badge.svg?branch=master)](https://coveralls.io/github/sharvit/generator-node-mdl?branch=master)
 
 ## Why
 
@@ -22,13 +22,13 @@
 ## Installation
 
 ```sh
-npm install --global yo generator-node-oss
+npm install --global yo generator-node-mdl
 ```
 
 ## Usage
 
 ```sh
-yo node-oss
+yo node-mdl
 ```
 
 With the most basic options, youʼll get a project structured like this:
@@ -36,15 +36,19 @@ With the most basic options, youʼll get a project structured like this:
 ```sh
 $ tree
 .
+├── src
+│   ├── index.js
+│   └── index.test.js
+├── .babelrc
+├── .eslintrc
 ├── .editorconfig
 ├── .gitattributes
 ├── .gitignore
+├── .eslintignore
 ├── .travis.yml
-├── index.js
 ├── license
 ├── package.json
-├── readme.md
-└── test.js
+└── readme.md
 ```
 
 Less boilerplate 🎉
@@ -55,6 +59,10 @@ Less boilerplate 🎉
 
 Read how to do it [here](https://stackoverflow.com/a/18500003).
 
+## Forked from
+
+[generator-oss](https://github.com/luftywiranda13/generator-node-oss) － Supports ES2015+ and [XO](https://github.com/xojs/xo) by default
+
 ## Related
 
 - [generator-bunny](https://github.com/luftywiranda13/generator-bunny) － Supports ES2015+ and [Flow](https://flow.org) by default
@@ -63,4 +71,4 @@ Read how to do it [here](https://stackoverflow.com/a/18500003).
 
 ## License
 
-MIT &copy; [Lufty Wiranda](https://www.instagram.com/luftywiranda13)
+MIT &copy; [Avi Sharvit](https://sharvit.github.io)
