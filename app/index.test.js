@@ -4,7 +4,7 @@ const path = require('path');
 const assert = require('yeoman-assert');
 const helpers = require('yeoman-test');
 
-const runAppGenerator = () => helpers.run(path.join(__dirname, './app'));
+const runAppGenerator = () => helpers.run(path.join(__dirname, './index.js'));
 
 test('destinationRoot', () => {
   return runAppGenerator()
@@ -144,8 +144,7 @@ describe('prompts', () => {
   });
 
   test('githubTemplates', () => {
-    return helpers
-      .run(path.join(__dirname, './app'))
+    return runAppGenerator()
       .withPrompts({
         githubUsername: 'foo',
         projectName: 'bar',
