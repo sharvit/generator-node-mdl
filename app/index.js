@@ -145,67 +145,48 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    this.fs.copyTpl(
-      [
-        `${this.templatePath()}/**`,
-        // exclude githubTemplates
-        '!**/_github/**',
-        '!**/contributing.md',
-        '!**/other/**',
-        // exclude travisCI
-        '!**/_travis.yml',
-        // exclude npmDeploy
-        '!**/_npmignore',
-      ],
-      this.destinationPath(),
-      this.props
-    );
-
-    const mv = (from, to) => {
-      this.fs.move(this.destinationPath(from), this.destinationPath(to));
-    };
-
-    mv('_editorconfig', '.editorconfig');
-    mv('_gitattributes', '.gitattributes');
-    mv('_gitignore', '.gitignore');
-    mv('_package.json', 'package.json');
-    mv('_eslintignore', '.eslintignore');
-    mv('_babelrc', '.babelrc');
-    mv('_eslintrc', '.eslintrc');
+    const templatesToCopy = [
+      { templatePath: '_babelrc', destinationPath: '.babelrc' },
+      { templatePath: '_editorconfig', destinationPath: '.editorconfig' },
+      { templatePath: '_eslintignore', destinationPath: '.eslintignore' },
+      { templatePath: '_eslintrc', destinationPath: '.eslintrc' },
+      { templatePath: '_gitattributes', destinationPath: '.gitattributes' },
+      { templatePath: '_gitignore', destinationPath: '.gitignore' },
+      { templatePath: '_package.json', destinationPath: 'package.json' },
+      { templatePath: 'license', destinationPath: 'license' },
+      { templatePath: 'readme.md', destinationPath: 'readme.md' },
+      { templatePath: 'src', destinationPath: 'src' },
+    ];
 
     if (this.props.githubTemplates) {
-      this.fs.copyTpl(
-        this.templatePath('_github'),
-        this.destinationPath('.github'),
-        this.props
-      );
-      this.fs.copyTpl(
-        this.templatePath('other'),
-        this.destinationPath('other'),
-        this.props
-      );
-      this.fs.copyTpl(
-        this.templatePath('contributing.md'),
-        this.destinationPath('contributing.md'),
-        this.props
+      templatesToCopy.push(
+        { templatePath: '_github', destinationPath: '.github' },
+        { templatePath: 'other', destinationPath: 'other' },
+        { templatePath: 'contributing.md', destinationPath: 'contributing.md' }
       );
     }
 
     if (this.props.travisCI) {
-      this.fs.copyTpl(
-        this.templatePath('_travis.yml'),
-        this.destinationPath('.travis.yml'),
-        this.props
-      );
+      templatesToCopy.push({
+        templatePath: '_travis.yml',
+        destinationPath: '.travis.yml',
+      });
     }
 
     if (this.props.npmDeploy) {
-      this.fs.copyTpl(
-        this.templatePath('_npmignore'),
-        this.destinationPath('.npmignore'),
-        this.props
-      );
+      templatesToCopy.push({
+        templatePath: '_npmignore',
+        destinationPath: '.npmignore',
+      });
     }
+
+    templatesToCopy.forEach(({ templatePath, destinationPath }) =>
+      this.fs.copyTpl(
+        this.templatePath(templatePath),
+        this.destinationPath(destinationPath),
+        this.props
+      )
+    );
   }
 
   install() {
