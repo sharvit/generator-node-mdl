@@ -1,7 +1,7 @@
 {
   "name": "generator-node-mdl",
   "version": "0.1.0",
-  "description": "Create a Node.js project with ease",
+  "description": "Create a Node.js module with ease",
   "license": "MIT",
   "preferGlobal": true,
   "repository": "https://github.com/sharvit/generator-node-mdl",

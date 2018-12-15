@@ -1,6 +1,6 @@
 # generator-node-mdl
 
-> Create a Node.js project with ease
+> Create a Node.js module with ease
 
 [![Package Version](https://img.shields.io/npm/v/generator-node-mdl.svg?style=flat-square)](https://www.npmjs.com/package/generator-node-mdl)
 [![Downloads Status](https://img.shields.io/npm/dm/generator-node-mdl.svg?style=flat-square)](https://npm-stat.com/charts.html?package=generator-node-mdl&from=2016-04-01)
@@ -12,12 +12,13 @@
 - Generates a simple but _ready to start_ project
 - Includes only necessary tools
 - Monitors repo quality through helpful badges
+- [Supports ES2015+ using Babel 7](https://babeljs.io)
 - [Jest testing framework](https://facebook.github.io/jest)
 - Sensible [ESLint](http://eslint.org) config extends [standard](https://github.com/standard/eslint-config-standard) and [Prettier](https://github.com/prettier/eslint-plugin-prettier)
 - Automates code reformatting using [Prettier](https://github.com/prettier/prettier)
-- [Travis CI](https://travis-ci.org) configuration
-- [Issue, Pull Request, and Contributing templates](https://github.com/blog/2111-issue-and-pull-request-templates) _(optional)_
-- [Supports ES2015+ using Babel](https://babeljs.io) _(optional)_
+- [Travis CI](https://travis-ci.org) configuration _(optional)_
+- [Coveralls](http://coveralls.io) configuration _(optional)_
+- Friendly for contributions using [Issue, Pull Request, and Contributing templates](https://github.com/blog/2111-issue-and-pull-request-templates) and some extras _(optional)_
 
 ## Installation
 
