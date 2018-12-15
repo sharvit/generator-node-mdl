@@ -4,9 +4,10 @@ const path = require('path');
 const assert = require('yeoman-assert');
 const helpers = require('yeoman-test');
 
+const runAppGenerator = () => helpers.run(path.join(__dirname, './app'));
+
 test('destinationRoot', () => {
-  return helpers
-    .run(path.join(__dirname, './app'))
+  return runAppGenerator()
     .withPrompts({ projectName: 'temp' })
     .then(() => {
       assert.equal(path.basename(process.cwd()), 'temp');
@@ -14,16 +15,15 @@ test('destinationRoot', () => {
 });
 
 test('default files', () => {
-  return helpers.run(path.join(__dirname, './app')).then(() => {
+  return runAppGenerator().then(() => {
     assert.file([
       '.git',
       '.babelrc',
-      '.eslintrc',
       '.editorconfig',
+      '.eslintignore',
+      '.eslintrc',
       '.gitattributes',
       '.gitignore',
-      '.eslintignore',
-      '.travis.yml',
       'license',
       'package.json',
       'readme.md',
@@ -38,14 +38,28 @@ test('default files', () => {
       'other/roadmap.md',
       // travisCI
       '.travis.yml',
+      // npmDeploy
+      '.npmignore',
+    ]);
+
+    assert.noFile([
+      '_babelrc',
+      '_editorconfig',
+      '_eslintignore',
+      '_eslintrc',
+      '_gitattributes',
+      '_gitignore',
+      '_travis.yml',
+      '_npmignore',
+      '_github/issue_template.md',
+      '_github/pull_request_template.md',
     ]);
   });
 });
 
 describe('prompts', () => {
   test('projectName', () => {
-    return helpers
-      .run(path.join(__dirname, './app'))
+    return runAppGenerator()
       .withPrompts({
         githubUsername: 'foo',
         projectName: 'bar',
@@ -76,8 +90,7 @@ describe('prompts', () => {
   });
 
   test('description', () => {
-    return helpers
-      .run(path.join(__dirname, './app'))
+    return runAppGenerator()
       .withPrompts({ description: 'foo' })
       .then(() => {
         assert.jsonFileContent('package.json', {
@@ -88,8 +101,7 @@ describe('prompts', () => {
   });
 
   test('name', () => {
-    return helpers
-      .run(path.join(__dirname, './app'))
+    return runAppGenerator()
       .withPrompts({ name: 'foo bar' })
       .then(() => {
         assert.jsonFileContent('package.json', {
@@ -104,8 +116,7 @@ describe('prompts', () => {
   });
 
   test('email', () => {
-    return helpers
-      .run(path.join(__dirname, './app'))
+    return runAppGenerator()
       .withPrompts({ email: 'foo@bar.com' })
       .then(() => {
         assert.jsonFileContent('package.json', {
@@ -119,8 +130,7 @@ describe('prompts', () => {
   });
 
   test('website', () => {
-    return helpers
-      .run(path.join(__dirname, './app'))
+    return runAppGenerator()
       .withPrompts({ website: 'test.com' })
       .then(() => {
         assert.jsonFileContent('package.json', {
@@ -157,8 +167,7 @@ describe('prompts', () => {
   });
 
   test('no githubTemplates', () => {
-    return helpers
-      .run(path.join(__dirname, './app'))
+    return runAppGenerator()
       .withPrompts({
         githubTemplates: false,
       })
@@ -176,8 +185,7 @@ describe('prompts', () => {
 
   describe('Travis', () => {
     test('travisCI', () => {
-      return helpers
-        .run(path.join(__dirname, './app'))
+      return runAppGenerator()
         .withPrompts({
           travisCI: true,
         })
@@ -187,8 +195,7 @@ describe('prompts', () => {
     });
 
     test('no travisCI', () => {
-      return helpers
-        .run(path.join(__dirname, './app'))
+      return runAppGenerator()
         .withPrompts({
           travisCI: false,
         })
@@ -198,8 +205,7 @@ describe('prompts', () => {
     });
 
     test('coveralls', () => {
-      return helpers
-        .run(path.join(__dirname, './app'))
+      return runAppGenerator()
         .withPrompts({
           travisCI: true,
           coveralls: true,
@@ -210,8 +216,7 @@ describe('prompts', () => {
     });
 
     test('no coveralls', () => {
-      return helpers
-        .run(path.join(__dirname, './app'))
+      return runAppGenerator()
         .withPrompts({
           travisCI: true,
           coveralls: false,
@@ -224,8 +229,7 @@ describe('prompts', () => {
     test('npmDeploy', () => {
       const npmSecureApiKey = 'npm-secure-api-key';
 
-      return helpers
-        .run(path.join(__dirname, './app'))
+      return runAppGenerator()
         .withPrompts({
           travisCI: true,
           npmDeploy: true,
@@ -239,8 +243,7 @@ describe('prompts', () => {
     });
 
     test('no npmDeploy', () => {
-      return helpers
-        .run(path.join(__dirname, './app'))
+      return runAppGenerator()
         .withPrompts({
           travisCI: true,
           npmDeploy: false,
