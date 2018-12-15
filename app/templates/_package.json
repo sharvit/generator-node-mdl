@@ -22,7 +22,7 @@
     "build": "babel src --out-dir dist --copy-files --ignore **/*.test.js",
     "postbuild": "rimraf dist/**/*.test.js",
     "test:watch": "jest --watch",
-    "test": "xo && jest<% if (coverage) { %> --coverage<% } %>"
+    "test": "xo && jest --coverage"
   },
   "main": "dist/index.js",
   "files": [

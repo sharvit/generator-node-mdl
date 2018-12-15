@@ -124,33 +124,6 @@ describe('prompts', () => {
   });
 
   describe('extras', () => {
-    test('coverage', () => {
-      return helpers
-        .run(path.join(__dirname, './app'))
-        .withPrompts({
-          githubUsername: 'foo',
-          projectName: 'bar',
-          extras: ['coverage']
-        })
-        .then(() => {
-          assert.jsonFileContent('package.json', {
-            scripts: {
-              test: 'xo && jest --coverage'
-            }
-          });
-
-          assert.fileContent(
-            '.travis.yml',
-            'after_success: if [[ `npm -v` > 4* ]]; then npx codecov; fi'
-          );
-
-          assert.fileContent(
-            'readme.md',
-            '[![Coverage Status](https://img.shields.io/codecov/c/github/foo/bar/master.svg?style=flat-square)](https://codecov.io/gh/foo/bar)'
-          );
-        });
-    });
-
     test('githubTemplates', () => {
       return helpers
         .run(path.join(__dirname, './app'))

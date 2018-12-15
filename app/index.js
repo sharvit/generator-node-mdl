@@ -31,11 +31,6 @@ module.exports = class extends Generator {
         type: 'checkbox',
         choices: [
           {
-            name: 'Code Coverage',
-            value: 'coverage',
-            checked: true,
-          },
-          {
             name: 'GitHub templates',
             value: 'githubTemplates',
             checked: true,
@@ -67,7 +62,6 @@ module.exports = class extends Generator {
         projectName: answers.projectName,
         camelProject: camelCase(answers.projectName),
         description: answers.description,
-        coverage: includes(answers.extras, 'coverage'),
         githubTemplates: includes(answers.extras, 'githubTemplates'),
         name: answers.name,
         email: answers.email,

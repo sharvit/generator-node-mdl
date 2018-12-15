@@ -7,8 +7,8 @@ node_js:
   - '6'
 script:
   - npm test
-  - npm run build<% if (coverage) { %>
-after_success: if [[ `npm -v` > 4* ]]; then npx codecov; fi<% } %>
+  - npm run build
+after_success: if [[ `npm -v` > 4* ]]; then npx codecov; fi
 branches:
   only:
     - master
