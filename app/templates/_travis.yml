@@ -9,4 +9,4 @@ script:
   - yarn lint
   - yarn test
   - yarn build
-after_success: if [[ `npm -v` > 4* ]]; then npx codecov; fi
+after_success: yarn coveralls

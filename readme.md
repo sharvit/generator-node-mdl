@@ -5,7 +5,7 @@
 [![Package Version](https://img.shields.io/npm/v/generator-node-oss.svg?style=flat-square)](https://www.npmjs.com/package/generator-node-oss)
 [![Downloads Status](https://img.shields.io/npm/dm/generator-node-oss.svg?style=flat-square)](https://npm-stat.com/charts.html?package=generator-node-oss&from=2016-04-01)
 [![Build Status: Linux](https://img.shields.io/travis/luftywiranda13/generator-node-oss/master.svg?style=flat-square)](https://travis-ci.org/luftywiranda13/generator-node-oss)
-[![Coverage Status](https://img.shields.io/codecov/c/github/luftywiranda13/generator-node-oss/master.svg?style=flat-square)](https://codecov.io/gh/luftywiranda13/generator-node-oss)
+[![Coverage Status](https://coveralls.io/repos/github/sharvit/generator-node-oss/badge.svg?branch=master)](https://coveralls.io/github/sharvit/generator-node-oss?branch=master)
 
 ## Why
 

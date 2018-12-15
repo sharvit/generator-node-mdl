@@ -18,6 +18,7 @@
     "postbuild": "rimraf dist/**/*.test.js",
     "test:watch": "jest --watch",
     "test": "jest --coverage",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "lint": "eslint ./src"
   },
   "main": "dist/index.js",
@@ -33,6 +34,7 @@
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
     "babel-plugin-add-module-exports": "^1.0.0",
+    "coveralls": "^3.0.2",
     "eslint": "^5.10.0",
     "eslint-config-prettier": "^3.3.0",
     "eslint-config-standard": "^12.0.0",
