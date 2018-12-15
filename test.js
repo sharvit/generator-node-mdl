@@ -28,7 +28,14 @@ test('default files', () => {
       'package.json',
       'readme.md',
       'src/index.js',
-      'src/index.test.js'
+      'src/index.test.js',
+      // githubTemplates
+      'contributing.md',
+      '.github/issue_template.md',
+      '.github/pull_request_template.md',
+      'other/code_of_conduct.md',
+      'other/examples.md',
+      'other/roadmap.md',
     ]);
   });
 });
@@ -39,12 +46,12 @@ describe('prompts', () => {
       .run(path.join(__dirname, './app'))
       .withPrompts({
         githubUsername: 'foo',
-        projectName: 'bar'
+        projectName: 'bar',
       })
       .then(() => {
         assert.jsonFileContent('package.json', {
           name: 'bar',
-          repository: 'https://github.com/foo/bar'
+          repository: 'https://github.com/foo/bar',
         });
 
         assert.fileContent(
@@ -72,7 +79,7 @@ describe('prompts', () => {
       .withPrompts({ description: 'foo' })
       .then(() => {
         assert.jsonFileContent('package.json', {
-          description: 'foo'
+          description: 'foo',
         });
         assert.fileContent('readme.md', 'foo');
       });
@@ -85,8 +92,8 @@ describe('prompts', () => {
       .then(() => {
         assert.jsonFileContent('package.json', {
           author: {
-            name: 'foo bar'
-          }
+            name: 'foo bar',
+          },
         });
 
         assert.fileContent('license', 'foo bar');
@@ -101,8 +108,8 @@ describe('prompts', () => {
       .then(() => {
         assert.jsonFileContent('package.json', {
           author: {
-            email: 'foo@bar.com'
-          }
+            email: 'foo@bar.com',
+          },
         });
 
         assert.fileContent('license', 'foo@bar.com');
@@ -116,36 +123,55 @@ describe('prompts', () => {
       .then(() => {
         assert.jsonFileContent('package.json', {
           author: {
-            url: 'test.com'
-          }
+            url: 'test.com',
+          },
         });
 
         assert.fileContent('readme.md', 'test.com');
       });
   });
 
-  describe('extras', () => {
-    test('githubTemplates', () => {
-      return helpers
-        .run(path.join(__dirname, './app'))
-        .withPrompts({
-          githubUsername: 'foo',
-          projectName: 'bar',
-          email: 'foo@test.com',
-          extras: ['githubTemplates']
-        })
-        .then(() => {
-          assert.fileContent('contributing.md', 'https://github.com/foo/bar');
-          assert.fileContent(
-            '.github/issue_template.md',
-            /bar version: <!-- run `npm ls bar` -->/
-          );
-          assert.fileContent(
-            '.github/pull_request_template.md',
-            'https://github.com/foo/bar/blob/master/contributing.md'
-          );
-          assert.fileContent('other/code_of_conduct.md', 'foo@test.com');
-        });
-    });
+  test('githubTemplates', () => {
+    return helpers
+      .run(path.join(__dirname, './app'))
+      .withPrompts({
+        githubUsername: 'foo',
+        projectName: 'bar',
+        email: 'foo@test.com',
+        githubTemplates: true,
+      })
+      .then(() => {
+        assert.fileContent('contributing.md', 'https://github.com/foo/bar');
+        assert.fileContent(
+          '.github/issue_template.md',
+          /bar version: <!-- run `npm ls bar` -->/
+        );
+        assert.fileContent(
+          '.github/pull_request_template.md',
+          'https://github.com/foo/bar/blob/master/contributing.md'
+        );
+        assert.fileContent('other/code_of_conduct.md', 'foo@test.com');
+      });
+  });
+
+  test('No githubTemplates', () => {
+    return helpers
+      .run(path.join(__dirname, './app'))
+      .withPrompts({
+        githubUsername: 'foo',
+        projectName: 'bar',
+        email: 'foo@test.com',
+        githubTemplates: false,
+      })
+      .then(() => {
+        assert.noFile([
+          'contributing.md',
+          '.github/issue_template.md',
+          '.github/pull_request_template.md',
+          'other/code_of_conduct.md',
+          'other/examples.md',
+          'other/roadmap.md',
+        ]);
+      });
   });
 });

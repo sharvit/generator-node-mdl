@@ -36,6 +36,13 @@ With the most basic options, youʼll get a project structured like this:
 ```sh
 $ tree
 .
+├── .github
+│   ├── issue_template.md
+│   └── pull_request_template.md
+├── other
+│   ├── code_of_conduct.md
+│   ├── examples.md
+│   └── roadmap.md
 ├── src
 │   ├── index.js
 │   └── index.test.js
@@ -47,6 +54,7 @@ $ tree
 ├── .eslintignore
 ├── .travis.yml
 ├── license
+├── contributing.md
 ├── package.json
 └── readme.md
 ```

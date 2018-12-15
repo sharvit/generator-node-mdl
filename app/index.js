@@ -4,7 +4,6 @@ const path = require('path');
 const Generator = require('yeoman-generator');
 const camelCase = require('lodash.camelcase');
 const kebabCase = require('lodash.kebabcase');
-const includes = require('lodash.includes');
 const chalk = require('chalk');
 const commandExists = require('command-exists');
 const findUp = require('find-up');
@@ -26,16 +25,10 @@ module.exports = class extends Generator {
         store: true,
       },
       {
-        name: 'extras',
-        message: 'Extra features',
-        type: 'checkbox',
-        choices: [
-          {
-            name: 'GitHub templates',
-            value: 'githubTemplates',
-            checked: true,
-          },
-        ],
+        name: 'githubTemplates',
+        message: 'Would you like to make it Github friendly for contributions?',
+        type: 'confirm',
+        default: true,
       },
       {
         name: 'name',
@@ -62,7 +55,7 @@ module.exports = class extends Generator {
         projectName: answers.projectName,
         camelProject: camelCase(answers.projectName),
         description: answers.description,
-        githubTemplates: includes(answers.extras, 'githubTemplates'),
+        githubTemplates: answers.githubTemplates,
         name: answers.name,
         email: answers.email,
         website: answers.website,
@@ -84,6 +77,7 @@ module.exports = class extends Generator {
     this.fs.copyTpl(
       [
         `${this.templatePath()}/**`,
+        // exclude githubTemplates
         '!**/_github/**',
         '!**/contributing.md',
         '!**/other/**',
