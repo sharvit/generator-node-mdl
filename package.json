@@ -1,6 +1,6 @@
 {
   "name": "generator-node-mdl",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Create a Node.js module with ease",
   "license": "MIT",
   "preferGlobal": true,
