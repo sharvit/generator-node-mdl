@@ -55,16 +55,18 @@ $ tree
 │   ├── index.js
 │   └── index.test.js
 ├── .babelrc
-├── .eslintrc
 ├── .editorconfig
+├── .eslintignore
+├── .eslintrc
 ├── .gitattributes
 ├── .gitignore
-├── .eslintignore
+├── .npmignore
 ├── .travis.yml
-├── license
 ├── contributing.md
+├── license
 ├── package.json
-└── readme.md
+├── readme.md
+└── yarn.lock
 ```
 
 Less boilerplate 🎉
