@@ -220,5 +220,35 @@ describe('prompts', () => {
           assert.noFileContent('.travis.yml', 'after_success: yarn coveralls');
         });
     });
+
+    test('npmDeploy', () => {
+      const npmSecureApiKey = 'npm-secure-api-key';
+
+      return helpers
+        .run(path.join(__dirname, './app'))
+        .withPrompts({
+          travisCI: true,
+          npmDeploy: true,
+          npmSecureApiKey,
+        })
+        .then(() => {
+          assert.file(['.npmignore']);
+          assert.fileContent('.travis.yml', 'deploy');
+          assert.fileContent('.travis.yml', `secure: ${npmSecureApiKey}`);
+        });
+    });
+
+    test('no npmDeploy', () => {
+      return helpers
+        .run(path.join(__dirname, './app'))
+        .withPrompts({
+          travisCI: true,
+          npmDeploy: false,
+        })
+        .then(() => {
+          assert.noFile(['.npmignore']);
+          assert.noFileContent('.travis.yml', 'deploy');
+        });
+    });
   });
 });

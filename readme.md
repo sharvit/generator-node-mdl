@@ -24,6 +24,7 @@
 - Automates code reformatting using [Prettier](https://github.com/prettier/prettier)
 - [Travis CI](https://travis-ci.org) configuration _(optional)_
 - [Coveralls](http://coveralls.io) configuration _(optional)_
+- Automatically deploy to [npm registry](https://www.npmjs.com) with [Travis CI](https://travis-ci.org)  _(optional)_
 - Friendly for contributions using [Issue, Pull Request, and Contributing templates](https://github.com/blog/2111-issue-and-pull-request-templates) and some extras _(optional)_
 
 ## Installation

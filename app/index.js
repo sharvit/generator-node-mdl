@@ -76,18 +76,61 @@ module.exports = class extends Generator {
           return false;
         },
       },
+      {
+        name: 'npmDeploy',
+        message: 'Automatically deploy to npm using TravisCI?',
+        type: 'confirm',
+        default: true,
+        when: ({ travisCI }) => {
+          if (travisCI) {
+            this.log('\nNeed to have an npm account: https://www.npmjs.com/');
+            return true;
+          }
+
+          return false;
+        },
+      },
+      {
+        name: 'npmSecureApiKey',
+        message: 'Past your secured api key here:',
+        type: 'input',
+        when: ({ npmDeploy }) => {
+          if (npmDeploy) {
+            this.log('\n\n');
+            this.log(
+              `${chalk.bold('Create a secured-api-key with 3 easy steps:')}`
+            );
+            this.log('\n');
+            this.log(
+              '1. Install travis cli: https://github.com/travis-ci/travis.rb#installation'
+            );
+            this.log('\n');
+            this.log(
+              '2. Go to your npm dashboard and create a new token: https://www.npmjs.com/settings/<YOUR_USERNAME>/tokens'
+            );
+            this.log('\n');
+            this.log('3. Run `travis encrypt <YOUR_TOKEN>`');
+            this.log('\n');
+            return true;
+          }
+
+          return false;
+        },
+      },
     ]).then(answers => {
       this.props = {
         projectName: answers.projectName,
         camelProject: camelCase(answers.projectName),
         description: answers.description,
-        githubTemplates: answers.githubTemplates,
-        travisCI: answers.travisCI,
-        coveralls: answers.coveralls,
         name: answers.name,
         email: answers.email,
         website: answers.website,
         githubUsername: answers.githubUsername,
+        githubTemplates: answers.githubTemplates,
+        travisCI: answers.travisCI,
+        coveralls: answers.coveralls,
+        npmDeploy: answers.npmDeploy,
+        npmSecureApiKey: answers.npmSecureApiKey,
       };
     });
   }
@@ -111,6 +154,8 @@ module.exports = class extends Generator {
         '!**/other/**',
         // exclude travisCI
         '!**/_travis.yml',
+        // exclude npmDeploy
+        '!**/_npmignore',
       ],
       this.destinationPath(),
       this.props
@@ -150,6 +195,14 @@ module.exports = class extends Generator {
       this.fs.copyTpl(
         this.templatePath('_travis.yml'),
         this.destinationPath('.travis.yml'),
+        this.props
+      );
+    }
+
+    if (this.props.npmDeploy) {
+      this.fs.copyTpl(
+        this.templatePath('_npmignore'),
+        this.destinationPath('.npmignore'),
         this.props
       );
     }

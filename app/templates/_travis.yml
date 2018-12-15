@@ -9,4 +9,15 @@ script:
   - yarn lint
   - yarn test
   - yarn build
-<% if (coveralls) { %>after_success: yarn coveralls<% } %>
+<% if (coveralls) { %>after_success: yarn coveralls<% } %><% if (npmDeploy) { %>
+deploy:
+  skip_cleanup: true
+  provider: npm
+  email: <%= email %>
+  api_key:
+    secure: <%= npmSecureApiKey %>
+  on:
+    node: 10
+    tags: true
+    repo: <%= githubUsername %>/<%= projectName %>
+<% } %>
