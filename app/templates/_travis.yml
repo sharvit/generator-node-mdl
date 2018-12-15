@@ -9,4 +9,4 @@ script:
   - yarn lint
   - yarn test
   - yarn build
-after_success: yarn coveralls
+<% if (coveralls) { %>after_success: yarn coveralls<% } %>

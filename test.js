@@ -36,6 +36,8 @@ test('default files', () => {
       'other/code_of_conduct.md',
       'other/examples.md',
       'other/roadmap.md',
+      // travisCI
+      '.travis.yml',
     ]);
   });
 });
@@ -154,13 +156,10 @@ describe('prompts', () => {
       });
   });
 
-  test('No githubTemplates', () => {
+  test('no githubTemplates', () => {
     return helpers
       .run(path.join(__dirname, './app'))
       .withPrompts({
-        githubUsername: 'foo',
-        projectName: 'bar',
-        email: 'foo@test.com',
         githubTemplates: false,
       })
       .then(() => {
@@ -173,5 +172,53 @@ describe('prompts', () => {
           'other/roadmap.md',
         ]);
       });
+  });
+
+  describe('Travis', () => {
+    test('travisCI', () => {
+      return helpers
+        .run(path.join(__dirname, './app'))
+        .withPrompts({
+          travisCI: true,
+        })
+        .then(() => {
+          assert.file(['.travis.yml']);
+        });
+    });
+
+    test('no travisCI', () => {
+      return helpers
+        .run(path.join(__dirname, './app'))
+        .withPrompts({
+          travisCI: false,
+        })
+        .then(() => {
+          assert.noFile(['.travis.yml']);
+        });
+    });
+
+    test('coveralls', () => {
+      return helpers
+        .run(path.join(__dirname, './app'))
+        .withPrompts({
+          travisCI: true,
+          coveralls: true,
+        })
+        .then(() => {
+          assert.fileContent('.travis.yml', 'after_success: yarn coveralls');
+        });
+    });
+
+    test('no coveralls', () => {
+      return helpers
+        .run(path.join(__dirname, './app'))
+        .withPrompts({
+          travisCI: true,
+          coveralls: false,
+        })
+        .then(() => {
+          assert.noFileContent('.travis.yml', 'after_success: yarn coveralls');
+        });
+    });
   });
 });

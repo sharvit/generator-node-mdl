@@ -17,8 +17,8 @@
     "build": "babel src --out-dir dist --copy-files --ignore **/*.test.js",
     "postbuild": "rimraf dist/**/*.test.js",
     "test:watch": "jest --watch",
-    "test": "jest --coverage",
-    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "test": "jest --coverage",<% if (coveralls) { %>
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",<% } %>
     "lint": "eslint ./src"
   },
   "main": "dist/index.js",

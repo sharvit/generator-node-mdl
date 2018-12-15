@@ -25,12 +25,6 @@ module.exports = class extends Generator {
         store: true,
       },
       {
-        name: 'githubTemplates',
-        message: 'Would you like to make it Github friendly for contributions?',
-        type: 'confirm',
-        default: true,
-      },
-      {
         name: 'name',
         message: "Author's name",
         default: this.user.git.name(),
@@ -50,12 +44,46 @@ module.exports = class extends Generator {
         message: 'GitHub username',
         store: true,
       },
+      {
+        name: 'githubTemplates',
+        message: 'Would you like to make it Github friendly for contributions?',
+        type: 'confirm',
+        default: true,
+      },
+      {
+        name: 'travisCI',
+        message: 'Give your project super prowers using Travis CI?',
+        type: 'confirm',
+        default: true,
+        when: () => {
+          this.log(
+            '\nLearn how to use Travis CI: https://docs.travis-ci.com/user/tutorial/#to-get-started-with-travis-ci'
+          );
+          return true;
+        },
+      },
+      {
+        name: 'coveralls',
+        message: 'Connect TravisCI to Coveralls?',
+        type: 'confirm',
+        default: true,
+        when: ({ travisCI }) => {
+          if (travisCI) {
+            this.log('\nLearn how to use Coveralls: https://coveralls.io');
+            return true;
+          }
+
+          return false;
+        },
+      },
     ]).then(answers => {
       this.props = {
         projectName: answers.projectName,
         camelProject: camelCase(answers.projectName),
         description: answers.description,
         githubTemplates: answers.githubTemplates,
+        travisCI: answers.travisCI,
+        coveralls: answers.coveralls,
         name: answers.name,
         email: answers.email,
         website: answers.website,
@@ -81,6 +109,8 @@ module.exports = class extends Generator {
         '!**/_github/**',
         '!**/contributing.md',
         '!**/other/**',
+        // exclude travisCI
+        '!**/_travis.yml',
       ],
       this.destinationPath(),
       this.props
@@ -95,7 +125,6 @@ module.exports = class extends Generator {
     mv('_gitignore', '.gitignore');
     mv('_package.json', 'package.json');
     mv('_eslintignore', '.eslintignore');
-    mv('_travis.yml', '.travis.yml');
     mv('_babelrc', '.babelrc');
     mv('_eslintrc', '.eslintrc');
 
@@ -113,6 +142,14 @@ module.exports = class extends Generator {
       this.fs.copyTpl(
         this.templatePath('contributing.md'),
         this.destinationPath('contributing.md'),
+        this.props
+      );
+    }
+
+    if (this.props.travisCI) {
+      this.fs.copyTpl(
+        this.templatePath('_travis.yml'),
+        this.destinationPath('.travis.yml'),
         this.props
       );
     }
