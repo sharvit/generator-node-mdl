@@ -16,19 +16,26 @@ First, [fork](https://guides.github.com/activities/forking) then clone the repo:
 git clone https://github.com/your-username/<%= projectName %>
 cd <%= projectName %>
 git remote add upstream https://github.com/<%= githubUsername %>/<%= projectName %>
-git branch --set-upstream-to=upstream/master master
 ```
 
 Install dependencies:
 
 ```sh
-npm install
+yarn
 ```
 
 Run test suits to validate the project is working:
 
 ```sh
-npm test
+yarn test
+```
+
+Run linter to validate the project code:
+
+```sh
+yarn lint
+# to fix linting errors
+yarn lint --fix
 ```
 
 ## Committing and Pushing changes

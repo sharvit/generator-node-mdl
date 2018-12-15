@@ -6,10 +6,7 @@ node_js:
   - '8'
   - '6'
 script:
-  - npm test
-  - npm run build
+  - yarn lint
+  - yarn test
+  - yarn build
 after_success: if [[ `npm -v` > 4* ]]; then npx codecov; fi
-branches:
-  only:
-    - master
-    - /^greenkeeper/.*$/

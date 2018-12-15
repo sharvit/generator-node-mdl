@@ -26,6 +26,7 @@ test('default files', () => {
       'package.json',
       'readme.md',
       '.babelrc',
+      '.eslintrc',
       'src/index.js',
       'src/index.test.js'
     ]);

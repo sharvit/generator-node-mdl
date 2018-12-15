@@ -13,7 +13,7 @@
 - Includes only necessary tools
 - Monitors repo quality through helpful badges
 - [Jest testing framework](https://facebook.github.io/jest)
-- Sensible [ESLint](http://eslint.org) config bundled in [XO](https://github.com/xojs/xo)
+- Sensible [ESLint](http://eslint.org) config extends [standard](https://github.com/standard/eslint-config-standard) and [Prettier](https://github.com/prettier/eslint-plugin-prettier)
 - Automates code reformatting using [Prettier](https://github.com/prettier/prettier)
 - [Travis CI](https://travis-ci.org) configuration
 - [Issue, Pull Request, and Contributing templates](https://github.com/blog/2111-issue-and-pull-request-templates) _(optional)_

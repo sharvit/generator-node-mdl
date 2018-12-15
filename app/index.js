@@ -102,11 +102,8 @@ module.exports = class extends Generator {
     mv('_package.json', 'package.json');
     mv('_prettierignore', '.prettierignore');
     mv('_travis.yml', '.travis.yml');
-
-    this.fs.copy(
-      this.templatePath('_babelrc'),
-      this.destinationPath('.babelrc')
-    );
+    mv('_babelrc', '.babelrc');
+    mv('_eslintrc', '.eslintrc');
 
     if (this.props.githubTemplates) {
       this.fs.copyTpl(
