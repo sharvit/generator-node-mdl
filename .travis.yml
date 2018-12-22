@@ -1,10 +1,7 @@
 language: node_js
 notifications:
   email: false
-node_js:
-  - '10'
-  - '8'
-  - '6'
+node_js: 10
 script:
   - yarn lint
   - yarn test
@@ -15,8 +12,8 @@ jobs:
     - stage: release
       if: branch = master AND type = push AND tag = false
       node_js: 10
-      script: yarn build
       deploy:
         provider: script
+        skip_cleanup: true
         script:
           - yarn semantic-release
