@@ -17,7 +17,10 @@
     "test": "jest --coverage",
     "test:watch": "jest --watch",
     "lint": "eslint ./app",
+    "lint:commit": "commitlint -e",
+    "lint:commit-travis": "commitlint-travis",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "commit": "git-cz",
     "semantic-release": "semantic-release"
   },
   "files": [
@@ -33,7 +36,12 @@
     "yeoman-generator": "^3.1.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^7.2.1",
+    "@commitlint/config-conventional": "^7.1.2",
+    "@commitlint/travis-cli": "^7.2.1",
+    "commitlint-config-cz": "^0.10.1",
     "coveralls": "^3.0.2",
+    "cz-conventional-changelog": "2.1.0",
     "eslint": "^5.10.0",
     "eslint-config-prettier": "^3.3.0",
     "eslint-config-standard": "^12.0.0",
@@ -44,9 +52,9 @@
     "eslint-plugin-standard": "^4.0.0",
     "jest": "^23.6.0",
     "prettier": "^1.15.3",
+    "semantic-release": "^15.13.1",
     "yeoman-assert": "^3.1.0",
-    "yeoman-test": "^2.0.0",
-    "semantic-release": "^15.13.1"
+    "yeoman-test": "^2.0.0"
   },
   "jest": {
     "testEnvironment": "node",
@@ -54,6 +62,11 @@
       "/node_modules/",
       "/templates/"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
   "keywords": [
     "yeoman-generator",

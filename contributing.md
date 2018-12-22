@@ -38,6 +38,12 @@ yarn lint
 yarn lint --fix
 ```
 
+Run linter to validate your commit message:
+
+```sh
+yarn lint:commit
+```
+
 ## Committing and Pushing changes
 
 Create a branch and start hacking:
@@ -48,9 +54,17 @@ git checkout -b my-branch
 
 Commit and push your changes:
 
+`generator-node-mdl` uses [commitizen](https://github.com/commitizen/cz-cli) to create commit messages so [semantic-release](https://github.com/semantic-release/semantic-release) can automatically create releases.
+
 ```sh
-git add my/changed/files
-git commit
+git add .
+yarn commit
+# answer the questions
+```
+
+Push your changes:
+
+```sh
 git push origin my-branch
 ```
 

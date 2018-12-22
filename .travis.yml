@@ -3,6 +3,7 @@ notifications:
   email: false
 node_js: 10
 script:
+  - yarn lint:commit-travis
   - yarn lint
   - yarn test
 after_success: yarn coveralls

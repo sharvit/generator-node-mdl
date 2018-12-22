@@ -6,10 +6,7 @@ We haven‘t filled this out yet though. Care to help? See [`contributing.md`](.
 
 ## Want to do
 
-- [ ] Install [Greenkeeper](https://greenkeeper.io/) on this repository
-- [ ] Install [semantic-release](https://github.com/semantic-release/semantic-release) on this repository
-- [ ] Add option to install [semantic-release](https://github.com/semantic-release/semantic-release)
-- [ ] Add option to install [Greenkeeper](https://greenkeeper.io/)
+ - Add option to install [semantic-release](https://github.com/semantic-release/semantic-release)
 
 ## Might do
 
