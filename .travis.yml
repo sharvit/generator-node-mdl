@@ -9,13 +9,14 @@ script:
   - yarn lint
   - yarn test
 after_success: yarn coveralls
-deploy:
-  skip_cleanup: true
-  provider: npm
-  email: sharvita@gmail.com
-  api_key:
-    secure: iz8zdhAg4RdqL4XNIL5WxhMNxH+KGub3kGHUkRCuQoZrftarKG5dF3g94I4to62lTy21NgL9iIkIef+/9jOggr++tv/dGAXzdt2LcKCzpclgZkeyKuh//atusPjqWOsGS07+iT240lFREIe/JJqRr+wLUCGrwjlav5Q2rtGYeorLSdPGf+OYCeF8r3blN1LMmeJCTSZS2ywJCeVNbt5AESmcLiJSnI0mgDv8NsIT4JokahjcX7g20AFC7uww4SJFcSRAMP9vmudKeZWCKn/KRRJwZMmsDFopqnNaDnwBAcNENb3/3r1F2/hlD0frJIRNxNOEKgxYKKVJ7GQ7dVVDbXnmovHFtk258uJGEYzih0zXD2a797P8Ddh90KMSYgGTKriprhB6yecoPbXuzfDpLzA8pb2KjBTo3FEoTSA3r9iZpMFwvkVdsomt4LdRJ934iPwu8Y4firmCSmBzzkaTfAVV8L47DHtkRD/rIUUqRCJPVy2u9vR4FwSnse197KfmcVZ03X+9PB0uSQpOzlwXXs6i2cQnKaAnpIGeJccckWzIjrDq1W00GT6O00GvPYGt6xufXwGBw4BmdIM+1yomCo76mv7q/aZGAZVOjHMzGKpLJ4D0FP4h3yfqzijVbVmMDdr6lGQmKTHj9x54TYyPXgFJe33Eq5fbz5QxkRbdRns=
-  on:
-    node: 10
-    tags: true
-    repo: sharvit/generator-node-mdl
+jobs:
+  include:
+    # Define the release stage that runs semantic-release
+    - stage: release
+      if: branch = master AND type = push AND tag = false
+      node_js: 10
+      script: yarn build
+      deploy:
+        provider: script
+        script:
+          - yarn semantic-release

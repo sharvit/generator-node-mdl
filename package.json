@@ -1,6 +1,6 @@
 {
   "name": "generator-node-mdl",
-  "version": "0.2.1",
+  "version": "0.0.0-semantic-release",
   "description": "Create a Node.js module with ease",
   "license": "MIT",
   "preferGlobal": true,
@@ -17,7 +17,8 @@
     "test": "jest --coverage",
     "test:watch": "jest --watch",
     "lint": "eslint ./app",
-    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "semantic-release": "semantic-release"
   },
   "files": [
     "app"
@@ -44,7 +45,8 @@
     "jest": "^23.6.0",
     "prettier": "^1.15.3",
     "yeoman-assert": "^3.1.0",
-    "yeoman-test": "^2.0.0"
+    "yeoman-test": "^2.0.0",
+    "semantic-release": "^15.13.1"
   },
   "jest": {
     "testEnvironment": "node",
