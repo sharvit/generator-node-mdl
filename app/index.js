@@ -12,8 +12,17 @@ const makeDir = require('make-dir');
 const github = require('../lib/github');
 
 module.exports = class extends Generator {
-  prompting() {
-    return this.prompt([
+  async prompting() {
+    this.props = {};
+
+    await this._promptGeneral();
+    await this._promptGithub();
+    await this._promptTravis();
+    await this._promptNpm();
+  }
+
+  async _promptGeneral() {
+    const answers = await this.prompt([
       {
         name: 'projectName',
         message: 'Project name',
@@ -41,10 +50,25 @@ module.exports = class extends Generator {
         message: "Author's website",
         store: true,
       },
+    ]);
+
+    Object.assign(this.props, answers, {
+      camelProject: camelCase(answers.projectName),
+    });
+  }
+
+  async _promptGithub() {
+    const answers = await this.prompt([
       {
         name: 'githubUsername',
         message: 'GitHub username',
         store: true,
+      },
+      {
+        name: 'githubTemplates',
+        message: 'Would you like to make it Github friendly for contributions?',
+        type: 'confirm',
+        default: true,
       },
       {
         name: 'createGithubRepository',
@@ -58,12 +82,13 @@ module.exports = class extends Generator {
         type: 'password',
         when: ({ createGithubRepository }) => createGithubRepository,
       },
-      {
-        name: 'githubTemplates',
-        message: 'Would you like to make it Github friendly for contributions?',
-        type: 'confirm',
-        default: true,
-      },
+    ]);
+
+    Object.assign(this.props, answers);
+  }
+
+  async _promptTravis() {
+    const answers = await this.prompt([
       {
         name: 'travisCI',
         message: 'Give your project super prowers using Travis CI?',
@@ -90,13 +115,20 @@ module.exports = class extends Generator {
           return false;
         },
       },
+    ]);
+
+    Object.assign(this.props, answers, { coveralls: answers.coveralls });
+  }
+
+  async _promptNpm() {
+    const answers = await this.prompt([
       {
         name: 'npmDeploy',
         message: 'Automatically deploy to npm using TravisCI?',
         type: 'confirm',
         default: true,
-        when: ({ travisCI }) => {
-          if (travisCI) {
+        when: () => {
+          if (this.props.travisCI) {
             this.log('\nNeed to have an npm account: https://www.npmjs.com/');
             return true;
           }
@@ -131,23 +163,11 @@ module.exports = class extends Generator {
           return false;
         },
       },
-    ]).then(answers => {
-      this.props = {
-        projectName: answers.projectName,
-        camelProject: camelCase(answers.projectName),
-        description: answers.description,
-        name: answers.name,
-        email: answers.email,
-        website: answers.website,
-        githubUsername: answers.githubUsername,
-        createGithubRepository: answers.createGithubRepository,
-        githubPassword: answers.githubPassword,
-        githubTemplates: answers.githubTemplates,
-        travisCI: answers.travisCI,
-        coveralls: answers.coveralls,
-        npmDeploy: answers.npmDeploy,
-        npmSecureApiKey: answers.npmSecureApiKey,
-      };
+    ]);
+
+    Object.assign(this.props, {
+      npmDeploy: answers.npmDeploy,
+      npmSecureApiKey: answers.npmSecureApiKey,
     });
   }
 
