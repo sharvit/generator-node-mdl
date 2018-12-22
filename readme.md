@@ -3,6 +3,7 @@
 > Create a Node.js module with ease
 
 [![Package Version](https://img.shields.io/npm/v/generator-node-mdl.svg?style=flat-square)](https://www.npmjs.com/package/generator-node-mdl)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![Downloads Status](https://img.shields.io/npm/dm/generator-node-mdl.svg?style=flat-square)](https://npm-stat.com/charts.html?package=generator-node-mdl&from=2016-04-01)
 [![Build Status: Linux](https://img.shields.io/travis/sharvit/generator-node-mdl/master.svg?style=flat-square)](https://travis-ci.org/sharvit/generator-node-mdl)
 [![Coverage Status](https://coveralls.io/repos/github/sharvit/generator-node-mdl/badge.svg?branch=master)](https://coveralls.io/github/sharvit/generator-node-mdl?branch=master)
