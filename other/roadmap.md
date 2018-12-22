@@ -6,7 +6,6 @@ We haven‘t filled this out yet though. Care to help? See [`contributing.md`](.
 
 ## Want to do
 
- - Add option to automatically create a github repository
  - Add option to automatically install travis on github
  - Add option to install [semantic-release](https://github.com/semantic-release/semantic-release)
 

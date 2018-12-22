@@ -1,10 +1,14 @@
-'use strict';
-
 const path = require('path');
 const assert = require('yeoman-assert');
 const helpers = require('yeoman-test');
 
+const github = require('../lib/github');
+
+jest.mock('../lib/github');
+
 const runAppGenerator = () => helpers.run(path.join(__dirname, './index.js'));
+
+beforeEach(() => jest.clearAllMocks());
 
 test('destinationRoot', () => {
   return runAppGenerator()
@@ -140,6 +144,46 @@ describe('prompts', () => {
         });
 
         assert.fileContent('readme.md', 'test.com');
+      });
+  });
+
+  test('createGithubRepository', () => {
+    const name = 'some-project-name';
+    const description = 'some-description';
+    const username = 'some-username';
+    const password = 'some-password';
+
+    return runAppGenerator()
+      .withPrompts({
+        createGithubRepository: true,
+        projectName: name,
+        description,
+        githubUsername: username,
+        githubPassword: password,
+      })
+      .then(() => {
+        assert.fileContent('.git/config', '[remote "origin"]');
+        assert.fileContent('.git/config', 'url = some-ssh_url');
+
+        expect(github.login).toBeCalledWith({ username, password });
+        expect(github.createRepository).toBeCalledWith({ name, description });
+      });
+  });
+
+  test('no createGithubRepository', () => {
+    return runAppGenerator()
+      .withPrompts({
+        createGithubRepository: false,
+        githubUsername: 'some-username',
+        githubPassword: 'some-password',
+        projectName: 'some-project-name',
+      })
+      .then(() => {
+        assert.noFileContent('.git/config', '[remote "origin"]');
+        assert.noFileContent('.git/config', 'url = some-ssh_url');
+
+        expect(github.login).not.toBeCalled();
+        expect(github.createRepository).not.toBeCalled();
       });
   });
 
