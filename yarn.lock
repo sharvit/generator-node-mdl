@@ -1363,10 +1363,10 @@ commander@~2.17.1:
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.17.1.tgz#bd77ab7de6de94205ceacc72f1716d29f20a77bf"
   integrity sha512-wPMUt6FnH2yzG95SA6mzjQOEKUU3aLaDEmzs1ti+1E9h+CsrZghRlqEM/EJ4KscsQVG8uNN4uVreUeT8+drlgg==
 
-commitlint-config-cz@^0.10.1:
-  version "0.10.1"
-  resolved "https://registry.yarnpkg.com/commitlint-config-cz/-/commitlint-config-cz-0.10.1.tgz#53bb899b2783015b940dcc4fbd82bb7c9d64ec1f"
-  integrity sha512-yZ4SJTEg0SjMz1EoyI8D8cvK1Pj+EoTWmx68XorULWl5gtduSHDXALmLlvPgLL3xvvblccPIHx03MI7hYLZXHw==
+commitlint-config-cz@^0.11.0:
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/commitlint-config-cz/-/commitlint-config-cz-0.11.0.tgz#43c8a6fdccbe4f1c06a3c80ba8ec7185d91fa7b4"
+  integrity sha512-h5b/TrmdPvABltvbVHEox2iya01yeunxUB3MO+1AJ28TjnnmuAv6iUsQ7mW79D8WBepgdiZ9nGr3D5fiM0Fe0Q==
   dependencies:
     app-root-path "~2.1.0"
     lodash.clonedeep "~4.5.0"
