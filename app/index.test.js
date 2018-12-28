@@ -5,6 +5,7 @@ const helpers = require('yeoman-test');
 const github = require('../lib/github');
 
 jest.mock('../lib/github');
+jest.mock('../lib/npm');
 
 const runAppGenerator = () => helpers.run(path.join(__dirname, './index.js'));
 
@@ -73,6 +74,9 @@ describe('prompts', () => {
           name: 'bar',
           repository: 'https://github.com/foo/bar',
         });
+
+        assert.fileContent('.git/config', '[remote "origin"]');
+        assert.fileContent('.git/config', 'git@github.com:foo/bar.git');
 
         assert.fileContent(
           'readme.md',
@@ -162,9 +166,6 @@ describe('prompts', () => {
         githubPassword: password,
       })
       .then(() => {
-        assert.fileContent('.git/config', '[remote "origin"]');
-        assert.fileContent('.git/config', 'url = some-ssh_url');
-
         expect(github.login).toBeCalledWith({ username, password });
         expect(github.createRepository).toBeCalledWith({ name, description });
       });
@@ -179,9 +180,6 @@ describe('prompts', () => {
         projectName: 'some-project-name',
       })
       .then(() => {
-        assert.noFileContent('.git/config', '[remote "origin"]');
-        assert.noFileContent('.git/config', 'url = some-ssh_url');
-
         expect(github.login).not.toBeCalled();
         expect(github.createRepository).not.toBeCalled();
       });
@@ -270,18 +268,18 @@ describe('prompts', () => {
     });
 
     test('npmDeploy', () => {
-      const npmSecureApiKey = 'npm-secure-api-key';
-
       return runAppGenerator()
         .withPrompts({
           travisCI: true,
           npmDeploy: true,
-          npmSecureApiKey,
+          npmUsername: 'some-username',
+          npmPassword: 'some-password',
         })
         .then(() => {
           assert.file(['.npmignore']);
-          assert.fileContent('.travis.yml', 'deploy');
-          assert.fileContent('.travis.yml', `secure: ${npmSecureApiKey}`);
+          assert.fileContent('.travis.yml', 'deploy:');
+          assert.fileContent('.travis.yml', 'provider: npm');
+          assert.fileContent('.travis.yml', 'api_key: $NPM_TOKEN');
         });
     });
 

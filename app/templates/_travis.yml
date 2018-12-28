@@ -14,8 +14,7 @@ deploy:
   skip_cleanup: true
   provider: npm
   email: <%= email %>
-  api_key:
-    secure: <%= npmSecureApiKey %>
+  api_key: $NPM_TOKEN
   on:
     node: 10
     tags: true

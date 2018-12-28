@@ -35,6 +35,8 @@
     "lodash.camelcase": "^4.3.0",
     "lodash.kebabcase": "^4.1.1",
     "make-dir": "^1.1.0",
+    "npm-profile": "^4.0.1",
+    "opener": "^1.5.1",
     "yeoman-generator": "^3.1.1"
   },
   "devDependencies": {
