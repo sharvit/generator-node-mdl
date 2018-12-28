@@ -9,8 +9,8 @@ const commandExists = require('command-exists');
 const findUp = require('find-up');
 const makeDir = require('make-dir');
 
-const github = require('../lib/github');
-const npm = require('../lib/npm');
+const github = require('./lib/github');
+const npm = require('./lib/npm');
 
 module.exports = class extends Generator {
   /*

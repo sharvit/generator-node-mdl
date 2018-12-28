@@ -2,10 +2,10 @@ const path = require('path');
 const assert = require('yeoman-assert');
 const helpers = require('yeoman-test');
 
-const github = require('../lib/github');
+const github = require('./lib/github');
 
-jest.mock('../lib/github');
-jest.mock('../lib/npm');
+jest.mock('./lib/github');
+jest.mock('./lib/npm');
 
 const runAppGenerator = () => helpers.run(path.join(__dirname, './index.js'));
 

@@ -11,12 +11,15 @@
     "url": "https://sharvit.github.io"
   },
   "engines": {
-    "node": ">=10"
+    "node": ">=6"
   },
   "scripts": {
+    "build": "yarn build:babel && yarn build:templates",
+    "build:babel": "BABEL_ENV=production babel src --out-dir .",
+    "build:templates": "ncp ./src/app/templates ./app/templates",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
-    "lint": "eslint ./app ./lib",
+    "lint": "eslint ./src",
     "lint:commit": "commitlint -e",
     "lint:commit-travis": "commitlint-travis",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
@@ -24,8 +27,7 @@
     "semantic-release": "semantic-release"
   },
   "files": [
-    "app",
-    "lib"
+    "app"
   ],
   "dependencies": {
     "@octokit/rest": "^16.3.0",
@@ -40,9 +42,16 @@
     "yeoman-generator": "^3.1.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
     "@commitlint/cli": "^7.2.1",
     "@commitlint/config-conventional": "^7.1.2",
     "@commitlint/travis-cli": "^7.2.1",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "babel-plugin-add-module-exports": "^1.0.0",
     "commitlint-config-cz": "^0.11.0",
     "coveralls": "^3.0.2",
     "cz-conventional-changelog": "2.1.0",
@@ -55,7 +64,9 @@
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
     "jest": "^23.6.0",
+    "ncp": "^2.0.0",
     "prettier": "^1.15.3",
+    "rimraf": "^2.6.2",
     "semantic-release": "^15.13.1",
     "yeoman-assert": "^3.1.0",
     "yeoman-test": "^2.0.0"

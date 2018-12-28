@@ -1,0 +1,21 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": { "node": 8 }
+      }
+    ]
+  ],
+  "plugins": ["add-module-exports"],
+  "env": {
+    "production": {
+      "ignore": [
+        "node_modules",
+        "**/templates/**/**",
+        "**/__mocks__/**/**",
+        "**/*.test.js"
+      ],
+    }
+  }
+}

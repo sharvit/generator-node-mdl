@@ -1,8 +1,6 @@
-app/templates/**/*.js
-app/templates/**/*.json
-app/templates/**/*.md
+src/app/templates
+./app/
 coverage/
-dist/
 package-lock.json
 package.json
 yarn.lock

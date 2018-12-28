@@ -1,11 +1,14 @@
 language: node_js
 notifications:
   email: false
-node_js: 10
+node_js:
+  - 8
+  - 10
 script:
   - yarn lint:commit-travis
   - yarn lint
   - yarn test
+  - yarn build
 after_success: yarn coveralls
 jobs:
   include:

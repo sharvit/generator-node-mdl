@@ -1,6 +1,5 @@
-# Compiled
-app
-!src/app
+# Source
+src
 
 # Logs
 logs
