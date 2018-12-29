@@ -1,4 +1,4 @@
-src/app/templates
+**/templates/**
 ./app/
 coverage/
 package-lock.json

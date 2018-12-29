@@ -14,9 +14,10 @@
     "node": ">=6"
   },
   "scripts": {
-    "build": "yarn build:babel && yarn build:templates",
+    "build": "yarn build:clean && yarn build:babel && yarn build:templates",
+    "build:clean": "rimraf ./app",
     "build:babel": "BABEL_ENV=production babel src --out-dir .",
-    "build:templates": "ncp ./src/app/templates ./app/templates",
+    "build:templates": "./scripts/build-templates.sh",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
     "lint": "eslint ./src",
@@ -64,7 +65,6 @@
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
     "jest": "^23.6.0",
-    "ncp": "^2.0.0",
     "prettier": "^1.15.3",
     "rimraf": "^2.6.2",
     "semantic-release": "^15.13.1",

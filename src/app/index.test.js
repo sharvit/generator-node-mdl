@@ -29,6 +29,7 @@ test('default files', () => {
       '.eslintrc',
       '.gitattributes',
       '.gitignore',
+      '.npmignore',
       'license',
       'package.json',
       'readme.md',
@@ -43,8 +44,6 @@ test('default files', () => {
       'other/roadmap.md',
       // travisCI
       '.travis.yml',
-      // npmDeploy
-      '.npmignore',
     ]);
 
     assert.noFile([
@@ -276,7 +275,6 @@ describe('prompts', () => {
           npmPassword: 'some-password',
         })
         .then(() => {
-          assert.file(['.npmignore']);
           assert.fileContent('.travis.yml', 'deploy:');
           assert.fileContent('.travis.yml', 'provider: npm');
           assert.fileContent('.travis.yml', 'api_key: $NPM_TOKEN');
@@ -290,7 +288,6 @@ describe('prompts', () => {
           npmDeploy: false,
         })
         .then(() => {
-          assert.noFile(['.npmignore']);
           assert.noFileContent('.travis.yml', 'deploy');
         });
     });
