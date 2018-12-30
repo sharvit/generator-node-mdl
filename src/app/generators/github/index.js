@@ -1,8 +1,8 @@
-const BaseGenerator = require('../base-generator');
+import BaseGenerator from '../base-generator';
 
-const github = require('../../lib/github');
+import { createRepository } from '../../lib/github';
 
-module.exports = class extends BaseGenerator {
+export default class extends BaseGenerator {
   writing() {
     if (this.options.githubTemplates) {
       const templatesToCopy = [
@@ -25,7 +25,7 @@ module.exports = class extends BaseGenerator {
     if (this.options.createGithubRepository) {
       const {
         data: { html_url: url },
-      } = await github.createRepository({
+      } = await createRepository({
         name: this.options.projectName,
         description: this.options.description,
       });
@@ -34,4 +34,4 @@ module.exports = class extends BaseGenerator {
       this.log(`Repository created: ${url}`);
     }
   }
-};
+}

@@ -1,4 +1,4 @@
-module.exports = {
+const options = {
   projectName: {
     type: String,
     required: true,
@@ -47,3 +47,5 @@ module.exports = {
     desc: 'Your npm-token',
   },
 };
+
+export default options;

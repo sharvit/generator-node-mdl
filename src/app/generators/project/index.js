@@ -1,12 +1,12 @@
+import BaseGenerator from '../base-generator';
+
 const path = require('path');
 const chalk = require('chalk');
 const commandExists = require('command-exists');
 const findUp = require('find-up');
 const makeDir = require('make-dir');
 
-const BaseGenerator = require('../base-generator');
-
-module.exports = class extends BaseGenerator {
+export default class extends BaseGenerator {
   /*
     Run Loop
    */
@@ -98,4 +98,4 @@ module.exports = class extends BaseGenerator {
       });
     }
   }
-};
+}

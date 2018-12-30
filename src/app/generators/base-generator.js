@@ -1,8 +1,7 @@
-const Generator = require('yeoman-generator');
+import YeomanGenerator from 'yeoman-generator';
+import options from '../options';
 
-const options = require('../options');
-
-module.exports = class extends Generator {
+export default class extends YeomanGenerator {
   constructor(...args) {
     super(...args);
 
@@ -10,4 +9,4 @@ module.exports = class extends Generator {
       this.option(name, value);
     }
   }
-};
+}

@@ -1,6 +1,6 @@
-const BaseGenerator = require('../base-generator');
+import BaseGenerator from '../base-generator';
 
-module.exports = class extends BaseGenerator {
+export default class extends BaseGenerator {
   writing() {
     this.fs.copyTpl(
       this.templatePath('_travis.yml'),
@@ -35,4 +35,4 @@ module.exports = class extends BaseGenerator {
       ]);
     }
   }
-};
+}

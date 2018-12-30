@@ -1,5 +1,2 @@
-const login = ({ username, password }) => ({ token: 'some-token' });
-
-module.exports = {
-  login,
-};
+export const login = ({ username, password }) =>
+  jest.fn(() => ({ token: 'some-token' }));

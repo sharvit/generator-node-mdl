@@ -18,7 +18,7 @@
     "build:clean": "rimraf ./app",
     "build:babel": "BABEL_ENV=production babel src --out-dir .",
     "build:templates": "./scripts/build-templates.sh",
-    "test": "jest --coverage",
+    "test": "jest --no-cache --coverage",
     "test:watch": "jest --watch",
     "lint": "eslint ./src",
     "lint:commit": "commitlint -e",
@@ -73,9 +73,9 @@
   },
   "jest": {
     "testEnvironment": "node",
-    "transform": {
-      "^.+\\.js$": "babel-jest"
-    },
+    "modulePaths": [
+      "<rootDir>/src/app"
+    ],
     "testPathIgnorePatterns": [
       "/node_modules/",
       "/templates/"

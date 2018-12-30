@@ -1,12 +1,12 @@
-const camelCase = require('lodash.camelcase');
-const kebabCase = require('lodash.kebabcase');
+import camelCase from 'lodash.camelcase';
+import kebabCase from 'lodash.kebabcase';
 
-const github = require('./lib/github');
-const npm = require('./lib/npm');
+import { login as githubLogin } from './lib/github';
+import { login as npmLogin } from './lib/npm';
 
-const options = require('./options');
+import options from './options';
 
-module.exports = class {
+export default class Prompter {
   constructor(generator) {
     this.generator = generator;
   }
@@ -183,7 +183,7 @@ module.exports = class {
     const { npmUsername, npmPassword } = await this._promptNpmLogin();
 
     // generate npm-token
-    const { token } = await npm.login({
+    const { token } = await npmLogin({
       username: npmUsername,
       password: npmPassword,
     });
@@ -197,9 +197,9 @@ module.exports = class {
     const { githubUsername } = this.props;
     const { githubPassword } = await this._promptGithubPassword();
 
-    github.login({
+    githubLogin({
       username: githubUsername,
       password: githubPassword,
     });
   }
-};
+}

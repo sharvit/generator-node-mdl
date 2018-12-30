@@ -1,7 +1,12 @@
-const Generator = require('yeoman-generator');
-const Prompter = require('./prompter');
+import YeomanGenerator from 'yeoman-generator';
 
-module.exports = class extends Generator {
+import './generators/project';
+import './generators/github';
+import './generators/travis';
+
+import Prompter from './prompter';
+
+export default class NodeMdlGenerator extends YeomanGenerator {
   constructor(...args) {
     super(...args);
 
@@ -20,4 +25,4 @@ module.exports = class extends Generator {
       this.composeWith(require.resolve('./generators/travis'), this.props);
     }
   }
-};
+}
