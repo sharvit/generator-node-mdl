@@ -8,3 +8,5 @@ export const createRepository = jest.fn(async ({ name, description }) => ({
     html_url: 'some-html_url',
   },
 }));
+
+export const createGithubToken = jest.fn(async () => 'some-token');

@@ -12,7 +12,26 @@ export default class extends BaseGenerator {
   async install() {
     if (process.env.NODE_ENV === 'test') return;
 
-    const { repository, npmDeploy, npmToken } = this.props;
+    this.log('\nInstalling TravisCI...\n');
+
+    const { npmDeploy, semanticRelease } = this.options;
+
+    this._installTravis();
+
+    if (npmDeploy) {
+      this._installTravisNpmToken();
+
+      if (semanticRelease) {
+        this._installTravisGithubToken();
+      }
+    }
+  }
+
+  _installTravis() {
+    const { repository } = this.options;
+
+    this.log('repository');
+    this.log(repository);
 
     this.spawnCommandSync('gem', [
       'install',
@@ -23,16 +42,31 @@ export default class extends BaseGenerator {
     ]);
     this.spawnCommandSync('travis', ['login', '--auto']);
     this.spawnCommandSync('travis', ['enable', '-r', repository]);
+  }
 
-    if (npmDeploy) {
-      this.spawnCommandSync('travis', [
-        'env',
-        'set',
-        'NPM_TOKEN',
-        npmToken,
-        '-r',
-        repository,
-      ]);
-    }
+  _installTravisNpmToken() {
+    const { repository, npmToken } = this.options;
+
+    this.spawnCommandSync('travis', [
+      'env',
+      'set',
+      'NPM_TOKEN',
+      npmToken,
+      '-r',
+      repository,
+    ]);
+  }
+
+  _installTravisGithubToken() {
+    const { repository, githubToken } = this.options;
+
+    this.spawnCommandSync('travis', [
+      'env',
+      'set',
+      'GH_TOKEN',
+      githubToken,
+      '-r',
+      repository,
+    ]);
   }
 }

@@ -21,17 +21,22 @@ export default class extends BaseGenerator {
     }
   }
 
-  async end() {
+  async install() {
     if (this.options.createGithubRepository) {
-      const {
-        data: { html_url: url },
-      } = await createRepository({
-        name: this.options.projectName,
-        description: this.options.description,
-      });
-
-      this.log('\n\n');
-      this.log(`Repository created: ${url}`);
+      await this._createGithubRepository();
     }
+  }
+
+  async _createGithubRepository() {
+    this.log('Creating github repository...');
+    const {
+      data: { html_url: url },
+    } = await createRepository({
+      name: this.options.projectName,
+      description: this.options.description,
+    });
+
+    this.log('\n\n');
+    this.log(`Repository created: ${url}`);
   }
 }

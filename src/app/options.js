@@ -33,14 +33,27 @@ const options = {
     type: Boolean,
     desc: 'Let me create a new github repository for you?',
   },
-  coveralls: { type: Boolean, desc: 'Connect TravisCI to Coveralls?' },
+  coveralls: {
+    type: Boolean,
+    desc: 'Connect TravisCI to Coveralls?',
+    help: () => '\nLearn how to use Coveralls: https://coveralls.io',
+  },
   travisCI: {
     type: Boolean,
     desc: 'Give your project super prowers using Travis CI?',
+    help: () =>
+      '\nLearn how to use Travis CI: https://docs.travis-ci.com/user/tutorial/#to-get-started-with-travis-ci',
   },
   npmDeploy: {
     type: Boolean,
     desc: 'Automatically deploy to npm using TravisCI?',
+    help: () => '\nNeed to have an npm account: https://www.npmjs.com/',
+  },
+  semanticRelease: {
+    type: Boolean,
+    desc: 'Use semantic-release?',
+    help: () =>
+      '\nLearn more about semantic-release: https://semantic-release.gitbook.io/semantic-release/',
   },
   npmToken: {
     type: String,

@@ -38,6 +38,16 @@ yarn lint
 yarn lint --fix
 ```
 
+<% if (semanticRelease) { %>
+Run linter to validate your commit message:
+
+```sh
+yarn lint:commit
+```
+<% } %>
+
+## Committing and Pushing changes
+
 ## Committing and Pushing changes
 
 Create a branch and start hacking:
@@ -48,13 +58,20 @@ git checkout -b my-branch
 
 Commit and push your changes:
 
+<% if (semanticRelease) { %>`generator-node-mdl` uses [commitizen](https://github.com/commitizen/cz-cli) to create commit messages so [semantic-release](https://github.com/semantic-release/semantic-release) can automatically create releases.<% } %>
+
 ```sh
-git add my/changed/files
+git add .
+<% if (semanticRelease) { %>
+yarn commit
+# answer the questions
+<% } else { %>
 git commit
+<% } %>
 git push origin my-branch
 ```
 
-Open this project on [GitHub](https://github.com/<%= githubUsername %>/<%= projectName %>), then click “Compare & pull request”.
+Open this project on [GitHub](https://github.com/sharvit/generator-node-mdl), then click “Compare & pull request”.
 
 ## Help needed
 

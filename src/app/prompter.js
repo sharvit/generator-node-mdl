@@ -1,7 +1,8 @@
 import camelCase from 'lodash.camelcase';
 import kebabCase from 'lodash.kebabcase';
+import chalk from 'chalk';
 
-import { login as githubLogin } from './lib/github';
+import { login as githubLogin, createGithubToken } from './lib/github';
 import { login as npmLogin } from './lib/npm';
 
 import options from './options';
@@ -11,6 +12,9 @@ export default class Prompter {
     this.generator = generator;
   }
 
+  /**
+   * Main prompter method
+   */
   async prompt() {
     this.props = {};
 
@@ -18,9 +22,14 @@ export default class Prompter {
     await this._promptGithub();
     await this._promptTravis();
     await this._promptNpm();
+    await this._promptPasswords();
 
     return this.props;
   }
+
+  /*
+    Sub prompters
+   */
 
   async _promptGeneral() {
     const answers = await this.generator.prompt([
@@ -82,10 +91,6 @@ export default class Prompter {
     Object.assign(this.props, answers, {
       repository: `${answers.githubUsername}/${this.props.projectName}`,
     });
-
-    if (answers.createGithubRepository) {
-      await this._loginToGithub();
-    }
   }
 
   async _promptTravis() {
@@ -95,12 +100,7 @@ export default class Prompter {
         message: options.travisCI.desc,
         type: 'confirm',
         default: true,
-        when: () => {
-          this.generator.log(
-            '\nLearn how to use Travis CI: https://docs.travis-ci.com/user/tutorial/#to-get-started-with-travis-ci'
-          );
-          return true;
-        },
+        when: this._logHelpWhenPrompt(options.travisCI.help),
       },
       {
         name: 'coveralls',
@@ -109,9 +109,7 @@ export default class Prompter {
         default: true,
         when: ({ travisCI }) => {
           if (travisCI) {
-            this.generator.log(
-              '\nLearn how to use Coveralls: https://coveralls.io'
-            );
+            this.generator.log(options.coveralls.help());
             return true;
           }
 
@@ -132,9 +130,21 @@ export default class Prompter {
         default: true,
         when: () => {
           if (this.props.travisCI) {
-            this.generator.log(
-              '\nNeed to have an npm account: https://www.npmjs.com/'
-            );
+            this.generator.log(options.npmDeploy.help());
+            return true;
+          }
+
+          return false;
+        },
+      },
+      {
+        name: 'semanticRelease',
+        message: options.semanticRelease.desc,
+        type: 'confirm',
+        default: true,
+        when: ({ npmDeploy }) => {
+          if (npmDeploy) {
+            this.generator.log(options.semanticRelease.help());
             return true;
           }
 
@@ -145,10 +155,63 @@ export default class Prompter {
 
     Object.assign(this.props, {
       npmDeploy: answers.npmDeploy,
+      semanticRelease: answers.semanticRelease,
+    });
+  }
+
+  async _promptPasswords() {
+    const { createGithubRepository, semanticRelease, npmDeploy } = this.props;
+
+    if (createGithubRepository || semanticRelease) {
+      this._logGithubPasswordRequired();
+      this._logPasswordSafety();
+      await this._loginToGithub();
+    }
+
+    if (npmDeploy) {
+      this._logNpmPasswordRequired();
+      this._logPasswordSafety();
+      await this._loginToNpm();
+    }
+  }
+
+  /*
+    Login prompters
+   */
+
+  async _loginToNpm() {
+    const { npmUsername, npmPassword } = await this._promptNpmLogin();
+
+    // generate npm-token
+    const { token } = await npmLogin({
+      username: npmUsername,
+      password: npmPassword,
     });
 
-    if (this.props.npmDeploy) {
-      await this._loginToNpm();
+    Object.assign(this.props, {
+      npmToken: token,
+    });
+  }
+
+  async _loginToGithub() {
+    const {
+      githubUsername: username,
+      semanticRelease,
+      repository,
+    } = this.props;
+    const { githubPassword: password } = await this._promptGithubPassword();
+
+    githubLogin({
+      username,
+      password,
+    });
+
+    if (semanticRelease) {
+      this.props.githubToken = await this._createGithubToken({
+        username,
+        password,
+        repository,
+      });
     }
   }
 
@@ -179,27 +242,62 @@ export default class Prompter {
     ]);
   }
 
-  async _loginToNpm() {
-    const { npmUsername, npmPassword } = await this._promptNpmLogin();
+  /*
+    Loggers
+   */
 
-    // generate npm-token
-    const { token } = await npmLogin({
-      username: npmUsername,
-      password: npmPassword,
-    });
-
-    Object.assign(this.props, {
-      npmToken: token,
-    });
+  _logHelpWhenPrompt(help) {
+    return () => {
+      this.generator.log(help());
+      return true;
+    };
   }
 
-  async _loginToGithub() {
-    const { githubUsername } = this.props;
-    const { githubPassword } = await this._promptGithubPassword();
+  _logGithubPasswordRequired() {
+    const { createGithubRepository } = this.props;
 
-    githubLogin({
-      username: githubUsername,
-      password: githubPassword,
+    if (createGithubRepository) {
+      this.generator.log(
+        '\nYour github password is required so I can create a github repository for you.'
+      );
+    } else {
+      this.generator.log(
+        '\nYour github password is required so I can install semantic-release for you.'
+      );
+    }
+  }
+
+  _logNpmPasswordRequired() {
+    this.generator.log(
+      '\nYour npm username and password is required so I can install an automated npm-deploy for you.'
+    );
+  }
+
+  _logPasswordSafety() {
+    this.generator.log(
+      `${chalk.bold('I will never store your passwords')} 🙌 🙌 🙌 \n`
+    );
+  }
+
+  /*
+    Helpers
+   */
+
+  _createGithubToken({ username, password, repository }) {
+    const scopes = [
+      'repo',
+      'read:org',
+      'user:email',
+      'repo_deployment',
+      'repo:status',
+      'write:repo_hook',
+    ];
+
+    return createGithubToken({
+      username,
+      password,
+      repository,
+      scopes,
     });
   }
 }

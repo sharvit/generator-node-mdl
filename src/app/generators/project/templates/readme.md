@@ -2,7 +2,8 @@
 
 > <%= description %>
 
-[![Package Version](https://img.shields.io/npm/v/<%= projectName %>.svg?style=flat-square)](https://www.npmjs.com/package/<%= projectName %>)
+[![Package Version](https://img.shields.io/npm/v/<%= projectName %>.svg?style=flat-square)](https://www.npmjs.com/package/<%= projectName %>)<% if (semanticRelease) { %>
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)<% } %>
 [![Downloads Status](https://img.shields.io/npm/dm/<%= projectName %>.svg?style=flat-square)](https://npm-stat.com/charts.html?package=<%= projectName %>&from=2016-04-01)
 <% if (travisCI) { %>[![Build Status: Linux](https://img.shields.io/travis/<%= githubUsername %>/<%= projectName %>/master.svg?style=flat-square)](https://travis-ci.org/<%= githubUsername %>/<%= projectName %>)<% } %>
 <% if (coveralls) { %>[![Coverage Status](https://coveralls.io/repos/github/<%= githubUsername %>/<%= projectName %>/badge.svg?branch=master)](https://coveralls.io/github/<%= githubUsername %>/<%= projectName %>?branch=master)<% } %>

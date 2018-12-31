@@ -176,6 +176,7 @@ describe('prompts', () => {
     return runAppGenerator()
       .withPrompts({
         createGithubRepository: false,
+        npmDeploy: false,
         githubUsername: 'some-username',
         githubPassword: 'some-password',
         projectName: 'some-project-name',
@@ -273,6 +274,7 @@ describe('prompts', () => {
         .withPrompts({
           travisCI: true,
           npmDeploy: true,
+          semanticRelease: false,
           npmUsername: 'some-username',
           npmPassword: 'some-password',
         })
@@ -280,6 +282,28 @@ describe('prompts', () => {
           assert.fileContent('.travis.yml', 'deploy:');
           assert.fileContent('.travis.yml', 'provider: npm');
           assert.fileContent('.travis.yml', 'api_key: $NPM_TOKEN');
+
+          assert.noFileContent('.travis.yml', 'provider: script');
+          assert.noFileContent('.travis.yml', 'yarn semantic-release');
+
+          assert.noFileContent(
+            'package.json',
+            '"version": "0.0.0-semantic-release"'
+          );
+          assert.noFileContent(
+            'package.json',
+            '"semantic-release": "semantic-release"'
+          );
+          assert.noFileContent('package.json', '@commitlint/cli');
+          assert.noFileContent(
+            'package.json',
+            '@commitlint/config-conventional'
+          );
+          assert.noFileContent('package.json', '@commitlint/travis-cli');
+          assert.noFileContent(
+            'package.json',
+            '"path": "./node_modules/cz-conventional-changelog"'
+          );
         });
     });
 
@@ -291,6 +315,40 @@ describe('prompts', () => {
         })
         .then(() => {
           assert.noFileContent('.travis.yml', 'deploy');
+        });
+    });
+
+    test('npmDeploy with semanticRelease', () => {
+      return runAppGenerator()
+        .withPrompts({
+          travisCI: true,
+          npmDeploy: true,
+          semanticRelease: true,
+          npmUsername: 'some-username',
+          npmPassword: 'some-password',
+          githubUsername: 'some-username',
+          githubPassword: 'some-password',
+        })
+        .then(() => {
+          assert.fileContent('.travis.yml', 'deploy:');
+          assert.fileContent('.travis.yml', 'provider: script');
+          assert.fileContent('.travis.yml', 'yarn semantic-release');
+
+          assert.fileContent(
+            'package.json',
+            '"version": "0.0.0-semantic-release"'
+          );
+          assert.fileContent(
+            'package.json',
+            '"semantic-release": "semantic-release"'
+          );
+          assert.fileContent('package.json', '@commitlint/cli');
+          assert.fileContent('package.json', '@commitlint/config-conventional');
+          assert.fileContent('package.json', '@commitlint/travis-cli');
+          assert.fileContent(
+            'package.json',
+            '"path": "./node_modules/cz-conventional-changelog"'
+          );
         });
     });
   });

@@ -2,14 +2,26 @@ language: node_js
 notifications:
   email: false
 node_js:
-  - '10'
-  - '8'
-  - '6'
-script:
+  - 10
+  - 8
+  - 6
+script:<% if (semanticRelease) { %>
+  - yarn lint:commit-travis<% } %>
   - yarn lint
   - yarn test
   - yarn build
-<% if (coveralls) { %>after_success: yarn coveralls<% } %><% if (npmDeploy) { %>
+<% if (coveralls) { %>after_success: yarn coveralls<% } if (npmDeploy && semanticRelease) { %>
+jobs:
+  include:
+    - stage: release
+      if: branch = master
+      node_js: 10
+      deploy:
+        provider: script
+        skip_cleanup: true
+        script:
+          - yarn semantic-release
+<% } else if (npmDeploy) { %>
 deploy:
   skip_cleanup: true
   provider: npm
