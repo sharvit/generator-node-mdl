@@ -37,7 +37,7 @@
     "find-up": "^3.0.0",
     "lodash.camelcase": "^4.3.0",
     "lodash.kebabcase": "^4.1.1",
-    "make-dir": "^1.1.0",
+    "make-dir": "^2.0.0",
     "npm-profile": "^4.0.1",
     "request-promise": "^4.2.2",
     "uuid": "^3.3.2",
