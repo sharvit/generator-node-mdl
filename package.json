@@ -34,11 +34,13 @@
     "@octokit/rest": "^16.3.0",
     "chalk": "^2.3.0",
     "command-exists": "^1.2.4",
+    "commitizen": "^3.0.7",
     "find-up": "^3.0.0",
     "lodash.camelcase": "^4.3.0",
     "lodash.kebabcase": "^4.1.1",
     "make-dir": "^2.0.0",
     "npm-profile": "^4.0.1",
+    "request": "^2.88.0",
     "request-promise": "^4.2.2",
     "uuid": "^3.3.2",
     "yeoman-generator": "^3.1.1"
