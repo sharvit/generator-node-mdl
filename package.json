@@ -55,7 +55,7 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.1.0",
-    "babel-plugin-add-module-exports": "^1.0.0",
+    "babel-plugin-add-module-exports": "^1.0.2",
     "commitlint-config-cz": "^0.11.0",
     "coveralls": "^3.0.2",
     "cz-conventional-changelog": "2.1.0",
