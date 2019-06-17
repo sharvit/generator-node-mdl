@@ -1120,10 +1120,10 @@ anymatch@^2.0.0:
     micromatch "^3.1.4"
     normalize-path "^2.1.1"
 
-app-root-path@~2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/app-root-path/-/app-root-path-2.1.0.tgz#98bf6599327ecea199309866e8140368fd2e646a"
-  integrity sha1-mL9lmTJ+zqGZMJhm6BQDaP0uZGo=
+app-root-path@~2.2.0:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/app-root-path/-/app-root-path-2.2.1.tgz#d0df4a682ee408273583d43f6f79e9892624bc9a"
+  integrity sha512-91IFKeKk7FjfmezPKkwtaRvSpnUc4gDwPAjA1YZ9Gn0q0PPeW+vbeUsZuyDwjI7+QTHhcLen2v25fi/AmhvbJA==
 
 append-transform@^1.0.0:
   version "1.0.0"
@@ -1987,12 +1987,12 @@ commitizen@^3.0.7:
     strip-bom "3.0.0"
     strip-json-comments "2.0.1"
 
-commitlint-config-cz@^0.11.0:
-  version "0.11.1"
-  resolved "https://registry.yarnpkg.com/commitlint-config-cz/-/commitlint-config-cz-0.11.1.tgz#13bfe7004afb4ba4e15182a7ed5f888a16e68ee2"
-  integrity sha512-7qDryDxRbWdDn0J7UskBqgwlTxHX0ED9v3AO2rlbBwJ3rQI9dTz8mBYPxrgsVA515VB/ZKVobiiNGyfqfpLfDQ==
+commitlint-config-cz@^0.12.0:
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/commitlint-config-cz/-/commitlint-config-cz-0.12.0.tgz#ab338b2976ced3eccaaa3e3925097875e2260ab5"
+  integrity sha512-L66R5B5MNslnaNiw1U+5tQg2/1QU/SgcYJply1ztiy9AiWCNTJdv7t+fAybOPE6xEmQ3SxTsZowNddw4YXYb/w==
   dependencies:
-    app-root-path "~2.1.0"
+    app-root-path "~2.2.0"
     lodash.clonedeep "~4.5.0"
 
 commondir@^1.0.1:
