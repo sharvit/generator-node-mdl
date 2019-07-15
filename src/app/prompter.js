@@ -2,7 +2,7 @@ import camelCase from 'lodash.camelcase';
 import kebabCase from 'lodash.kebabcase';
 import chalk from 'chalk';
 
-import { login as githubLogin, createGithubToken } from './lib/github';
+import Github from './lib/github';
 import { login as npmLogin } from './lib/npm';
 
 import options from './options';
@@ -201,17 +201,10 @@ export default class Prompter {
     } = this.props;
     const { githubPassword: password } = await this._promptGithubPassword();
 
-    githubLogin({
-      username,
-      password,
-    });
+    this.props.github = new Github(username, password);
 
     if (semanticRelease) {
-      this.props.githubToken = await this._createGithubToken({
-        username,
-        password,
-        repository,
-      });
+      this.props.githubToken = await this.props.github.createToken(repository);
     }
   }
 
@@ -277,27 +270,5 @@ export default class Prompter {
     this.generator.log(
       `${chalk.bold('I will never store your passwords')} 🙌 🙌 🙌 \n`
     );
-  }
-
-  /*
-    Helpers
-   */
-
-  _createGithubToken({ username, password, repository }) {
-    const scopes = [
-      'repo',
-      'read:org',
-      'user:email',
-      'repo_deployment',
-      'repo:status',
-      'write:repo_hook',
-    ];
-
-    return createGithubToken({
-      username,
-      password,
-      repository,
-      scopes,
-    });
   }
 }

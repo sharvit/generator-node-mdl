@@ -1,7 +1,5 @@
 import BaseGenerator from '../base-generator';
 
-import { createRepository } from '../../lib/github';
-
 export default class extends BaseGenerator {
   writing() {
     if (this.options.githubTemplates) {
@@ -31,7 +29,7 @@ export default class extends BaseGenerator {
     this.log('Creating github repository...');
     const {
       data: { html_url: url },
-    } = await createRepository({
+    } = await this.options.github.createRepository({
       name: this.options.projectName,
       description: this.options.description,
     });

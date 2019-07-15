@@ -1,10 +1,9 @@
+import path from 'path';
+import assert from 'yeoman-assert';
+import helpers from 'yeoman-test';
+
 import Generator from './index';
-
-const path = require('path');
-const assert = require('yeoman-assert');
-const helpers = require('yeoman-test');
-
-const github = require('./lib/github');
+import Github from './lib/github';
 
 jest.mock('./lib/github');
 jest.mock('./lib/npm');
@@ -167,8 +166,11 @@ describe('prompts', () => {
         githubPassword: password,
       })
       .then(() => {
-        expect(github.login).toBeCalledWith({ username, password });
-        expect(github.createRepository).toBeCalledWith({ name, description });
+        expect(Github).toBeCalledWith(username, password);
+        expect(Github.prototype.createRepository).toBeCalledWith({
+          name,
+          description,
+        });
       });
   });
 
@@ -182,8 +184,8 @@ describe('prompts', () => {
         projectName: 'some-project-name',
       })
       .then(() => {
-        expect(github.login).not.toBeCalled();
-        expect(github.createRepository).not.toBeCalled();
+        expect(Github).not.toBeCalled();
+        expect(Github.prototype.createRepository).not.toBeCalled();
       });
   });
 
