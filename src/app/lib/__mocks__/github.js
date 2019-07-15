@@ -1,12 +1,13 @@
-export const login = jest.fn(({ username, password }) => true);
+const Github = jest.fn();
 
-export const createRepository = jest.fn(async ({ name, description }) => ({
-  data: {
-    name,
-    description,
-    ssh_url: 'some-ssh_url',
-    html_url: 'some-html_url',
-  },
-}));
+Github.prototype.createRepository = jest.fn(({ name, description }) =>
+  Promise.resolve({
+    data: { html_url: 'some-html-url' },
+  })
+);
 
-export const createGithubToken = jest.fn(async () => 'some-token');
+Github.prototype.createToken = jest.fn(repository =>
+  Promise.resolve('some-token')
+);
+
+export default Github;
