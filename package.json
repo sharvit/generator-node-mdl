@@ -11,7 +11,7 @@
     "url": "https://sharvit.github.io"
   },
   "engines": {
-    "node": ">=8"
+    "node": ">=10"
   },
   "scripts": {
     "build": "yarn build:clean && yarn build:babel && yarn build:templates",
@@ -34,7 +34,7 @@
     "@octokit/rest": "^16.28.2",
     "chalk": "^2.3.0",
     "command-exists": "^1.2.4",
-    "commitizen": "^3.0.7",
+    "commitizen": "^4.0.3",
     "find-up": "^4.0.0",
     "lodash.camelcase": "^4.3.0",
     "lodash.kebabcase": "^4.1.1",
