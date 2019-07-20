@@ -7,11 +7,12 @@ jobs:
         - yarn lint:commit-travis
         - yarn lint
     - stage: test
-      node_js: 8
-      script: yarn test
-    - node_js: 10
-      script: yarn test
-    - node_js: 12
+      node_js: 10
+      script:
+        - yarn test
+        - yarn build
+    - stage: test
+      node_js: 12
       script:
         - yarn test
         - yarn build
@@ -19,9 +20,8 @@ jobs:
     - stage: release
       if: branch = master AND type = push
       node_js: 12
+      script: yarn build
       deploy:
         provider: script
         skip_cleanup: true
-        script:
-          - yarn build
-          - yarn semantic-release
+        script: yarn semantic-release
