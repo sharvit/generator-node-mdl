@@ -3,7 +3,14 @@ import request from 'request-promise';
 import uuid from 'uuid/v4';
 
 export default class Github {
-  constructor(username, password) {
+  /**
+   * Github
+   * @param {string}   username github username
+   * @param {string}   password github password
+   * @param {function} on2fa    async function that should return
+   *                            two-factor authentication pin (string)
+   */
+  constructor(username, password, on2fa) {
     this.username = username;
     this.password = password;
 
@@ -11,6 +18,7 @@ export default class Github {
       auth: {
         username,
         password,
+        on2fa,
       },
     });
   }

@@ -201,7 +201,7 @@ export default class Prompter {
     } = this.props;
     const { githubPassword: password } = await this._promptGithubPassword();
 
-    this.props.github = new Github(username, password);
+    this.props.github = new Github(username, password, () => this.github2fa());
 
     if (semanticRelease) {
       this.props.githubToken = await this.props.github.createToken(repository);
@@ -233,6 +233,21 @@ export default class Prompter {
         type: 'password',
       },
     ]);
+  }
+
+  _promptGithub2fa() {
+    return this.generator.prompt([
+      {
+        name: 'github2fa',
+        message: `Enter your github two-factor authentication Code:`,
+        type: 'password',
+      },
+    ]);
+  }
+
+  async github2fa() {
+    const { github2fa } = await this._promptGithub2fa();
+    return github2fa;
   }
 
   /*

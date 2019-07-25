@@ -166,7 +166,7 @@ describe('prompts', () => {
         githubPassword: password,
       })
       .then(() => {
-        expect(Github).toBeCalledWith(username, password);
+        expect(Github).toBeCalledWith(username, password, expect.any(Function));
         expect(Github.prototype.createRepository).toBeCalledWith({
           name,
           description,
