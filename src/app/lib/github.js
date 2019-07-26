@@ -1,5 +1,4 @@
 import Octokit from '@octokit/rest';
-import request from 'request-promise';
 import uuid from 'uuid/v4';
 
 export default class Github {
@@ -31,29 +30,20 @@ export default class Github {
   }
 
   async createToken(repository) {
-    const { username, password } = this;
-
-    const { token } = await request({
-      method: 'POST',
-      url: 'https://api.github.com/authorizations',
-      json: true,
-      auth: { username, password },
-      headers: {
-        'User-Agent': 'semantic-release',
-      },
-      body: {
-        scopes: [
-          'repo',
-          'read:org',
-          'user:email',
-          'repo_deployment',
-          'repo:status',
-          'write:repo_hook',
-        ],
-        note: `semantic-release-${repository}-${uuid().slice(-4)}`,
-      },
+    const {
+      data,
+    } = await this.githubClient.oauthAuthorizations.createAuthorization({
+      note: `semantic-release-${repository}-${uuid().slice(-4)}`,
+      scopes: [
+        'repo',
+        'read:org',
+        'user:email',
+        'repo_deployment',
+        'repo:status',
+        'write:repo_hook',
+      ],
     });
 
-    return token;
+    return data.token;
   }
 }

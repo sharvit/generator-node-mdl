@@ -31,7 +31,7 @@
     "app"
   ],
   "dependencies": {
-    "@octokit/rest": "^16.28.2",
+    "@octokit/rest": "^16.28.6",
     "chalk": "^2.3.0",
     "command-exists": "^1.2.4",
     "commitizen": "^4.0.3",
@@ -40,8 +40,6 @@
     "lodash.kebabcase": "^4.1.1",
     "make-dir": "^3.0.0",
     "npm-profile": "^4.0.1",
-    "request": "^2.88.0",
-    "request-promise": "^4.2.2",
     "uuid": "^3.3.2",
     "yeoman-generator": "^4.0.1"
   },
