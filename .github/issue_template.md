@@ -34,7 +34,10 @@
 
 <!--- reproduce this bug. Include code or screenshot if relevant -->
 
-1. 2. 3. 4.
+1.
+2.
+3.
+4.
 
 ## Environment
 

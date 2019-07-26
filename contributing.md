@@ -44,15 +44,17 @@ Run linter to validate your commit message:
 yarn lint:commit
 ```
 
-## Committing and Pushing changes
+## Creating Pull Requests
 
-Create a branch and start hacking:
+1. Create a branch:
 
 ```sh
 git checkout -b my-branch
 ```
 
-Commit and push your changes:
+2. Happy Hacking 🎉: Start hacking and creating code changes.
+
+3. Commit your changes:
 
 `generator-node-mdl` uses [commitizen](https://github.com/commitizen/cz-cli) to create commit messages so [semantic-release](https://github.com/semantic-release/semantic-release) can automatically create releases.
 
@@ -62,13 +64,13 @@ yarn commit
 # answer the questions
 ```
 
-Push your changes:
+4. Push your changes:
 
 ```sh
 git push origin my-branch
 ```
 
-Open this project on [GitHub](https://github.com/sharvit/generator-node-mdl), then click “Compare & pull request”.
+5. Open [this project on GitHub](https://github.com/sharvit/generator-node-mdl), then click “Compare & pull request”.
 
 ## Help needed
 
