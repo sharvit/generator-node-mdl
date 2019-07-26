@@ -247,6 +247,7 @@ export default class Prompter {
 
   async github2fa() {
     const { github2fa } = await this._promptGithub2fa();
+
     return github2fa;
   }
 
