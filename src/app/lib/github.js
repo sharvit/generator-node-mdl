@@ -1,13 +1,12 @@
 import Octokit from '@octokit/rest';
-import uuid from 'uuid/v4';
 
 export default class Github {
   /**
    * Github
-   * @param {string}   username github username
-   * @param {string}   password github password
-   * @param {function} on2fa    async function that should return
-   *                            two-factor authentication pin (string)
+   * @param {string}        username github username
+   * @param {string}        password github password
+   * @param {function}      on2fa    async function that should return
+   *                                 two-factor authentication pin (string)
    */
   constructor(username, password, on2fa) {
     this.username = username;
@@ -29,19 +28,12 @@ export default class Github {
     });
   }
 
-  async createToken(repository) {
+  async createToken(note, scopes) {
     const {
       data,
     } = await this.githubClient.oauthAuthorizations.createAuthorization({
-      note: `semantic-release-${repository}-${uuid().slice(-4)}`,
-      scopes: [
-        'repo',
-        'read:org',
-        'user:email',
-        'repo_deployment',
-        'repo:status',
-        'write:repo_hook',
-      ],
+      note,
+      scopes,
     });
 
     return data.token;
