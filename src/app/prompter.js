@@ -1,6 +1,7 @@
 import camelCase from 'lodash.camelcase';
 import kebabCase from 'lodash.kebabcase';
 import chalk from 'chalk';
+import uuid from 'uuid/v4';
 
 import Github from './lib/github';
 import { login as npmLogin } from './lib/npm';
@@ -201,11 +202,20 @@ export default class Prompter {
     } = this.props;
     const { githubPassword: password } = await this._promptGithubPassword();
 
-    this.props.github = new Github(username, password, () => this.github2fa());
+    const note = `${repository}/travis-${uuid().slice(-4)}`;
+    const scopes = semanticRelease
+      ? [
+          'repo',
+          'read:org',
+          'user:email',
+          'repo_deployment',
+          'repo:status',
+          'write:repo_hook',
+        ]
+      : [];
 
-    if (semanticRelease) {
-      this.props.githubToken = await this.props.github.createToken(repository);
-    }
+    this.props.github = new Github(username, password, () => this.github2fa());
+    this.props.githubToken = await this.props.github.createToken(note, scopes);
   }
 
   _promptNpmLogin() {
