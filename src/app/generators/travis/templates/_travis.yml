@@ -1,34 +1,38 @@
 language: node_js
-notifications:
-  email: false
-node_js:
-  - 10
-  - 8
-  - 6
-script:<% if (semanticRelease) { %>
-  - yarn lint:commit-travis<% } %>
-  - yarn lint
-  - yarn test
-  - yarn build
-<% if (coveralls) { %>after_success: yarn coveralls<% } if (npmDeploy && semanticRelease) { %>
 jobs:
   include:
+    - stage: test
+      node_js: 8
+      script:
+        - yarn test
+        - yarn build
+    - node_js: 10
+      script:
+        - yarn test
+        - yarn build
+    - node_js: 12
+      script:<% if (semanticRelease) { %>
+        - yarn lint:commit-travis<% } %>
+        - yarn lint
+        - yarn test
+        - yarn build<% if (coveralls) { %>
+      after_success: yarn coveralls<% } if (npmDeploy) { %>
     - stage: release
-      if: branch = master
-      node_js: 10
+      if: branch = master AND type = push
+      node_js: 12
+      script: yarn build<% if (semanticRelease) { %>
       deploy:
         provider: script
         skip_cleanup: true
-        script:
-          - yarn semantic-release
-<% } else if (npmDeploy) { %>
-deploy:
-  skip_cleanup: true
-  provider: npm
-  email: <%= email %>
-  api_key: $NPM_TOKEN
-  on:
-    node: 10
-    tags: true
-    repo: <%= githubUsername %>/<%= projectName %>
-<% } %>
+        script: yarn semantic-release<% } else { %>
+      deploy:
+        skip_cleanup: true
+        provider: npm
+        email: <%= email %>
+        api_key: $NPM_TOKEN
+        on:
+          node: 10
+          tags: true
+          repo: <%= githubUsername %>/<%= projectName %>
+      <% } %>
+    <% } %>
