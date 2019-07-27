@@ -11,7 +11,7 @@
     "url": "<%= website %>"
   },
   "engines": {
-    "node": ">=6"
+    "node": ">=8"
   },
   "scripts": {
     "prebuild": "rimraf dist",
@@ -31,32 +31,32 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "@babel/cli": "^7.2.0",
-    "@babel/core": "^7.2.0",
-    "@babel/preset-env": "^7.2.0",<% if (semanticRelease) { %>
-    "@commitlint/cli": "^7.2.1",
-    "@commitlint/config-conventional": "^7.1.2",
-    "@commitlint/travis-cli": "^7.2.1",<% } %>
-    "babel-core": "^7.0.0-bridge.0",
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.0",
+    "@babel/preset-env": "^7.5.0",<% if (semanticRelease) { %>
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
+    "@commitlint/travis-cli": "^8.1.0",<% } %>
     "babel-eslint": "^10.0.1",
-    "babel-jest": "^23.6.0",<% if (semanticRelease) { %>
-    "commitlint-config-cz": "^0.11.0",<% } %>
+    "babel-jest": "^24.8.0",<% if (semanticRelease) { %>
+    "commitlint-config-cz": "^0.12.0",<% } %>
     "babel-plugin-add-module-exports": "^1.0.0",<% if (coveralls) { %>
-    "coveralls": "^3.0.2",<% } %><% if (semanticRelease) { %>
-    "cz-conventional-changelog": "2.1.0",<% } %>
-    "eslint": "^5.10.0",
-    "eslint-config-prettier": "^3.3.0",
-    "eslint-config-standard": "^12.0.0",
+    "coveralls": "^3.0.2",<% } %>
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-config-standard": "^13.0.1",
     "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
-    "jest": "^23.6.0",
+    "jest": "^24.8.0",
     "prettier": "^1.15.3",
     "rimraf": "^2.6.2"
   },<% if (semanticRelease) { %>
   "optionalDependencies": {
+    <% if (semanticRelease) { %>
+    "cz-conventional-changelog": "^3.0.2",<% } %>
     "semantic-release": "^15.13.1"
   },<% } %>
   "jest": {
