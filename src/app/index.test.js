@@ -25,6 +25,7 @@ test('default files', () => {
     assert.file([
       '.git',
       '.babelrc',
+      '.commitlintrc.json',
       '.editorconfig',
       '.eslintignore',
       '.eslintrc',
@@ -58,6 +59,7 @@ test('default files', () => {
       '_npmignore',
       '_github/issue_template.md',
       '_github/pull_request_template.md',
+      '_commitlintrc.json',
     ]);
   });
 });
@@ -281,6 +283,8 @@ describe('prompts', () => {
           npmPassword: 'some-password',
         })
         .then(() => {
+          assert.noFile(['.commitlintrc.json']);
+
           assert.fileContent('.travis.yml', 'deploy:');
           assert.fileContent('.travis.yml', 'provider: npm');
           assert.fileContent('.travis.yml', 'api_key: $NPM_TOKEN');
@@ -316,6 +320,7 @@ describe('prompts', () => {
           npmDeploy: false,
         })
         .then(() => {
+          assert.noFile(['.commitlintrc.json']);
           assert.noFileContent('.travis.yml', 'deploy');
         });
     });
@@ -332,6 +337,8 @@ describe('prompts', () => {
           githubPassword: 'some-password',
         })
         .then(() => {
+          assert.file(['.commitlintrc.json']);
+
           assert.fileContent('.travis.yml', 'deploy:');
           assert.fileContent('.travis.yml', 'provider: script');
           assert.fileContent('.travis.yml', 'yarn semantic-release');

@@ -35,6 +35,13 @@ export default class extends BaseGenerator {
       { templatePath: 'src', destinationPath: 'src' },
     ];
 
+    if (this.options.semanticRelease) {
+      templatesToCopy.push({
+        templatePath: '_commitlintrc.json',
+        destinationPath: '.commitlintrc.json',
+      });
+    }
+
     templatesToCopy.forEach(({ templatePath, destinationPath }) =>
       this.fs.copyTpl(
         this.templatePath(templatePath),
