@@ -1,3 +1,4 @@
+import chalk from 'chalk';
 import BaseGenerator from '../base-generator';
 
 export default class extends BaseGenerator {
@@ -12,7 +13,7 @@ export default class extends BaseGenerator {
   async install() {
     if (process.env.NODE_ENV === 'test') return;
 
-    this.log('\nInstalling TravisCI...\n');
+    this.log('Installing TravisCI...');
 
     const { npmDeploy, semanticRelease } = this.options;
 
@@ -25,13 +26,22 @@ export default class extends BaseGenerator {
         this._installTravisGithubToken();
       }
     }
+
+    this.log('\n');
+  }
+
+  end() {
+    const { repository } = this.options;
+
+    this.log(
+      `  Visit your TravisCI url: ${chalk.underline.cyan(
+        `https://travis-ci.org/${repository}`
+      )}`
+    );
   }
 
   _installTravis() {
     const { repository } = this.options;
-
-    this.log('repository');
-    this.log(repository);
 
     this.spawnCommandSync('gem', [
       'install',

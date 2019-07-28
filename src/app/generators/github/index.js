@@ -1,3 +1,4 @@
+import chalk from 'chalk';
 import BaseGenerator from '../base-generator';
 
 export default class extends BaseGenerator {
@@ -27,6 +28,7 @@ export default class extends BaseGenerator {
 
   async _createGithubRepository() {
     this.log('Creating github repository...');
+
     const {
       data: { html_url: url },
     } = await this.options.github.createRepository({
@@ -34,7 +36,19 @@ export default class extends BaseGenerator {
       description: this.options.description,
     });
 
-    this.log('\n\n');
-    this.log(`Repository created: ${url}`);
+    this.githubRepositoryUrl = url;
+
+    this.log(this.githubRepositoryUrl);
+    this.log('\n');
+  }
+
+  end() {
+    if (this.options.createGithubRepository) {
+      this.log(
+        `  Check out your new Github repository: ${chalk.underline.cyan(
+          this.githubRepositoryUrl
+        )}`
+      );
+    }
   }
 }
