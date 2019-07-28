@@ -1,10 +1,10 @@
-import BaseGenerator from '../base-generator';
+import path from 'path';
+import chalk from 'chalk';
+import commandExists from 'command-exists';
+import findUp from 'find-up';
+import makeDir from 'make-dir';
 
-const path = require('path');
-const chalk = require('chalk');
-const commandExists = require('command-exists');
-const findUp = require('find-up');
-const makeDir = require('make-dir');
+import BaseGenerator from '../base-generator';
 
 export default class extends BaseGenerator {
   /*
@@ -15,7 +15,7 @@ export default class extends BaseGenerator {
     if (path.basename(this.destinationRoot()) !== this.options.projectName) {
       return makeDir(this.options.projectName).then(path => {
         this.destinationRoot(path);
-        this.log(`\nGenerating a new project in ${chalk.green(path)}\n`);
+        this.log(chalk`\nGenerating a new project in {green ${path}}\n`);
       });
     }
   }
@@ -62,20 +62,14 @@ export default class extends BaseGenerator {
     this._createGit();
 
     this.log('\n\n\n');
-    this.log(`${chalk.bold("Finished, what's next:")}\n`);
+    this.log(chalk`{bold Finished, what's next:}\n`);
 
+    this.log(chalk`  Push your changes to git: {gray git push origin master}`);
     this.log(
-      `  Push your changes to git: ${chalk.gray('git push origin master')}`
+      chalk`  Read your project contributing guide: {underline.cyan https://github.com/${repository}/blob/master/contributing.md}`
     );
     this.log(
-      `  Read your project contributing guide: ${chalk.underline.cyan(
-        `https://github.com/${repository}/blob/master/contributing.md`
-      )}`
-    );
-    this.log(
-      `  Enable greenkeeper for your project by visiting: ${chalk.underline.cyan(
-        'https://account.greenkeeper.io/'
-      )}`
+      chalk`  Enable greenkeeper for your project by visiting: {underline.cyan https://account.greenkeeper.io/}`
     );
   }
 
@@ -124,7 +118,7 @@ export default class extends BaseGenerator {
     ];
 
     for (const { command, args } of commands) {
-      this.log(`  ${chalk.gray(`${command} ${args.join(' ')}`)}`);
+      this.log(chalk`  {gray ${command} ${args.join(' ')}}`);
       this.spawnCommandSync(command, args);
     }
   }

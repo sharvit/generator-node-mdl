@@ -45,9 +45,7 @@ export default class extends BaseGenerator {
   end() {
     if (this.options.createGithubRepository) {
       this.log(
-        `  Check out your new Github repository: ${chalk.underline.cyan(
-          this.githubRepositoryUrl
-        )}`
+        chalk`  Check out your new Github repository: {underline.cyan ${this.githubRepositoryUrl}}`
       );
     }
   }

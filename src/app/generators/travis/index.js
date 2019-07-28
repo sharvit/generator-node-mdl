@@ -34,9 +34,7 @@ export default class extends BaseGenerator {
     const { repository } = this.options;
 
     this.log(
-      `  Visit your TravisCI url: ${chalk.underline.cyan(
-        `https://travis-ci.org/${repository}`
-      )}`
+      chalk`  Visit your TravisCI url: {underline.cyan https://travis-ci.org/${repository}}`
     );
   }
 
