@@ -1,4 +1,4 @@
-const npmProfile = require('npm-profile');
+import npmProfile from 'npm-profile';
 
 export const login = ({ username, password }) =>
   npmProfile.loginCouch(username, password, {
