@@ -1,7 +1,17 @@
 import chalk from 'chalk';
+
+import Commander from '../../lib/commander';
 import BaseGenerator from '../base-generator';
 
 export default class extends BaseGenerator {
+  constructor(...args) {
+    super(...args);
+
+    this.commander = new Commander({
+      spawnSync: this.spawnCommandSync.bind(this),
+    });
+  }
+
   writing() {
     this.fs.copyTpl(
       this.templatePath('_travis.yml'),
@@ -41,40 +51,24 @@ export default class extends BaseGenerator {
   _installTravis() {
     const { repository } = this.options;
 
-    this.spawnCommandSync('gem', [
-      'install',
-      'travis',
-      '--no-ri',
-      '--no-rdoc',
-      '--quiet',
+    this.commander.run([
+      'gem install travis --no-ri --no-rdoc --quiet',
+      'travis login --auto',
+      `travis enable -r ${repository}`,
     ]);
-    this.spawnCommandSync('travis', ['login', '--auto']);
-    this.spawnCommandSync('travis', ['enable', '-r', repository]);
   }
 
   _installTravisNpmToken() {
     const { repository, npmToken } = this.options;
 
-    this.spawnCommandSync('travis', [
-      'env',
-      'set',
-      'NPM_TOKEN',
-      npmToken,
-      '-r',
-      repository,
-    ]);
+    this.commander.run(`travis env set NPM_TOKEN ${npmToken} -r ${repository}`);
   }
 
   _installTravisGithubToken() {
     const { repository, githubToken } = this.options;
 
-    this.spawnCommandSync('travis', [
-      'env',
-      'set',
-      'GH_TOKEN',
-      githubToken,
-      '-r',
-      repository,
-    ]);
+    this.commander.run(
+      `travis env set GH_TOKEN ${githubToken} -r ${repository}`
+    );
   }
 }
