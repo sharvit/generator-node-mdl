@@ -39,6 +39,7 @@ npm install --global yo generator-node-mdl
 
 ```sh
 yo node-mdl
+# answer questions
 ```
 
 With the most basic options, youʼll get a project structured like this:
@@ -72,6 +73,37 @@ $ tree
 ```
 
 Less boilerplate 🎉
+
+## Options
+
+There are 2 ways to supply your data to this generator.
+The obvious way is runnin `yo node-mdl` and answer all questions. You can bypass questions by passing options as arguments.
+
+Run `yo node-mdl --help` to see the different options.
+
+## About passwords and tokens
+
+This project contain some features that will make your life easier when setting up a new open-source project. Based on your choices, you may be asked to supply some of your accounts usernames and passwords (github, npm, etc...) so this project will automatically produce tokens for those accounts and save them to your TravisCI as secured enviorment variables if needed. You can bypass those questions by manually creating tokens and supply them using options as arguments.
+
+1. `--npmToken my-token` is needed when using with `--npmDeploy`.
+
+   Your token will end up in `TravisCI` as a secured enviorment variables called `NPM_TOKEN`.
+
+   [creating and viewing npm authentication tokens](https://docs.npmjs.com/creating-and-viewing-authentication-tokens)
+
+2. `--githubToken my-token` is needed when using with `---createGithubRepository` or with `--semanticRelease`.
+
+   [creating and viewing github authentication tokens](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line)
+
+   - When using with `---createGithubRepository` your token doesn't need to contain any scope.
+
+   - When using with `---semanticRelease` your token need to contain the following scopes:
+     - repo
+     - read:org
+     - user:email
+     - repo_deployment
+     - repo:status
+     - write:repo_hook
 
 ## FAQ
 

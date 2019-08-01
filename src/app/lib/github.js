@@ -8,12 +8,9 @@ export default class Github {
    * @param {function}      on2fa    async function that should return
    *                                 two-factor authentication pin (string)
    */
-  constructor(username, password, on2fa) {
-    this.username = username;
-    this.password = password;
-
+  constructor({ token, username, password, on2fa }) {
     this.githubClient = new Octokit({
-      auth: {
+      auth: token || {
         username,
         password,
         on2fa,
