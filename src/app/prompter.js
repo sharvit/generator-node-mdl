@@ -7,17 +7,20 @@ import Github from './lib/github';
 import { login as npmLogin } from './lib/npm';
 
 import options from './options';
+import prompts from './prompts';
 
 export default class Prompter {
   constructor(generator) {
     this.generator = generator;
+
+    this._setGeneratorOptions();
   }
 
   /**
    * Main prompter method
    */
   async prompt() {
-    this.props = {};
+    this._initProps();
 
     await this._promptGeneral();
     await this._promptGithub();
@@ -34,142 +37,85 @@ export default class Prompter {
 
   async _promptGeneral() {
     const answers = await this.generator.prompt([
-      {
-        name: 'projectName',
-        message: options.projectName.desc,
+      this._buildPrompt('projectName', {
+        ...prompts.projectName,
         default: kebabCase(this.generator.appname),
         filter: kebabCase,
-      },
-      {
-        name: 'description',
-        message: options.description.desc,
-        default: options.description.default,
-        store: true,
-      },
-      {
-        name: 'name',
-        message: options.name.desc,
+      }),
+      this._buildPrompt('description', prompts.description),
+      this._buildPrompt('name', {
+        ...prompts.name,
         default: this.generator.user.git.name(),
-      },
-      {
-        name: 'email',
-        message: options.email.desc,
+      }),
+      this._buildPrompt('email', {
+        ...prompts.email,
         default: this.generator.user.git.email(),
-      },
-      {
-        name: 'website',
-        message: options.website.desc,
-        store: true,
-      },
+      }),
+      this._buildPrompt('website', prompts.website),
     ]);
 
-    Object.assign(this.props, answers, {
-      camelProject: camelCase(answers.projectName),
-    });
+    this._updatePropsWithAnswers(answers);
+    this.props.camelProject = camelCase(this.props.projectName);
   }
 
   async _promptGithub() {
     const answers = await this.generator.prompt([
-      {
-        name: 'githubUsername',
-        message: options.githubUsername.desc,
-        store: true,
-      },
-      {
-        name: 'githubTemplates',
-        message: options.githubTemplates.desc,
-        type: 'confirm',
-        default: true,
-      },
-      {
-        name: 'createGithubRepository',
-        message: options.createGithubRepository.desc,
-        type: 'confirm',
-        default: true,
-      },
+      this._buildPrompt('githubUsername', prompts.githubUsername),
+      this._buildPrompt('githubTemplates', prompts.githubTemplates),
+      this._buildPrompt(
+        'createGithubRepository',
+        prompts.createGithubRepository
+      ),
     ]);
 
-    Object.assign(this.props, answers, {
-      repository: `${answers.githubUsername}/${this.props.projectName}`,
-    });
+    this._updatePropsWithAnswers(answers);
+    this.props.repository = `${this.props.githubUsername}/${this.props.projectName}`;
   }
 
   async _promptTravis() {
-    const answers = await this.generator.prompt([
-      {
-        name: 'travisCI',
-        message: options.travisCI.desc,
-        type: 'confirm',
-        default: true,
-        when: this._logHelpWhenPrompt(options.travisCI.help),
-      },
-      {
-        name: 'coveralls',
-        message: options.coveralls.desc,
-        type: 'confirm',
-        default: true,
-        when: ({ travisCI }) => {
-          if (travisCI) {
-            this.generator.log(options.coveralls.help());
-            return true;
-          }
-
-          return false;
-        },
-      },
+    const { travisCI } = await this.generator.prompt([
+      this._buildPrompt('travisCI', prompts.travisCI),
     ]);
 
-    Object.assign(this.props, answers, { coveralls: answers.coveralls });
+    this._updatePropsWithAnswers({ travisCI });
+
+    const { coveralls } = await this.generator.prompt([
+      this._buildPrompt('coveralls', prompts.coveralls),
+    ]);
+
+    this._updatePropsWithAnswers({ coveralls: coveralls || false });
   }
 
   async _promptNpm() {
-    const answers = await this.generator.prompt([
-      {
-        name: 'npmDeploy',
-        message: options.npmDeploy.desc,
-        type: 'confirm',
-        default: true,
-        when: () => {
-          if (this.props.travisCI) {
-            this.generator.log(options.npmDeploy.help());
-            return true;
-          }
-
-          return false;
-        },
-      },
-      {
-        name: 'semanticRelease',
-        message: options.semanticRelease.desc,
-        type: 'confirm',
-        default: true,
-        when: ({ npmDeploy }) => {
-          if (npmDeploy) {
-            this.generator.log(options.semanticRelease.help());
-            return true;
-          }
-
-          return false;
-        },
-      },
+    const { npmDeploy, semanticRelease } = await this.generator.prompt([
+      this._buildPrompt('npmDeploy', prompts.npmDeploy),
+      this._buildPrompt('semanticRelease', prompts.semanticRelease),
     ]);
 
-    Object.assign(this.props, {
-      npmDeploy: answers.npmDeploy,
-      semanticRelease: answers.semanticRelease,
+    this._updatePropsWithAnswers({
+      npmDeploy: npmDeploy || false,
+      semanticRelease: semanticRelease || false,
     });
   }
 
   async _promptPasswords() {
-    const { createGithubRepository, semanticRelease, npmDeploy } = this.props;
+    const {
+      createGithubRepository,
+      semanticRelease,
+      npmDeploy,
+      githubToken,
+      npmToken,
+    } = this.props;
 
-    if (createGithubRepository || semanticRelease) {
-      this._logGithubPasswordRequired();
-      this._logPasswordSafety();
+    if (createGithubRepository || (npmDeploy && semanticRelease)) {
+      if (!githubToken) {
+        this._logGithubPasswordRequired();
+        this._logPasswordSafety();
+      }
       await this._loginToGithub();
     }
 
-    if (npmDeploy) {
+    if (!npmToken && npmDeploy) {
       this._logNpmPasswordRequired();
       this._logPasswordSafety();
       await this._loginToNpm();
@@ -184,22 +130,27 @@ export default class Prompter {
     const { npmUsername, npmPassword } = await this._promptNpmLogin();
 
     // generate npm-token
-    const { token } = await npmLogin({
+    const { token: npmToken } = await npmLogin({
       username: npmUsername,
       password: npmPassword,
     });
 
-    Object.assign(this.props, {
-      npmToken: token,
-    });
+    this.props = { ...this.props, npmToken };
   }
 
   async _loginToGithub() {
     const {
+      githubToken: token,
       githubUsername: username,
       semanticRelease,
       repository,
     } = this.props;
+
+    if (token) {
+      this.props.github = new Github({ token: `token ${token}` });
+      return;
+    }
+
     const { githubPassword: password } = await this._promptGithubPassword();
 
     const note = `${repository}/travis-${uuid().slice(-4)}`;
@@ -214,7 +165,11 @@ export default class Prompter {
         ]
       : [];
 
-    this.props.github = new Github(username, password, () => this.github2fa());
+    this.props.github = new Github({
+      username,
+      password,
+      on2fa: this.github2fa.bind(this),
+    });
     this.props.githubToken = await this.props.github.createToken(note, scopes);
   }
 
@@ -265,13 +220,6 @@ export default class Prompter {
     Loggers
    */
 
-  _logHelpWhenPrompt(help) {
-    return () => {
-      this.generator.log(help());
-      return true;
-    };
-  }
-
   _logGithubPasswordRequired() {
     const { createGithubRepository } = this.props;
 
@@ -296,5 +244,85 @@ export default class Prompter {
     this.generator.log(
       `${chalk.bold('I will never store your passwords')} 🙌 🙌 🙌 \n`
     );
+  }
+
+  /*
+    Helpers
+   */
+
+  _setGeneratorOptions() {
+    for (const [name, { type, desc }] of Object.entries(options)) {
+      this.generator.option(name, { type, desc });
+    }
+  }
+
+  _initProps() {
+    this.props = {};
+
+    for (const optionName of Object.keys(options)) {
+      const { [optionName]: option } = this.generator.options;
+
+      if (option) {
+        this.props[optionName] = option;
+      }
+    }
+  }
+
+  _updatePropsWithAnswers(answers) {
+    for (const [name, value] of Object.entries(answers)) {
+      if (value) {
+        this.props[name] = value;
+      }
+    }
+  }
+
+  _buildPrompt(name, prompt) {
+    const result = { name, message: prompt.desc };
+
+    switch (prompt.type) {
+      case Boolean:
+        result.type = 'confirm';
+        break;
+      case String:
+      default:
+        result.type = 'input';
+        break;
+    }
+
+    if (prompt.default) result.default = prompt.default;
+    if (prompt.store) result.store = prompt.store;
+    if (prompt.filter) result.filter = prompt.filter;
+
+    result.when = () => {
+      if (this.props[name] !== undefined) return false;
+
+      if (prompts[name].dependOn) {
+        for (const dependOn of prompts[name].dependOn) {
+          if (!this.props[dependOn]) {
+            return false;
+          }
+        }
+      }
+
+      prompts[name].help && this.generator.log(prompts[name].help());
+      return true;
+    };
+
+    if (prompt.required) {
+      result.validate = input => {
+        if (
+          input === undefined ||
+          (typeof input === 'string' &&
+            input.trim() === '' &&
+            prompt.default === undefined)
+        ) {
+          throw new Error(`${name} is required`);
+        }
+
+        return true;
+      };
+    }
+
+    return result;
   }
 }

@@ -44,7 +44,7 @@ export default class extends BaseGenerator {
       { templatePath: 'src', destinationPath: 'src' },
     ];
 
-    if (this.options.semanticRelease) {
+    if (this.options.npmDeploy && this.options.semanticRelease) {
       templatesToCopy.push({
         templatePath: '_commitlintrc.json',
         destinationPath: '.commitlintrc.json',

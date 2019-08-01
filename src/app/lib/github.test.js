@@ -16,7 +16,7 @@ describe('Github', () => {
     createRepoForAuthenticatedUser.mockClear();
     createAuthorization.mockClear();
 
-    github = new Github(username, password, on2fa);
+    github = new Github({ username, password, on2fa });
   });
 
   it('should create a new Github instance', () => {
