@@ -308,6 +308,7 @@ export default class Prompter {
 
     result.when = () => {
       if (this.props[name] !== undefined) return false;
+      if (this.props.noDefaults && prompt.type === Boolean) return false;
 
       if (prompts[name].dependOn) {
         for (const dependOn of prompts[name].dependOn) {
