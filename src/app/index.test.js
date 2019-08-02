@@ -33,7 +33,6 @@ test('default files', () => {
       assert.file([
         '.git',
         '.babelrc',
-        '.commitlintrc.json',
         '.editorconfig',
         '.eslintignore',
         '.eslintrc',
@@ -54,6 +53,8 @@ test('default files', () => {
         'other/roadmap.md',
         // travisCI
         '.travis.yml',
+        // semanticRelease
+        '.commitlintrc.json',
       ]);
 
       assert.noFile([
@@ -68,6 +69,55 @@ test('default files', () => {
         '_github/issue_template.md',
         '_github/pull_request_template.md',
         '_commitlintrc.json',
+      ]);
+    });
+});
+
+test('default files with --noDefaults', () => {
+  return runAppGenerator()
+    .withOptions({ noDefaults: true })
+    .withPrompts(requiredPrompts)
+    .then(() => {
+      assert.file([
+        '.git',
+        '.babelrc',
+        '.editorconfig',
+        '.eslintignore',
+        '.eslintrc',
+        '.gitattributes',
+        '.gitignore',
+        '.npmignore',
+        'license',
+        'package.json',
+        'readme.md',
+        'src/index.js',
+        'src/index.test.js',
+      ]);
+
+      assert.noFile([
+        '.commitlintrc.json',
+        '_babelrc',
+        '_editorconfig',
+        '_eslintignore',
+        '_eslintrc',
+        '_gitattributes',
+        '_gitignore',
+        '_travis.yml',
+        '_npmignore',
+        '_github/issue_template.md',
+        '_github/pull_request_template.md',
+        '_commitlintrc.json',
+        // githubTemplates
+        'contributing.md',
+        '.github/issue_template.md',
+        '.github/pull_request_template.md',
+        'other/code_of_conduct.md',
+        'other/examples.md',
+        'other/roadmap.md',
+        // travisCI
+        '.travis.yml',
+        // semanticRelease
+        '.commitlintrc.json',
       ]);
     });
 });

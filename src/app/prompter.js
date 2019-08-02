@@ -25,7 +25,9 @@ export default class Prompter {
     await this._promptGeneral();
     await this._promptGithub();
     await this._promptTravis();
+    await this._promptCoveralls();
     await this._promptNpm();
+    await this._promptSemanticRelease();
     await this._promptPasswords();
 
     return this.props;
@@ -78,7 +80,9 @@ export default class Prompter {
     ]);
 
     this._updatePropsWithAnswers({ travisCI });
+  }
 
+  async _promptCoveralls() {
     const { coveralls } = await this.generator.prompt([
       this._buildPrompt('coveralls', prompts.coveralls),
     ]);
@@ -87,13 +91,21 @@ export default class Prompter {
   }
 
   async _promptNpm() {
-    const { npmDeploy, semanticRelease } = await this.generator.prompt([
+    const { npmDeploy } = await this.generator.prompt([
       this._buildPrompt('npmDeploy', prompts.npmDeploy),
-      this._buildPrompt('semanticRelease', prompts.semanticRelease),
     ]);
 
     this._updatePropsWithAnswers({
       npmDeploy: npmDeploy || false,
+    });
+  }
+
+  async _promptSemanticRelease() {
+    const { semanticRelease } = await this.generator.prompt([
+      this._buildPrompt('semanticRelease', prompts.semanticRelease),
+    ]);
+
+    this._updatePropsWithAnswers({
       semanticRelease: semanticRelease || false,
     });
   }
@@ -279,19 +291,20 @@ export default class Prompter {
   _buildPrompt(name, prompt) {
     const result = { name, message: prompt.desc };
 
+    if (prompt.default) result.default = prompt.default;
+    if (prompt.store) result.store = prompt.store;
+    if (prompt.filter) result.filter = prompt.filter;
+
     switch (prompt.type) {
       case Boolean:
         result.type = 'confirm';
+        result.default = this.props.noDefaults ? false : result.default;
         break;
       case String:
       default:
         result.type = 'input';
         break;
     }
-
-    if (prompt.default) result.default = prompt.default;
-    if (prompt.store) result.store = prompt.store;
-    if (prompt.filter) result.filter = prompt.filter;
 
     result.when = () => {
       if (this.props[name] !== undefined) return false;

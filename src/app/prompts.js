@@ -58,12 +58,14 @@ const prompts = {
     ...options.npmDeploy,
     required: true,
     store: true,
+    dependOn: ['travisCI'],
     help: () => '\nNeed to have an npm account: https://www.npmjs.com/',
   },
   semanticRelease: {
     ...options.semanticRelease,
     required: true,
     store: true,
+    dependOn: ['travisCI', 'npmDeploy'],
     help: () =>
       '\nLearn more about semantic-release: https://semantic-release.gitbook.io/semantic-release/',
   },
