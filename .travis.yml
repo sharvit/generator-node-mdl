@@ -32,10 +32,10 @@ jobs:
         GITHUB_USERNAME: sharvit
         PROJECT_NAME: node-mdl-starter
       install: yarn global add yo generator-node-mdl
-      script: ./script/build-node-mdl-starter.sh
+      script: ./scripts/build-node-mdl-starter.sh
       deploy:
         on:
           tags: true
         provider: script
         skip_cleanup: true
-        script: ./script/deploy-node-mdl-starter.sh
+        script: ./scripts/deploy-node-mdl-starter.sh
