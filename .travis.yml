@@ -31,6 +31,8 @@ jobs:
       skip_install: true
       script: echo "deploying node-mdl-starter with generator-node-mdl ${TRAVIS_TAG}"
       deploy:
+        on:
+          tags: true
         provider: script
         skip_cleanup: true
         script: ./script/deploy-node-mdl-starter.sh
