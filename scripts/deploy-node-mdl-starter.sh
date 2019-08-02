@@ -15,9 +15,11 @@ else
   COMMIT_TYPE="fix"
 fi
 
+set -v
+
 yarn global add yo generator-node-mdl
 
-git clone git@github.com:$GITHUB_USERNAME/$PROJECT_NAME.git
+git clone https://${STARTER_GH_TOKEN}@github.com/${GITHUB_USERNAME}/${PROJECT_NAME}.git
 cd $PROJECT_NAME
 
 yo node-mdl \
