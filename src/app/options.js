@@ -45,6 +45,10 @@ const options = {
     desc:
       'Your github-token, needed when using with --createGithubRepository or --semanticRelease (https://github.com/sharvit/generator-node-mdl#about-passwords-and-tokens)',
   },
+  noDefaults: {
+    type: Boolean,
+    desc: 'Set all the default Boolean optins to false',
+  },
 };
 
 export default options;
