@@ -71,7 +71,9 @@ export default class extends BaseGenerator {
     this._createGit();
 
     this.log('\n\n\n');
-    this.log(chalk`{bold Finished, what's next:}\n`);
+    this.log(chalk`{bold.yellow Thank you for using generator-node-mdl!}`);
+    this.log('\n\n\n');
+    this.log(chalk`{bold.underline What's next:}\n`);
 
     this.log(chalk`  Push your changes to git: {gray git push origin master}`);
     this.log(
