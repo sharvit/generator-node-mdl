@@ -28,8 +28,11 @@ jobs:
     - stage: deploy node-mdl-starter
       if: tag =~ ^v AND type = push
       node_js: 12
-      skip_install: true
-      script: echo "deploying node-mdl-starter with generator-node-mdl ${TRAVIS_TAG}"
+      env:
+        GITHUB_USERNAME: sharvit
+        PROJECT_NAME: node-mdl-starter
+      install: yarn global add yo generator-node-mdl
+      script: ./script/build-node-mdl-starter.sh
       deploy:
         on:
           tags: true
