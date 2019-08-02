@@ -17,7 +17,7 @@ then
     COMMIT_TYPE="fix"
   fi
 
-  echo "Deploying node-mdl-starter with generator-node-mdl ${GENERATOR_NODE_MDL_VERSION}"
+  echo "Deploying ${PROJECT_NAME} generated using generator-node-mdl ${GENERATOR_NODE_MDL_VERSION}"
 
   set -v
 
