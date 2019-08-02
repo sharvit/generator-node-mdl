@@ -91,19 +91,21 @@ This project contain some features that will make your life easier when setting 
 
    [creating and viewing npm authentication tokens](https://docs.npmjs.com/creating-and-viewing-authentication-tokens)
 
-2. `--githubToken my-token` is needed when using with `---createGithubRepository` or with `--semanticRelease`.
+2. `--githubToken my-token` is needed when using with `--createGithubRepository` or with `--travisCI`.
 
    [creating and viewing github authentication tokens](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line)
 
-   - When using with `---createGithubRepository` your token doesn't need to contain any scope.
+   - When using with `--createGithubRepository` your token doesn't need to contain any scope.
 
-   - When using with `---semanticRelease` your token need to contain the following scopes:
-     - repo
-     - read:org
-     - user:email
-     - repo_deployment
-     - repo:status
-     - write:repo_hook
+   - When using with `--travisCI` but without `--semanticRelease` your token doesn't need to contain any scope.
+
+   - When using with `--travisCI` and with `--semanticRelease` your token need to contain the following scopes:
+     - `repo`
+     - `read:org`
+     - `user:email`
+     - `repo_deployment`
+     - `repo:status`
+     - `write:repo_hook`
 
 ## FAQ
 

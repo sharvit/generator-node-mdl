@@ -305,6 +305,7 @@ describe('prompts', () => {
       .withPrompts({
         ...requiredPrompts,
         createGithubRepository: false,
+        travisCI: false,
         npmDeploy: false,
         githubUsername: 'some-username',
         githubPassword: 'some-password',

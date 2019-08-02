@@ -49,11 +49,11 @@ export default class extends BaseGenerator {
   }
 
   _installTravis() {
-    const { repository } = this.options;
+    const { repository, githubToken } = this.options;
 
     this.commander.run([
       'gem install travis --no-ri --no-rdoc --quiet',
-      'travis login --auto',
+      `travis login --github-token ${githubToken}`,
       `travis enable -r ${repository}`,
     ]);
   }

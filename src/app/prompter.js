@@ -113,13 +113,13 @@ export default class Prompter {
   async _promptPasswords() {
     const {
       createGithubRepository,
-      semanticRelease,
       npmDeploy,
       githubToken,
       npmToken,
+      travisCI,
     } = this.props;
 
-    if (createGithubRepository || (npmDeploy && semanticRelease)) {
+    if (createGithubRepository || travisCI) {
       if (!githubToken) {
         this._logGithubPasswordRequired();
         this._logPasswordSafety();
