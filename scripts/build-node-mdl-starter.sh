@@ -10,8 +10,6 @@ GENERATOR_NODE_MDL_VERSION=$TRAVIS_TAG
 
 echo "Building node-mdl-starter with generator-node-mdl ${GENERATOR_NODE_MDL_VERSION}"
 
-set -v
-
 git clone https://${STARTER_GH_TOKEN}@github.com/${GITHUB_USERNAME}/${PROJECT_NAME}.git
 cd $PROJECT_NAME
 

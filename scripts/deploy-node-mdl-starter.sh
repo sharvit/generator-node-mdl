@@ -6,6 +6,8 @@ GITHUB_USERNAME=$GITHUB_USERNAME
 PROJECT_NAME=$PROJECT_NAME
 GENERATOR_NODE_MDL_VERSION=$TRAVIS_TAG
 
+cd $PROJECT_NAME
+
 if [ $( git diff origin/master | wc -l ) -ne 0 ]
 then
   if [ `echo $GENERATOR_NODE_MDL_VERSION | tail -c 3` == ".0" ]
