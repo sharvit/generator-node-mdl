@@ -25,3 +25,12 @@ jobs:
         provider: script
         skip_cleanup: true
         script: yarn semantic-release
+    - stage: deploy node-mdl-starter
+      if: tag =~ ^v AND type = push
+      node_js: 12
+      skip_install: true
+      script: echo "deploying node-mdl-starter with generator-node-mdl ${TRAVIS_TAG}"
+      deploy:
+        provider: script
+        skip_cleanup: true
+        script: ./script/deploy-node-mdl-starter.sh
