@@ -69,7 +69,7 @@
     "eslint-plugin-standard": "^4.0.0",
     "jest": "^24.1.0",
     "prettier": "^1.15.3",
-    "rimraf": "^2.6.2",
+    "rimraf": "^3.0.0",
     "semantic-release": "^15.13.1",
     "yeoman-assert": "^3.1.0",
     "yeoman-test": "^2.0.0"
