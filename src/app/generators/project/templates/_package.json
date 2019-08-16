@@ -38,9 +38,9 @@
     "@commitlint/config-conventional": "^8.1.0",
     "@commitlint/travis-cli": "^8.1.0",<% } %>
     "babel-eslint": "^10.0.1",
-    "babel-jest": "^24.8.0",<% if (semanticRelease) { %>
-    "commitlint-config-cz": "^0.12.0",<% } %>
-    "babel-plugin-add-module-exports": "^1.0.0",<% if (coveralls) { %>
+    "babel-jest": "^24.8.0",
+    "babel-plugin-add-module-exports": "^1.0.0",<% if (semanticRelease) { %>
+    "commitlint-config-cz": "^0.12.0",<% } %><% if (coveralls) { %>
     "coveralls": "^3.0.2",<% } %>
     "eslint": "^6.1.0",
     "eslint-config-prettier": "^6.0.0",
@@ -54,8 +54,7 @@
     "prettier": "^1.15.3",
     "rimraf": "^2.6.2"
   },<% if (semanticRelease) { %>
-  "optionalDependencies": {
-    <% if (semanticRelease) { %>
+  "optionalDependencies": {<% if (semanticRelease) { %>
     "cz-conventional-changelog": "^3.0.2",<% } %>
     "semantic-release": "^15.13.1"
   },<% } %>
