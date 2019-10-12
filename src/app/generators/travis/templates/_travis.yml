@@ -20,19 +20,24 @@ jobs:
     - stage: release
       if: branch = master AND type = push
       node_js: 12
-      script: yarn build<% if (semanticRelease) { %>
-      deploy:
-        provider: script
-        skip_cleanup: true
-        script: yarn semantic-release<% } else { %>
-      deploy:
-        skip_cleanup: true
-        provider: npm
-        email: <%= email %>
-        api_key: $NPM_TOKEN
-        on:
-          node: 10
-          tags: true
-          repo: <%= githubUsername %>/<%= projectName %>
+      script: yarn build
+      deploy:<% if (semanticRelease) { %>
+        - provider: script
+          skip_cleanup: true
+          script: yarn semantic-release<% } else { %>
+        - provider: npm
+          skip_cleanup: true
+          email: <%= email %>
+          api_key: $NPM_TOKEN
+          on:
+            node: 10
+            tags: true
+            repo: <%= githubUsername %>/<%= projectName %>
+      <% } if (esdoc) { %>
+        - provider: pages
+          skip_cleanup: true
+          github_token: $GH_TOKEN
+          local_dir: ./docs
+          keep_history: true
       <% } %>
     <% } %>

@@ -19,6 +19,10 @@ const options = {
     type: Boolean,
     desc: 'Let me create a new github repository for you?',
   },
+  esdoc: {
+    type: Boolean,
+    desc: 'Would you like to install esdoc?',
+  },
   coveralls: {
     type: Boolean,
     desc: 'Connect TravisCI to Coveralls?',

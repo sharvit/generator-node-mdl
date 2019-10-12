@@ -1,6 +1,9 @@
 # Source
 ./src
 
+# Docs
+./docs
+
 # Test files
 *test.*.*
 

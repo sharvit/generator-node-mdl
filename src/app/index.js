@@ -1,5 +1,6 @@
 import YeomanGenerator from 'yeoman-generator';
 import chalk from 'chalk';
+import commandExists from 'command-exists';
 
 import './generators/project';
 import './generators/github';
@@ -19,6 +20,9 @@ export default class NodeMdlGenerator extends YeomanGenerator {
   }
 
   configuring() {
+    this.props.hasYarn = commandExists.sync('yarn');
+    this.props.runScriptCommand = this.props.hasYarn ? 'yarn' : 'npm run';
+
     this.composeWith(require.resolve('./generators/project'), this.props);
     this.composeWith(require.resolve('./generators/github'), this.props);
 

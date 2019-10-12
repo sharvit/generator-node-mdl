@@ -28,6 +28,20 @@ Run test suits to validate the project is working:
 
 ```sh
 yarn test
+# run test in watch mode
+yarn test:watch
+```
+
+Build the project:
+
+```sh
+yarn build
+# only build the dist folder from source
+yarn build:babel<%if (esdoc) { %>
+# only build the docs using esdocs
+yarn build:docs
+# build docs in watch mode
+yarn develop:docs<% } %>
 ```
 
 Run linter to validate the project code:
@@ -45,8 +59,6 @@ Run linter to validate your commit message:
 yarn lint:commit
 ```
 <% } %>
-
-## Committing and Pushing changes
 
 ## Committing and Pushing changes
 

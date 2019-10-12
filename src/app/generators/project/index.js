@@ -1,6 +1,5 @@
 import path from 'path';
 import chalk from 'chalk';
-import commandExists from 'command-exists';
 import findUp from 'find-up';
 import makeDir from 'make-dir';
 
@@ -43,6 +42,13 @@ export default class extends BaseGenerator {
       { templatePath: 'readme.md', destinationPath: 'readme.md' },
       { templatePath: 'src', destinationPath: 'src' },
     ];
+
+    if (this.options.esdoc) {
+      templatesToCopy.push({
+        templatePath: '_esdoc.json',
+        destinationPath: '.esdoc.json',
+      });
+    }
 
     if (this.options.npmDeploy && this.options.semanticRelease) {
       templatesToCopy.push({
@@ -89,7 +95,7 @@ export default class extends BaseGenerator {
    */
 
   _installNpmDeps() {
-    const hasYarn = commandExists.sync('yarn');
+    const { hasYarn } = this.options;
 
     return this.installDependencies({
       bower: false,
