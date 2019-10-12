@@ -23,6 +23,7 @@ export default class Prompter {
     this._initProps();
 
     await this._promptGeneral();
+    await this._promptEsdoc();
     await this._promptGithub();
     await this._promptTravis();
     await this._promptCoveralls();
@@ -58,6 +59,14 @@ export default class Prompter {
 
     this._updatePropsWithAnswers(answers);
     this.props.camelProject = camelCase(this.props.projectName);
+  }
+
+  async _promptEsdoc() {
+    const { esdoc } = await this.generator.prompt([
+      this._buildPrompt('esdoc', prompts.esdoc),
+    ]);
+
+    this._updatePropsWithAnswers({ esdoc: esdoc || false });
   }
 
   async _promptGithub() {

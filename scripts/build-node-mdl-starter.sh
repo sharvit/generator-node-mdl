@@ -27,6 +27,7 @@ yo node-mdl \
   --githubUsername $GITHUB_USERNAME \
   --noDefaults \
   --githubTemplates \
+  --esdoc \
   --coveralls \
   --travisCI \
   --npmDeploy \

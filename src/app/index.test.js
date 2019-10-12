@@ -44,6 +44,8 @@ test('default files', () => {
         'readme.md',
         'src/index.js',
         'src/index.test.js',
+        // esdoc
+        '.esdoc.json',
         // githubTemplates
         'contributing.md',
         '.github/issue_template.md',
@@ -60,6 +62,7 @@ test('default files', () => {
       assert.noFile([
         '_babelrc',
         '_editorconfig',
+        '_esdoc.json',
         '_eslintignore',
         '_eslintrc',
         '_gitattributes',
@@ -107,6 +110,9 @@ test('default files with --noDefaults', () => {
         '_github/issue_template.md',
         '_github/pull_request_template.md',
         '_commitlintrc.json',
+        // esdoc
+        '_esdoc.json',
+        '.esdoc.json',
         // githubTemplates
         'contributing.md',
         '.github/issue_template.md',
@@ -317,6 +323,36 @@ describe('prompts', () => {
       });
   });
 
+  test('esdoc', () => {
+    return runAppGenerator()
+      .withPrompts({
+        ...requiredPrompts,
+        esdoc: true,
+      })
+      .then(() => {
+        assert.file(['.esdoc.json']);
+        assert.fileContent('package.json', 'build:docs');
+        assert.fileContent('package.json', 'esdoc');
+        assert.fileContent('package.json', 'esdoc-standard-plugin');
+        assert.fileContent('contributing.md', 'yarn build:docs');
+      });
+  });
+
+  test('no esdoc', () => {
+    return runAppGenerator()
+      .withPrompts({
+        ...requiredPrompts,
+        esdoc: false,
+      })
+      .then(() => {
+        assert.noFile(['.esdoc.json']);
+        assert.noFileContent('package.json', 'build:docs');
+        assert.noFileContent('package.json', 'esdoc');
+        assert.noFileContent('package.json', 'esdoc-standard-plugin');
+        assert.noFileContent('contributing.md', 'yarn build:docs');
+      });
+  });
+
   test('githubTemplates', () => {
     return runAppGenerator()
       .withPrompts({
@@ -378,6 +414,30 @@ describe('prompts', () => {
         })
         .then(() => {
           assert.noFile(['.travis.yml']);
+        });
+    });
+
+    test('esdoc', () => {
+      return runAppGenerator()
+        .withPrompts({
+          ...requiredPrompts,
+          travisCI: true,
+          esdoc: true,
+        })
+        .then(() => {
+          assert.fileContent('.travis.yml', 'provider: pages');
+        });
+    });
+
+    test('esdoc', () => {
+      return runAppGenerator()
+        .withPrompts({
+          ...requiredPrompts,
+          travisCI: true,
+          esdoc: false,
+        })
+        .then(() => {
+          assert.noFileContent('.travis.yml', 'provider: pages');
         });
     });
 

@@ -40,6 +40,12 @@ const prompts = {
     required: true,
     store: true,
   },
+  esdoc: {
+    ...options.esdoc,
+    required: true,
+    store: true,
+    help: () => '\nLearn more about esdoc: https://esdoc.org',
+  },
   travisCI: {
     ...options.travisCI,
     required: true,
