@@ -76,6 +76,12 @@ const prompts = {
     required: true,
     store: true,
   },
+  esdoc: {
+    ...options.esdoc,
+    required: true,
+    store: true,
+    help: () =&gt; &apos;\nLearn more about esdoc: https://esdoc.org&apos;,
+  },
   travisCI: {
     ...options.travisCI,
     required: true,

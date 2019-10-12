@@ -36,7 +36,6 @@
 <div class="content" data-ice="content"><h1 data-ice="title">src/app/generators/project/index.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import path from &apos;path&apos;;
 import chalk from &apos;chalk&apos;;
-import commandExists from &apos;command-exists&apos;;
 import findUp from &apos;find-up&apos;;
 import makeDir from &apos;make-dir&apos;;
 
@@ -79,6 +78,13 @@ export default class extends BaseGenerator {
       { templatePath: &apos;readme.md&apos;, destinationPath: &apos;readme.md&apos; },
       { templatePath: &apos;src&apos;, destinationPath: &apos;src&apos; },
     ];
+
+    if (this.options.esdoc) {
+      templatesToCopy.push({
+        templatePath: &apos;_esdoc.json&apos;,
+        destinationPath: &apos;.esdoc.json&apos;,
+      });
+    }
 
     if (this.options.npmDeploy &amp;&amp; this.options.semanticRelease) {
       templatesToCopy.push({
@@ -125,7 +131,7 @@ export default class extends BaseGenerator {
    */
 
   _installNpmDeps() {
-    const hasYarn = commandExists.sync(&apos;yarn&apos;);
+    const { hasYarn } = this.options;
 
     return this.installDependencies({
       bower: false,

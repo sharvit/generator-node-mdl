@@ -80,6 +80,8 @@ test(&apos;default files&apos;, () =&gt; {
         &apos;readme.md&apos;,
         &apos;src/index.js&apos;,
         &apos;src/index.test.js&apos;,
+        // esdoc
+        &apos;.esdoc.json&apos;,
         // githubTemplates
         &apos;contributing.md&apos;,
         &apos;.github/issue_template.md&apos;,
@@ -96,6 +98,7 @@ test(&apos;default files&apos;, () =&gt; {
       assert.noFile([
         &apos;_babelrc&apos;,
         &apos;_editorconfig&apos;,
+        &apos;_esdoc.json&apos;,
         &apos;_eslintignore&apos;,
         &apos;_eslintrc&apos;,
         &apos;_gitattributes&apos;,
@@ -143,6 +146,9 @@ test(&apos;default files with --noDefaults&apos;, () =&gt; {
         &apos;_github/issue_template.md&apos;,
         &apos;_github/pull_request_template.md&apos;,
         &apos;_commitlintrc.json&apos;,
+        // esdoc
+        &apos;_esdoc.json&apos;,
+        &apos;.esdoc.json&apos;,
         // githubTemplates
         &apos;contributing.md&apos;,
         &apos;.github/issue_template.md&apos;,
@@ -353,6 +359,36 @@ describe(&apos;prompts&apos;, () =&gt; {
       });
   });
 
+  test(&apos;esdoc&apos;, () =&gt; {
+    return runAppGenerator()
+      .withPrompts({
+        ...requiredPrompts,
+        esdoc: true,
+      })
+      .then(() =&gt; {
+        assert.file([&apos;.esdoc.json&apos;]);
+        assert.fileContent(&apos;package.json&apos;, &apos;build:docs&apos;);
+        assert.fileContent(&apos;package.json&apos;, &apos;esdoc&apos;);
+        assert.fileContent(&apos;package.json&apos;, &apos;esdoc-standard-plugin&apos;);
+        assert.fileContent(&apos;contributing.md&apos;, &apos;yarn build:docs&apos;);
+      });
+  });
+
+  test(&apos;no esdoc&apos;, () =&gt; {
+    return runAppGenerator()
+      .withPrompts({
+        ...requiredPrompts,
+        esdoc: false,
+      })
+      .then(() =&gt; {
+        assert.noFile([&apos;.esdoc.json&apos;]);
+        assert.noFileContent(&apos;package.json&apos;, &apos;build:docs&apos;);
+        assert.noFileContent(&apos;package.json&apos;, &apos;esdoc&apos;);
+        assert.noFileContent(&apos;package.json&apos;, &apos;esdoc-standard-plugin&apos;);
+        assert.noFileContent(&apos;contributing.md&apos;, &apos;yarn build:docs&apos;);
+      });
+  });
+
   test(&apos;githubTemplates&apos;, () =&gt; {
     return runAppGenerator()
       .withPrompts({
@@ -414,6 +450,30 @@ describe(&apos;prompts&apos;, () =&gt; {
         })
         .then(() =&gt; {
           assert.noFile([&apos;.travis.yml&apos;]);
+        });
+    });
+
+    test(&apos;esdoc&apos;, () =&gt; {
+      return runAppGenerator()
+        .withPrompts({
+          ...requiredPrompts,
+          travisCI: true,
+          esdoc: true,
+        })
+        .then(() =&gt; {
+          assert.fileContent(&apos;.travis.yml&apos;, &apos;provider: pages&apos;);
+        });
+    });
+
+    test(&apos;esdoc&apos;, () =&gt; {
+      return runAppGenerator()
+        .withPrompts({
+          ...requiredPrompts,
+          travisCI: true,
+          esdoc: false,
+        })
+        .then(() =&gt; {
+          assert.noFileContent(&apos;.travis.yml&apos;, &apos;provider: pages&apos;);
         });
     });
 

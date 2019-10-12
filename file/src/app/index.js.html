@@ -36,6 +36,7 @@
 <div class="content" data-ice="content"><h1 data-ice="title">src/app/index.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import YeomanGenerator from &apos;yeoman-generator&apos;;
 import chalk from &apos;chalk&apos;;
+import commandExists from &apos;command-exists&apos;;
 
 import &apos;./generators/project&apos;;
 import &apos;./generators/github&apos;;
@@ -55,6 +56,9 @@ export default class NodeMdlGenerator extends YeomanGenerator {
   }
 
   configuring() {
+    this.props.hasYarn = commandExists.sync(&apos;yarn&apos;);
+    this.props.runScriptCommand = this.props.hasYarn ? &apos;yarn&apos; : &apos;npm run&apos;;
+
     this.composeWith(require.resolve(&apos;./generators/project&apos;), this.props);
     this.composeWith(require.resolve(&apos;./generators/github&apos;), this.props);
 

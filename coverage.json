@@ -1,6 +1,6 @@
 {
-  "coverage": "5%",
-  "expectCount": 80,
+  "coverage": "4.93%",
+  "expectCount": 81,
   "actualCount": 4,
   "files": {
     "src/app/generators/base-generator.js": {
@@ -27,16 +27,16 @@
       "expectCount": 10,
       "actualCount": 0,
       "undocumentLines": [
+        9,
         10,
-        11,
-        14,
-        23,
-        32,
-        63,
-        67,
-        91,
-        102,
-        121
+        13,
+        22,
+        31,
+        69,
+        73,
+        97,
+        108,
+        127
       ]
     },
     "src/app/generators/travis/index.js": {
@@ -58,15 +58,15 @@
       "expectCount": 9,
       "actualCount": 0,
       "undocumentLines": [
-        10,
         11,
-        14,
-        17,
+        12,
+        15,
         18,
-        21,
-        30,
-        35,
-        40
+        19,
+        22,
+        34,
+        39,
+        44
       ]
     },
     "src/app/index.test.js": {
@@ -115,33 +115,34 @@
       ]
     },
     "src/app/prompter.js": {
-      "expectCount": 25,
+      "expectCount": 26,
       "actualCount": 1,
       "undocumentLines": [
         12,
         13,
         14,
-        40,
-        63,
-        77,
-        85,
-        93,
-        103,
-        113,
-        141,
+        41,
+        64,
+        72,
+        86,
+        94,
+        102,
+        112,
+        122,
         150,
-        153,
-        188,
-        203,
-        215,
-        225,
-        235,
-        249,
-        255,
-        265,
-        271,
-        283,
-        291
+        159,
+        162,
+        197,
+        212,
+        224,
+        234,
+        244,
+        258,
+        264,
+        274,
+        280,
+        292,
+        300
       ]
     },
     "src/app/prompts.js": {
