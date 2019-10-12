@@ -13,6 +13,7 @@
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![MIT License](https://img.shields.io/npm/l/stack-overflow-copy-paste.svg?style=flat-square)](http://opensource.org/licenses/MIT) [![Greenkeeper badge](https://badges.greenkeeper.io/sharvit/generator-node-mdl.svg)](https://greenkeeper.io/)
 
+See [node-mdl-starter](https://github.com/sharvit/node-mdl-starter), it is an example of what you get using this generator and it is automatically generated with every new release of this generator.
 
 ## Why
 
