@@ -23,6 +23,7 @@
 - [Jest testing framework](https://facebook.github.io/jest)
 - Sensible [ESLint](http://eslint.org) config extends [standard](https://github.com/standard/eslint-config-standard) and [Prettier](https://github.com/prettier/eslint-plugin-prettier)
 - Automates code reformatting using [Prettier](https://github.com/prettier/prettier)
+- Build your documentations using [esdoc](https://esdoc.org) _(optional)_
 - [Travis CI](https://travis-ci.org) configuration _(optional)_
 - [Coveralls](http://coveralls.io) configuration _(optional)_
 - Automatically deploy to [npm registry](https://www.npmjs.com) with [Travis CI](https://travis-ci.org)  _(optional)_
@@ -59,6 +60,7 @@ $ tree
 │   └── index.test.js
 ├── .babelrc
 ├── .editorconfig
+├── .esdoc.json
 ├── .eslintignore
 ├── .eslintrc
 ├── .gitattributes
