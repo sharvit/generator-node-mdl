@@ -8,7 +8,8 @@ We haven‘t filled this out yet though. Care to help? See [`contributing.md`](.
 
 ## Might do
 
+- Webpack
+
 ## Won‘t do
 
-- Won't do webpack
 - Won't do XO
