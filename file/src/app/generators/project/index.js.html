@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../../">
+  <title data-ice="title">src/app/generators/project/index.js | generator-node-mdl</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Create a Node.js module with ease"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="generator-node-mdl"><meta property="twitter:description" content="Create a Node.js module with ease"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/sharvit/generator-node-mdl"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  </ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/app/generators/project/index.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import path from &apos;path&apos;;
+import chalk from &apos;chalk&apos;;
+import commandExists from &apos;command-exists&apos;;
+import findUp from &apos;find-up&apos;;
+import makeDir from &apos;make-dir&apos;;
+
+import Commander from &apos;../../lib/commander&apos;;
+import BaseGenerator from &apos;../base-generator&apos;;
+
+export default class extends BaseGenerator {
+  constructor(...args) {
+    super(...args);
+
+    this.commander = new Commander({
+      spawnSync: this.spawnCommandSync.bind(this),
+      log: this.log.bind(this),
+    });
+  }
+  /*
+    Run Loop
+   */
+
+  configuring() {
+    if (path.basename(this.destinationRoot()) !== this.options.projectName) {
+      return makeDir(this.options.projectName).then(path =&gt; {
+        this.destinationRoot(path);
+        this.log(chalk`\nGenerating a new project in {green ${path}}\n`);
+      });
+    }
+  }
+
+  writing() {
+    const templatesToCopy = [
+      { templatePath: &apos;_babelrc&apos;, destinationPath: &apos;.babelrc&apos; },
+      { templatePath: &apos;_editorconfig&apos;, destinationPath: &apos;.editorconfig&apos; },
+      { templatePath: &apos;_eslintignore&apos;, destinationPath: &apos;.eslintignore&apos; },
+      { templatePath: &apos;_eslintrc&apos;, destinationPath: &apos;.eslintrc&apos; },
+      { templatePath: &apos;_gitattributes&apos;, destinationPath: &apos;.gitattributes&apos; },
+      { templatePath: &apos;_gitignore&apos;, destinationPath: &apos;.gitignore&apos; },
+      { templatePath: &apos;_npmignore&apos;, destinationPath: &apos;.npmignore&apos; },
+      { templatePath: &apos;_package.json&apos;, destinationPath: &apos;package.json&apos; },
+      { templatePath: &apos;license&apos;, destinationPath: &apos;license&apos; },
+      { templatePath: &apos;readme.md&apos;, destinationPath: &apos;readme.md&apos; },
+      { templatePath: &apos;src&apos;, destinationPath: &apos;src&apos; },
+    ];
+
+    if (this.options.npmDeploy &amp;&amp; this.options.semanticRelease) {
+      templatesToCopy.push({
+        templatePath: &apos;_commitlintrc.json&apos;,
+        destinationPath: &apos;.commitlintrc.json&apos;,
+      });
+    }
+
+    templatesToCopy.forEach(({ templatePath, destinationPath }) =&gt;
+      this.fs.copyTpl(
+        this.templatePath(templatePath),
+        this.destinationPath(destinationPath),
+        this.options
+      )
+    );
+  }
+
+  install() {
+    this._installNpmDeps();
+  }
+
+  async end() {
+    const { repository } = this.options;
+    await this._removeYoRc();
+
+    this._createGit();
+
+    this.log(&apos;\n\n\n&apos;);
+    this.log(chalk`{bold.yellow Thank you for using generator-node-mdl!}`);
+    this.log(&apos;\n\n\n&apos;);
+    this.log(chalk`{bold.underline What&apos;s next:}\n`);
+
+    this.log(chalk`  Push your changes to git: {gray git push origin master}`);
+    this.log(
+      chalk`  Read your project contributing guide: {underline.cyan https://github.com/${repository}/blob/master/contributing.md}`
+    );
+    this.log(
+      chalk`  Enable greenkeeper for your project by visiting: {underline.cyan https://account.greenkeeper.io/}`
+    );
+  }
+
+  /*
+    Private Methods
+   */
+
+  _installNpmDeps() {
+    const hasYarn = commandExists.sync(&apos;yarn&apos;);
+
+    return this.installDependencies({
+      bower: false,
+      npm: !hasYarn,
+      yarn: hasYarn,
+      skipMessage: true,
+    });
+  }
+
+  _createGit() {
+    const { repository } = this.options;
+
+    this.log(&apos;Initiating git:&apos;);
+
+    this.commander.run([
+      &apos;git init --quiet&apos;,
+      `git remote add origin git@github.com:${repository}.git`,
+      &apos;git add .&apos;,
+      [
+        &apos;git&apos;,
+        &apos;commit&apos;,
+        &apos;-m&apos;,
+        &apos;chore(init): generated by generator-node-mdl &#x1F525;&apos;,
+        &apos;--quiet&apos;,
+      ],
+    ]);
+  }
+
+  async _removeYoRc() {
+    const yoRC = await findUp(&apos;.yo-rc.json&apos;);
+
+    if (yoRC) {
+      this.fs.delete(yoRC);
+
+      await new Promise((resolve, reject) =&gt; {
+        this.fs.commit(() =&gt; resolve());
+      });
+    }
+  }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

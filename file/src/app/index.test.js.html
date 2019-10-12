@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/app/index.test.js | generator-node-mdl</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Create a Node.js module with ease"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="generator-node-mdl"><meta property="twitter:description" content="Create a Node.js module with ease"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/sharvit/generator-node-mdl"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  </ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/app/index.test.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import path from &apos;path&apos;;
+import assert from &apos;yeoman-assert&apos;;
+import helpers from &apos;yeoman-test&apos;;
+
+import Generator from &apos;./index&apos;;
+import Github from &apos;./lib/github&apos;;
+
+jest.mock(&apos;./lib/github&apos;);
+jest.mock(&apos;./lib/npm&apos;);
+
+Github.use2fa = false;
+
+const runAppGenerator = () =&gt; helpers.run(Generator);
+
+beforeEach(() =&gt; jest.clearAllMocks());
+
+const requiredPrompts = {
+  githubUsername: &apos;github-username&apos;,
+};
+
+test(&apos;destinationRoot&apos;, () =&gt; {
+  return runAppGenerator()
+    .withPrompts({ ...requiredPrompts, projectName: &apos;temp&apos; })
+    .then(() =&gt; {
+      assert.equal(path.basename(process.cwd()), &apos;temp&apos;);
+    });
+});
+
+test(&apos;default files&apos;, () =&gt; {
+  return runAppGenerator()
+    .withPrompts(requiredPrompts)
+    .then(() =&gt; {
+      assert.file([
+        &apos;.git&apos;,
+        &apos;.babelrc&apos;,
+        &apos;.editorconfig&apos;,
+        &apos;.eslintignore&apos;,
+        &apos;.eslintrc&apos;,
+        &apos;.gitattributes&apos;,
+        &apos;.gitignore&apos;,
+        &apos;.npmignore&apos;,
+        &apos;license&apos;,
+        &apos;package.json&apos;,
+        &apos;readme.md&apos;,
+        &apos;src/index.js&apos;,
+        &apos;src/index.test.js&apos;,
+        // githubTemplates
+        &apos;contributing.md&apos;,
+        &apos;.github/issue_template.md&apos;,
+        &apos;.github/pull_request_template.md&apos;,
+        &apos;other/code_of_conduct.md&apos;,
+        &apos;other/examples.md&apos;,
+        &apos;other/roadmap.md&apos;,
+        // travisCI
+        &apos;.travis.yml&apos;,
+        // semanticRelease
+        &apos;.commitlintrc.json&apos;,
+      ]);
+
+      assert.noFile([
+        &apos;_babelrc&apos;,
+        &apos;_editorconfig&apos;,
+        &apos;_eslintignore&apos;,
+        &apos;_eslintrc&apos;,
+        &apos;_gitattributes&apos;,
+        &apos;_gitignore&apos;,
+        &apos;_travis.yml&apos;,
+        &apos;_npmignore&apos;,
+        &apos;_github/issue_template.md&apos;,
+        &apos;_github/pull_request_template.md&apos;,
+        &apos;_commitlintrc.json&apos;,
+      ]);
+    });
+});
+
+test(&apos;default files with --noDefaults&apos;, () =&gt; {
+  return runAppGenerator()
+    .withOptions({ noDefaults: true })
+    .withPrompts(requiredPrompts)
+    .then(() =&gt; {
+      assert.file([
+        &apos;.git&apos;,
+        &apos;.babelrc&apos;,
+        &apos;.editorconfig&apos;,
+        &apos;.eslintignore&apos;,
+        &apos;.eslintrc&apos;,
+        &apos;.gitattributes&apos;,
+        &apos;.gitignore&apos;,
+        &apos;.npmignore&apos;,
+        &apos;license&apos;,
+        &apos;package.json&apos;,
+        &apos;readme.md&apos;,
+        &apos;src/index.js&apos;,
+        &apos;src/index.test.js&apos;,
+      ]);
+
+      assert.noFile([
+        &apos;.commitlintrc.json&apos;,
+        &apos;_babelrc&apos;,
+        &apos;_editorconfig&apos;,
+        &apos;_eslintignore&apos;,
+        &apos;_eslintrc&apos;,
+        &apos;_gitattributes&apos;,
+        &apos;_gitignore&apos;,
+        &apos;_travis.yml&apos;,
+        &apos;_npmignore&apos;,
+        &apos;_github/issue_template.md&apos;,
+        &apos;_github/pull_request_template.md&apos;,
+        &apos;_commitlintrc.json&apos;,
+        // githubTemplates
+        &apos;contributing.md&apos;,
+        &apos;.github/issue_template.md&apos;,
+        &apos;.github/pull_request_template.md&apos;,
+        &apos;other/code_of_conduct.md&apos;,
+        &apos;other/examples.md&apos;,
+        &apos;other/roadmap.md&apos;,
+        // travisCI
+        &apos;.travis.yml&apos;,
+        // semanticRelease
+        &apos;.commitlintrc.json&apos;,
+      ]);
+    });
+});
+
+describe(&apos;prompts&apos;, () =&gt; {
+  test(&apos;projectName&apos;, () =&gt; {
+    return runAppGenerator()
+      .withPrompts({
+        ...requiredPrompts,
+        githubUsername: &apos;foo&apos;,
+        projectName: &apos;bar&apos;,
+      })
+      .then(() =&gt; {
+        assert.jsonFileContent(&apos;package.json&apos;, {
+          name: &apos;bar&apos;,
+          repository: &apos;https://github.com/foo/bar&apos;,
+        });
+
+        assert.fileContent(&apos;.git/config&apos;, &apos;[remote &quot;origin&quot;]&apos;);
+        assert.fileContent(&apos;.git/config&apos;, &apos;git@github.com:foo/bar.git&apos;);
+
+        assert.fileContent(
+          &apos;readme.md&apos;,
+          &apos;[![Package Version](https://img.shields.io/npm/v/bar.svg?style=flat-square)](https://www.npmjs.com/package/bar)&apos;
+        );
+        assert.fileContent(
+          &apos;readme.md&apos;,
+          &apos;[![Build Status: Linux](https://img.shields.io/travis/foo/bar/master.svg?style=flat-square)](https://travis-ci.org/foo/bar)&apos;
+        );
+        assert.fileContent(
+          &apos;readme.md&apos;,
+          &apos;[![Downloads Status](https://img.shields.io/npm/dm/bar.svg?style=flat-square)](https://npm-stat.com/charts.html?package=bar&amp;from=2016-04-01)&apos;
+        );
+
+        assert.fileContent(&apos;readme.md&apos;, &apos;# bar&apos;);
+        assert.fileContent(&apos;readme.md&apos;, &apos;npm install --save bar&apos;);
+        assert.fileContent(&apos;readme.md&apos;, &quot;const bar = require(&apos;bar&apos;);&quot;);
+      });
+  });
+
+  test(&apos;description&apos;, () =&gt; {
+    return runAppGenerator()
+      .withPrompts({ ...requiredPrompts, description: &apos;foo&apos; })
+      .then(() =&gt; {
+        assert.jsonFileContent(&apos;package.json&apos;, {
+          description: &apos;foo&apos;,
+        });
+        assert.fileContent(&apos;readme.md&apos;, &apos;foo&apos;);
+      });
+  });
+
+  test(&apos;name&apos;, () =&gt; {
+    return runAppGenerator()
+      .withPrompts({ ...requiredPrompts, name: &apos;foo bar&apos; })
+      .then(() =&gt; {
+        assert.jsonFileContent(&apos;package.json&apos;, {
+          author: {
+            name: &apos;foo bar&apos;,
+          },
+        });
+
+        assert.fileContent(&apos;license&apos;, &apos;foo bar&apos;);
+        assert.fileContent(&apos;readme.md&apos;, &apos;MIT &amp;copy; [foo bar]&apos;);
+      });
+  });
+
+  test(&apos;email&apos;, () =&gt; {
+    return runAppGenerator()
+      .withPrompts({ ...requiredPrompts, email: &apos;foo@bar.com&apos; })
+      .then(() =&gt; {
+        assert.jsonFileContent(&apos;package.json&apos;, {
+          author: {
+            email: &apos;foo@bar.com&apos;,
+          },
+        });
+
+        assert.fileContent(&apos;license&apos;, &apos;foo@bar.com&apos;);
+      });
+  });
+
+  test(&apos;website&apos;, () =&gt; {
+    return runAppGenerator()
+      .withPrompts({ ...requiredPrompts, website: &apos;test.com&apos; })
+      .then(() =&gt; {
+        assert.jsonFileContent(&apos;package.json&apos;, {
+          author: {
+            url: &apos;test.com&apos;,
+          },
+        });
+
+        assert.fileContent(&apos;readme.md&apos;, &apos;test.com&apos;);
+      });
+  });
+
+  test(&apos;createGithubRepository with token&apos;, () =&gt; {
+    const name = &apos;some-project-name&apos;;
+    const description = &apos;some-description&apos;;
+    const githubToken = &apos;some-token&apos;;
+
+    return runAppGenerator()
+      .withOptions({
+        githubToken,
+      })
+      .withPrompts({
+        ...requiredPrompts,
+        createGithubRepository: true,
+        projectName: name,
+        description,
+      })
+      .then(() =&gt; {
+        expect(Github).toBeCalledWith({
+          token: `token ${githubToken}`,
+        });
+        expect(Github.prototype.createRepository).toBeCalledWith({
+          name,
+          description,
+        });
+      });
+  });
+
+  test(&apos;createGithubRepository with username and password&apos;, () =&gt; {
+    const name = &apos;some-project-name&apos;;
+    const description = &apos;some-description&apos;;
+    const username = &apos;some-username&apos;;
+    const password = &apos;some-password&apos;;
+
+    return runAppGenerator()
+      .withPrompts({
+        ...requiredPrompts,
+        createGithubRepository: true,
+        projectName: name,
+        description,
+        githubUsername: username,
+        githubPassword: password,
+      })
+      .then(() =&gt; {
+        expect(Github).toBeCalledWith({
+          username,
+          password,
+          on2fa: expect.any(Function),
+        });
+        expect(Github.prototype.createRepository).toBeCalledWith({
+          name,
+          description,
+        });
+      });
+  });
+
+  test(&apos;createGithubRepository with username, password and 2fa&apos;, () =&gt; {
+    Github.use2fa = true;
+
+    const name = &apos;some-project-name&apos;;
+    const description = &apos;some-description&apos;;
+    const username = &apos;some-username&apos;;
+    const password = &apos;some-password&apos;;
+    const github2fa = &apos;github2fa&apos;;
+
+    return runAppGenerator()
+      .withPrompts({
+        ...requiredPrompts,
+        createGithubRepository: true,
+        projectName: name,
+        description,
+        githubUsername: username,
+        githubPassword: password,
+        github2fa,
+      })
+      .then(() =&gt; {
+        expect(Github).toBeCalledWith({
+          username,
+          password,
+          on2fa: expect.any(Function),
+        });
+        expect(Github.prototype.createRepository).toBeCalledWith({
+          name,
+          description,
+        });
+
+        Github.use2fa = false;
+      });
+  });
+
+  test(&apos;no createGithubRepository&apos;, () =&gt; {
+    return runAppGenerator()
+      .withPrompts({
+        ...requiredPrompts,
+        createGithubRepository: false,
+        travisCI: false,
+        npmDeploy: false,
+        githubUsername: &apos;some-username&apos;,
+        githubPassword: &apos;some-password&apos;,
+        projectName: &apos;some-project-name&apos;,
+      })
+      .then(() =&gt; {
+        expect(Github).not.toBeCalled();
+        expect(Github.prototype.createRepository).not.toBeCalled();
+      });
+  });
+
+  test(&apos;githubTemplates&apos;, () =&gt; {
+    return runAppGenerator()
+      .withPrompts({
+        ...requiredPrompts,
+        githubUsername: &apos;foo&apos;,
+        projectName: &apos;bar&apos;,
+        email: &apos;foo@test.com&apos;,
+        githubTemplates: true,
+      })
+      .then(() =&gt; {
+        assert.fileContent(&apos;contributing.md&apos;, &apos;https://github.com/foo/bar&apos;);
+        assert.fileContent(
+          &apos;.github/issue_template.md&apos;,
+          /bar version: &lt;!-- run `npm ls bar` --&gt;/
+        );
+        assert.fileContent(
+          &apos;.github/pull_request_template.md&apos;,
+          &apos;https://github.com/foo/bar/blob/master/contributing.md&apos;
+        );
+        assert.fileContent(&apos;other/code_of_conduct.md&apos;, &apos;foo@test.com&apos;);
+      });
+  });
+
+  test(&apos;no githubTemplates&apos;, () =&gt; {
+    return runAppGenerator()
+      .withPrompts({
+        ...requiredPrompts,
+        githubTemplates: false,
+      })
+      .then(() =&gt; {
+        assert.noFile([
+          &apos;contributing.md&apos;,
+          &apos;.github/issue_template.md&apos;,
+          &apos;.github/pull_request_template.md&apos;,
+          &apos;other/code_of_conduct.md&apos;,
+          &apos;other/examples.md&apos;,
+          &apos;other/roadmap.md&apos;,
+        ]);
+      });
+  });
+
+  describe(&apos;Travis&apos;, () =&gt; {
+    test(&apos;travisCI&apos;, () =&gt; {
+      return runAppGenerator()
+        .withPrompts({
+          ...requiredPrompts,
+          travisCI: true,
+        })
+        .then(() =&gt; {
+          assert.file([&apos;.travis.yml&apos;]);
+        });
+    });
+
+    test(&apos;no travisCI&apos;, () =&gt; {
+      return runAppGenerator()
+        .withPrompts({
+          ...requiredPrompts,
+          travisCI: false,
+        })
+        .then(() =&gt; {
+          assert.noFile([&apos;.travis.yml&apos;]);
+        });
+    });
+
+    test(&apos;coveralls&apos;, () =&gt; {
+      return runAppGenerator()
+        .withPrompts({
+          ...requiredPrompts,
+          travisCI: true,
+          coveralls: true,
+        })
+        .then(() =&gt; {
+          assert.fileContent(&apos;.travis.yml&apos;, &apos;after_success: yarn coveralls&apos;);
+        });
+    });
+
+    test(&apos;no coveralls&apos;, () =&gt; {
+      return runAppGenerator()
+        .withPrompts({
+          ...requiredPrompts,
+          travisCI: true,
+          coveralls: false,
+        })
+        .then(() =&gt; {
+          assert.noFileContent(&apos;.travis.yml&apos;, &apos;after_success: yarn coveralls&apos;);
+        });
+    });
+
+    test(&apos;npmDeploy&apos;, () =&gt; {
+      return runAppGenerator()
+        .withPrompts({
+          ...requiredPrompts,
+          travisCI: true,
+          npmDeploy: true,
+          semanticRelease: false,
+          npmUsername: &apos;some-username&apos;,
+          npmPassword: &apos;some-password&apos;,
+        })
+        .then(() =&gt; {
+          assert.noFile([&apos;.commitlintrc.json&apos;]);
+
+          assert.fileContent(&apos;.travis.yml&apos;, &apos;deploy:&apos;);
+          assert.fileContent(&apos;.travis.yml&apos;, &apos;provider: npm&apos;);
+          assert.fileContent(&apos;.travis.yml&apos;, &apos;api_key: $NPM_TOKEN&apos;);
+
+          assert.noFileContent(&apos;.travis.yml&apos;, &apos;provider: script&apos;);
+          assert.noFileContent(&apos;.travis.yml&apos;, &apos;yarn semantic-release&apos;);
+
+          assert.noFileContent(
+            &apos;package.json&apos;,
+            &apos;&quot;version&quot;: &quot;0.0.0-semantic-release&quot;&apos;
+          );
+          assert.noFileContent(
+            &apos;package.json&apos;,
+            &apos;&quot;semantic-release&quot;: &quot;semantic-release&quot;&apos;
+          );
+          assert.noFileContent(&apos;package.json&apos;, &apos;@commitlint/cli&apos;);
+          assert.noFileContent(
+            &apos;package.json&apos;,
+            &apos;@commitlint/config-conventional&apos;
+          );
+          assert.noFileContent(&apos;package.json&apos;, &apos;@commitlint/travis-cli&apos;);
+          assert.noFileContent(
+            &apos;package.json&apos;,
+            &apos;&quot;path&quot;: &quot;./node_modules/cz-conventional-changelog&quot;&apos;
+          );
+        });
+    });
+
+    test(&apos;no npmDeploy&apos;, () =&gt; {
+      return runAppGenerator()
+        .withPrompts({
+          ...requiredPrompts,
+          travisCI: true,
+          npmDeploy: false,
+        })
+        .then(() =&gt; {
+          assert.noFile([&apos;.commitlintrc.json&apos;]);
+          assert.noFileContent(&apos;.travis.yml&apos;, &apos;deploy&apos;);
+        });
+    });
+
+    test(&apos;npmDeploy with semanticRelease&apos;, () =&gt; {
+      return runAppGenerator()
+        .withPrompts({
+          ...requiredPrompts,
+          travisCI: true,
+          npmDeploy: true,
+          semanticRelease: true,
+          npmUsername: &apos;some-username&apos;,
+          npmPassword: &apos;some-password&apos;,
+          githubUsername: &apos;some-username&apos;,
+          githubPassword: &apos;some-password&apos;,
+        })
+        .then(() =&gt; {
+          assert.file([&apos;.commitlintrc.json&apos;]);
+
+          assert.fileContent(&apos;.travis.yml&apos;, &apos;deploy:&apos;);
+          assert.fileContent(&apos;.travis.yml&apos;, &apos;provider: script&apos;);
+          assert.fileContent(&apos;.travis.yml&apos;, &apos;yarn semantic-release&apos;);
+
+          assert.fileContent(
+            &apos;package.json&apos;,
+            &apos;&quot;version&quot;: &quot;0.0.0-semantic-release&quot;&apos;
+          );
+          assert.fileContent(
+            &apos;package.json&apos;,
+            &apos;&quot;semantic-release&quot;: &quot;semantic-release&quot;&apos;
+          );
+          assert.fileContent(&apos;package.json&apos;, &apos;@commitlint/cli&apos;);
+          assert.fileContent(&apos;package.json&apos;, &apos;@commitlint/config-conventional&apos;);
+          assert.fileContent(&apos;package.json&apos;, &apos;@commitlint/travis-cli&apos;);
+          assert.fileContent(
+            &apos;package.json&apos;,
+            &apos;&quot;path&quot;: &quot;./node_modules/cz-conventional-changelog&quot;&apos;
+          );
+        });
+    });
+
+    test(&apos;npmDeploy with semanticRelease and w/o createGithubRepository&apos;, () =&gt; {
+      return runAppGenerator()
+        .withPrompts({
+          ...requiredPrompts,
+          createGithubRepository: false,
+          travisCI: true,
+          npmDeploy: true,
+          semanticRelease: true,
+          npmUsername: &apos;some-username&apos;,
+          npmPassword: &apos;some-password&apos;,
+          githubUsername: &apos;some-username&apos;,
+          githubPassword: &apos;some-password&apos;,
+        })
+        .then(() =&gt; {
+          assert.file([&apos;.commitlintrc.json&apos;]);
+
+          assert.fileContent(&apos;.travis.yml&apos;, &apos;deploy:&apos;);
+          assert.fileContent(&apos;.travis.yml&apos;, &apos;provider: script&apos;);
+          assert.fileContent(&apos;.travis.yml&apos;, &apos;yarn semantic-release&apos;);
+
+          assert.fileContent(
+            &apos;package.json&apos;,
+            &apos;&quot;version&quot;: &quot;0.0.0-semantic-release&quot;&apos;
+          );
+          assert.fileContent(
+            &apos;package.json&apos;,
+            &apos;&quot;semantic-release&quot;: &quot;semantic-release&quot;&apos;
+          );
+          assert.fileContent(&apos;package.json&apos;, &apos;@commitlint/cli&apos;);
+          assert.fileContent(&apos;package.json&apos;, &apos;@commitlint/config-conventional&apos;);
+          assert.fileContent(&apos;package.json&apos;, &apos;@commitlint/travis-cli&apos;);
+          assert.fileContent(
+            &apos;package.json&apos;,
+            &apos;&quot;path&quot;: &quot;./node_modules/cz-conventional-changelog&quot;&apos;
+          );
+        });
+    });
+  });
+});
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

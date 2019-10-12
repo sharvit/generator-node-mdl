@@ -1,0 +1,2908 @@
+[
+  {
+    "__docId__": 1,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Infinity",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 2,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~NaN",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 3,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~undefined",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 4,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~null",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 5,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 6,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 7,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 8,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 9,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 10,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 11,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Symbol",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 12,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Error",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 13,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~EvalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 14,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~InternalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 15,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RangeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 16,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ReferenceError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 17,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~SyntaxError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 18,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~TypeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 19,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~URIError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 20,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 21,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 22,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Date",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 23,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~String",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 24,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~string",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 25,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RegExp",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 26,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 27,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 28,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 29,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8ClampedArray",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 30,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 31,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 32,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 33,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 34,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 35,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float64Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 36,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Map",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 37,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Set",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 38,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakMap",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 39,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakSet",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 40,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ArrayBuffer",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~DataView",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~JSON",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Promise",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Generator",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~GeneratorFunction",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Reflect",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Proxy",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "src/app/generators/base-generator.js",
+    "content": "import YeomanGenerator from 'yeoman-generator';\nimport options from '../options';\n\nexport default class extends YeomanGenerator {\n  constructor(...args) {\n    super(...args);\n\n    for (const [name, value] of Object.entries(options)) {\n      this.option(name, value);\n    }\n  }\n}\n",
+    "static": true,
+    "longname": "/home/travis/build/sharvit/generator-node-mdl/src/app/generators/base-generator.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "class",
+    "name": "basegenerator",
+    "memberof": "src/app/generators/base-generator.js",
+    "static": true,
+    "longname": "src/app/generators/base-generator.js~basegenerator",
+    "access": "public",
+    "export": true,
+    "importPath": "generator-node-mdl/src/app/generators/base-generator.js",
+    "importStyle": "basegenerator",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "yeoman-generator~YeomanGenerator"
+    ],
+    "ignore": true
+  },
+  {
+    "__docId__": 50,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/app/generators/base-generator.js~basegenerator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/app/generators/base-generator.js~basegenerator#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "ignore": true
+  },
+  {
+    "__docId__": 51,
+    "kind": "file",
+    "name": "src/app/generators/github/index.js",
+    "content": "import chalk from 'chalk';\nimport BaseGenerator from '../base-generator';\n\nexport default class extends BaseGenerator {\n  writing() {\n    if (this.options.githubTemplates) {\n      const templatesToCopy = [\n        { templatePath: '_github', destinationPath: '.github' },\n        { templatePath: 'other', destinationPath: 'other' },\n        { templatePath: 'contributing.md', destinationPath: 'contributing.md' },\n      ];\n\n      templatesToCopy.forEach(({ templatePath, destinationPath }) =>\n        this.fs.copyTpl(\n          this.templatePath(templatePath),\n          this.destinationPath(destinationPath),\n          this.options\n        )\n      );\n    }\n  }\n\n  async install() {\n    if (this.options.createGithubRepository) {\n      await this._createGithubRepository();\n    }\n  }\n\n  async _createGithubRepository() {\n    this.log('Creating github repository...');\n\n    const {\n      data: { html_url: url },\n    } = await this.options.github.createRepository({\n      name: this.options.projectName,\n      description: this.options.description,\n    });\n\n    this.githubRepositoryUrl = url;\n\n    this.log(this.githubRepositoryUrl);\n    this.log('\\n');\n  }\n\n  end() {\n    if (this.options.createGithubRepository) {\n      this.log(\n        chalk`  Check out your new Github repository: {underline.cyan ${this.githubRepositoryUrl}}`\n      );\n    }\n  }\n}\n",
+    "static": true,
+    "longname": "/home/travis/build/sharvit/generator-node-mdl/src/app/generators/github/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 52,
+    "kind": "class",
+    "name": "index",
+    "memberof": "src/app/generators/github/index.js",
+    "static": true,
+    "longname": "src/app/generators/github/index.js~index",
+    "access": "public",
+    "export": true,
+    "importPath": "generator-node-mdl/src/app/generators/github/index.js",
+    "importStyle": "index",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "src/app/generators/base-generator.js~BaseGenerator"
+    ],
+    "ignore": true
+  },
+  {
+    "__docId__": 53,
+    "kind": "method",
+    "name": "writing",
+    "memberof": "src/app/generators/github/index.js~index",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/app/generators/github/index.js~index#writing",
+    "access": "public",
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "params": [],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 54,
+    "kind": "method",
+    "name": "install",
+    "memberof": "src/app/generators/github/index.js~index",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/app/generators/github/index.js~index#install",
+    "access": "public",
+    "description": null,
+    "lineNumber": 23,
+    "undocument": true,
+    "params": [],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 55,
+    "kind": "method",
+    "name": "_createGithubRepository",
+    "memberof": "src/app/generators/github/index.js~index",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/app/generators/github/index.js~index#_createGithubRepository",
+    "access": "private",
+    "description": null,
+    "lineNumber": 29,
+    "undocument": true,
+    "ignore": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 56,
+    "kind": "member",
+    "name": "githubRepositoryUrl",
+    "memberof": "src/app/generators/github/index.js~index",
+    "static": false,
+    "longname": "src/app/generators/github/index.js~index#githubRepositoryUrl",
+    "access": "public",
+    "description": null,
+    "lineNumber": 39,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 57,
+    "kind": "method",
+    "name": "end",
+    "memberof": "src/app/generators/github/index.js~index",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/app/generators/github/index.js~index#end",
+    "access": "public",
+    "description": null,
+    "lineNumber": 45,
+    "undocument": true,
+    "params": [],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 58,
+    "kind": "file",
+    "name": "src/app/generators/project/index.js",
+    "content": "import path from 'path';\nimport chalk from 'chalk';\nimport commandExists from 'command-exists';\nimport findUp from 'find-up';\nimport makeDir from 'make-dir';\n\nimport Commander from '../../lib/commander';\nimport BaseGenerator from '../base-generator';\n\nexport default class extends BaseGenerator {\n  constructor(...args) {\n    super(...args);\n\n    this.commander = new Commander({\n      spawnSync: this.spawnCommandSync.bind(this),\n      log: this.log.bind(this),\n    });\n  }\n  /*\n    Run Loop\n   */\n\n  configuring() {\n    if (path.basename(this.destinationRoot()) !== this.options.projectName) {\n      return makeDir(this.options.projectName).then(path => {\n        this.destinationRoot(path);\n        this.log(chalk`\\nGenerating a new project in {green ${path}}\\n`);\n      });\n    }\n  }\n\n  writing() {\n    const templatesToCopy = [\n      { templatePath: '_babelrc', destinationPath: '.babelrc' },\n      { templatePath: '_editorconfig', destinationPath: '.editorconfig' },\n      { templatePath: '_eslintignore', destinationPath: '.eslintignore' },\n      { templatePath: '_eslintrc', destinationPath: '.eslintrc' },\n      { templatePath: '_gitattributes', destinationPath: '.gitattributes' },\n      { templatePath: '_gitignore', destinationPath: '.gitignore' },\n      { templatePath: '_npmignore', destinationPath: '.npmignore' },\n      { templatePath: '_package.json', destinationPath: 'package.json' },\n      { templatePath: 'license', destinationPath: 'license' },\n      { templatePath: 'readme.md', destinationPath: 'readme.md' },\n      { templatePath: 'src', destinationPath: 'src' },\n    ];\n\n    if (this.options.npmDeploy && this.options.semanticRelease) {\n      templatesToCopy.push({\n        templatePath: '_commitlintrc.json',\n        destinationPath: '.commitlintrc.json',\n      });\n    }\n\n    templatesToCopy.forEach(({ templatePath, destinationPath }) =>\n      this.fs.copyTpl(\n        this.templatePath(templatePath),\n        this.destinationPath(destinationPath),\n        this.options\n      )\n    );\n  }\n\n  install() {\n    this._installNpmDeps();\n  }\n\n  async end() {\n    const { repository } = this.options;\n    await this._removeYoRc();\n\n    this._createGit();\n\n    this.log('\\n\\n\\n');\n    this.log(chalk`{bold.yellow Thank you for using generator-node-mdl!}`);\n    this.log('\\n\\n\\n');\n    this.log(chalk`{bold.underline What's next:}\\n`);\n\n    this.log(chalk`  Push your changes to git: {gray git push origin master}`);\n    this.log(\n      chalk`  Read your project contributing guide: {underline.cyan https://github.com/${repository}/blob/master/contributing.md}`\n    );\n    this.log(\n      chalk`  Enable greenkeeper for your project by visiting: {underline.cyan https://account.greenkeeper.io/}`\n    );\n  }\n\n  /*\n    Private Methods\n   */\n\n  _installNpmDeps() {\n    const hasYarn = commandExists.sync('yarn');\n\n    return this.installDependencies({\n      bower: false,\n      npm: !hasYarn,\n      yarn: hasYarn,\n      skipMessage: true,\n    });\n  }\n\n  _createGit() {\n    const { repository } = this.options;\n\n    this.log('Initiating git:');\n\n    this.commander.run([\n      'git init --quiet',\n      `git remote add origin git@github.com:${repository}.git`,\n      'git add .',\n      [\n        'git',\n        'commit',\n        '-m',\n        'chore(init): generated by generator-node-mdl 🔥',\n        '--quiet',\n      ],\n    ]);\n  }\n\n  async _removeYoRc() {\n    const yoRC = await findUp('.yo-rc.json');\n\n    if (yoRC) {\n      this.fs.delete(yoRC);\n\n      await new Promise((resolve, reject) => {\n        this.fs.commit(() => resolve());\n      });\n    }\n  }\n}\n",
+    "static": true,
+    "longname": "/home/travis/build/sharvit/generator-node-mdl/src/app/generators/project/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 59,
+    "kind": "class",
+    "name": "index",
+    "memberof": "src/app/generators/project/index.js",
+    "static": true,
+    "longname": "src/app/generators/project/index.js~index",
+    "access": "public",
+    "export": true,
+    "importPath": "generator-node-mdl/src/app/generators/project/index.js",
+    "importStyle": "index",
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "src/app/generators/base-generator.js~BaseGenerator"
+    ],
+    "ignore": true
+  },
+  {
+    "__docId__": 60,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/app/generators/project/index.js~index",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/app/generators/project/index.js~index#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "ignore": true
+  },
+  {
+    "__docId__": 61,
+    "kind": "member",
+    "name": "commander",
+    "memberof": "src/app/generators/project/index.js~index",
+    "static": false,
+    "longname": "src/app/generators/project/index.js~index#commander",
+    "access": "public",
+    "description": null,
+    "lineNumber": 14,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 62,
+    "kind": "method",
+    "name": "configuring",
+    "memberof": "src/app/generators/project/index.js~index",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/app/generators/project/index.js~index#configuring",
+    "access": "public",
+    "description": null,
+    "lineNumber": 23,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 63,
+    "kind": "method",
+    "name": "writing",
+    "memberof": "src/app/generators/project/index.js~index",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/app/generators/project/index.js~index#writing",
+    "access": "public",
+    "description": null,
+    "lineNumber": 32,
+    "undocument": true,
+    "params": [],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 64,
+    "kind": "method",
+    "name": "install",
+    "memberof": "src/app/generators/project/index.js~index",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/app/generators/project/index.js~index#install",
+    "access": "public",
+    "description": null,
+    "lineNumber": 63,
+    "undocument": true,
+    "params": [],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 65,
+    "kind": "method",
+    "name": "end",
+    "memberof": "src/app/generators/project/index.js~index",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/app/generators/project/index.js~index#end",
+    "access": "public",
+    "description": null,
+    "lineNumber": 67,
+    "undocument": true,
+    "params": [],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 66,
+    "kind": "method",
+    "name": "_installNpmDeps",
+    "memberof": "src/app/generators/project/index.js~index",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/app/generators/project/index.js~index#_installNpmDeps",
+    "access": "private",
+    "description": null,
+    "lineNumber": 91,
+    "undocument": true,
+    "ignore": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 67,
+    "kind": "method",
+    "name": "_createGit",
+    "memberof": "src/app/generators/project/index.js~index",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/app/generators/project/index.js~index#_createGit",
+    "access": "private",
+    "description": null,
+    "lineNumber": 102,
+    "undocument": true,
+    "ignore": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 68,
+    "kind": "method",
+    "name": "_removeYoRc",
+    "memberof": "src/app/generators/project/index.js~index",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/app/generators/project/index.js~index#_removeYoRc",
+    "access": "private",
+    "description": null,
+    "lineNumber": 121,
+    "undocument": true,
+    "ignore": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 69,
+    "kind": "file",
+    "name": "src/app/generators/travis/index.js",
+    "content": "import chalk from 'chalk';\n\nimport Commander from '../../lib/commander';\nimport BaseGenerator from '../base-generator';\n\nexport default class extends BaseGenerator {\n  constructor(...args) {\n    super(...args);\n\n    this.commander = new Commander({\n      spawnSync: this.spawnCommandSync.bind(this),\n    });\n  }\n\n  writing() {\n    this.fs.copyTpl(\n      this.templatePath('_travis.yml'),\n      this.destinationPath('.travis.yml'),\n      this.options\n    );\n  }\n\n  async install() {\n    if (process.env.NODE_ENV === 'test') return;\n\n    this.log('Installing TravisCI...');\n\n    const { npmDeploy, semanticRelease } = this.options;\n\n    this._installTravis();\n\n    if (npmDeploy) {\n      this._installTravisNpmToken();\n\n      if (semanticRelease) {\n        this._installTravisGithubToken();\n      }\n    }\n\n    this.log('\\n');\n  }\n\n  end() {\n    const { repository } = this.options;\n\n    this.log(\n      chalk`  Visit your TravisCI url: {underline.cyan https://travis-ci.org/${repository}}`\n    );\n  }\n\n  _installTravis() {\n    const { repository, githubToken } = this.options;\n\n    this.commander.run([\n      'gem install travis --no-ri --no-rdoc --quiet',\n      `travis login --github-token ${githubToken}`,\n      `travis enable -r ${repository}`,\n    ]);\n  }\n\n  _installTravisNpmToken() {\n    const { repository, npmToken } = this.options;\n\n    this.commander.run(`travis env set NPM_TOKEN ${npmToken} -r ${repository}`);\n  }\n\n  _installTravisGithubToken() {\n    const { repository, githubToken } = this.options;\n\n    this.commander.run(\n      `travis env set GH_TOKEN ${githubToken} -r ${repository}`\n    );\n  }\n}\n",
+    "static": true,
+    "longname": "/home/travis/build/sharvit/generator-node-mdl/src/app/generators/travis/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 70,
+    "kind": "class",
+    "name": "index",
+    "memberof": "src/app/generators/travis/index.js",
+    "static": true,
+    "longname": "src/app/generators/travis/index.js~index",
+    "access": "public",
+    "export": true,
+    "importPath": "generator-node-mdl/src/app/generators/travis/index.js",
+    "importStyle": "index",
+    "description": null,
+    "lineNumber": 6,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "src/app/generators/base-generator.js~BaseGenerator"
+    ],
+    "ignore": true
+  },
+  {
+    "__docId__": 71,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/app/generators/travis/index.js~index",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/app/generators/travis/index.js~index#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "ignore": true
+  },
+  {
+    "__docId__": 72,
+    "kind": "member",
+    "name": "commander",
+    "memberof": "src/app/generators/travis/index.js~index",
+    "static": false,
+    "longname": "src/app/generators/travis/index.js~index#commander",
+    "access": "public",
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 73,
+    "kind": "method",
+    "name": "writing",
+    "memberof": "src/app/generators/travis/index.js~index",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/app/generators/travis/index.js~index#writing",
+    "access": "public",
+    "description": null,
+    "lineNumber": 15,
+    "undocument": true,
+    "params": [],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 74,
+    "kind": "method",
+    "name": "install",
+    "memberof": "src/app/generators/travis/index.js~index",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/app/generators/travis/index.js~index#install",
+    "access": "public",
+    "description": null,
+    "lineNumber": 23,
+    "undocument": true,
+    "params": [],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 75,
+    "kind": "method",
+    "name": "end",
+    "memberof": "src/app/generators/travis/index.js~index",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/app/generators/travis/index.js~index#end",
+    "access": "public",
+    "description": null,
+    "lineNumber": 43,
+    "undocument": true,
+    "params": [],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 76,
+    "kind": "method",
+    "name": "_installTravis",
+    "memberof": "src/app/generators/travis/index.js~index",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/app/generators/travis/index.js~index#_installTravis",
+    "access": "private",
+    "description": null,
+    "lineNumber": 51,
+    "undocument": true,
+    "ignore": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 77,
+    "kind": "method",
+    "name": "_installTravisNpmToken",
+    "memberof": "src/app/generators/travis/index.js~index",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/app/generators/travis/index.js~index#_installTravisNpmToken",
+    "access": "private",
+    "description": null,
+    "lineNumber": 61,
+    "undocument": true,
+    "ignore": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 78,
+    "kind": "method",
+    "name": "_installTravisGithubToken",
+    "memberof": "src/app/generators/travis/index.js~index",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/app/generators/travis/index.js~index#_installTravisGithubToken",
+    "access": "private",
+    "description": null,
+    "lineNumber": 67,
+    "undocument": true,
+    "ignore": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 79,
+    "kind": "file",
+    "name": "src/app/index.js",
+    "content": "import YeomanGenerator from 'yeoman-generator';\nimport chalk from 'chalk';\n\nimport './generators/project';\nimport './generators/github';\nimport './generators/travis';\n\nimport Prompter from './prompter';\n\nexport default class NodeMdlGenerator extends YeomanGenerator {\n  constructor(...args) {\n    super(...args);\n\n    this.prompter = new Prompter(this);\n  }\n\n  async prompting() {\n    this.props = await this.prompter.prompt();\n  }\n\n  configuring() {\n    this.composeWith(require.resolve('./generators/project'), this.props);\n    this.composeWith(require.resolve('./generators/github'), this.props);\n\n    if (this.props.travisCI) {\n      this.composeWith(require.resolve('./generators/travis'), this.props);\n    }\n  }\n\n  writing() {\n    this.log('\\n\\n\\n');\n    this.log(chalk`{underline.bold Writing files to disk:}\\n`);\n  }\n\n  install() {\n    this.log('\\n\\n\\n');\n    this.log(chalk`{underline.bold Installing:}\\n`);\n  }\n\n  end() {\n    this.log('\\n\\n\\n');\n    this.log(chalk`{underline.bold Finishing:}\\n`);\n  }\n}\n",
+    "static": true,
+    "longname": "/home/travis/build/sharvit/generator-node-mdl/src/app/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 80,
+    "kind": "class",
+    "name": "NodeMdlGenerator",
+    "memberof": "src/app/index.js",
+    "static": true,
+    "longname": "src/app/index.js~NodeMdlGenerator",
+    "access": "public",
+    "export": true,
+    "importPath": "generator-node-mdl/src/app/index.js",
+    "importStyle": "NodeMdlGenerator",
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "yeoman-generator~YeomanGenerator"
+    ],
+    "ignore": true
+  },
+  {
+    "__docId__": 81,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/app/index.js~NodeMdlGenerator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/app/index.js~NodeMdlGenerator#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "ignore": true
+  },
+  {
+    "__docId__": 82,
+    "kind": "member",
+    "name": "prompter",
+    "memberof": "src/app/index.js~NodeMdlGenerator",
+    "static": false,
+    "longname": "src/app/index.js~NodeMdlGenerator#prompter",
+    "access": "public",
+    "description": null,
+    "lineNumber": 14,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 83,
+    "kind": "method",
+    "name": "prompting",
+    "memberof": "src/app/index.js~NodeMdlGenerator",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/app/index.js~NodeMdlGenerator#prompting",
+    "access": "public",
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "params": [],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 84,
+    "kind": "member",
+    "name": "props",
+    "memberof": "src/app/index.js~NodeMdlGenerator",
+    "static": false,
+    "longname": "src/app/index.js~NodeMdlGenerator#props",
+    "access": "public",
+    "description": null,
+    "lineNumber": 18,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 85,
+    "kind": "method",
+    "name": "configuring",
+    "memberof": "src/app/index.js~NodeMdlGenerator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/app/index.js~NodeMdlGenerator#configuring",
+    "access": "public",
+    "description": null,
+    "lineNumber": 21,
+    "undocument": true,
+    "params": [],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 86,
+    "kind": "method",
+    "name": "writing",
+    "memberof": "src/app/index.js~NodeMdlGenerator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/app/index.js~NodeMdlGenerator#writing",
+    "access": "public",
+    "description": null,
+    "lineNumber": 30,
+    "undocument": true,
+    "params": [],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 87,
+    "kind": "method",
+    "name": "install",
+    "memberof": "src/app/index.js~NodeMdlGenerator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/app/index.js~NodeMdlGenerator#install",
+    "access": "public",
+    "description": null,
+    "lineNumber": 35,
+    "undocument": true,
+    "params": [],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 88,
+    "kind": "method",
+    "name": "end",
+    "memberof": "src/app/index.js~NodeMdlGenerator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/app/index.js~NodeMdlGenerator#end",
+    "access": "public",
+    "description": null,
+    "lineNumber": 40,
+    "undocument": true,
+    "params": [],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 89,
+    "kind": "file",
+    "name": "src/app/index.test.js",
+    "content": "import path from 'path';\nimport assert from 'yeoman-assert';\nimport helpers from 'yeoman-test';\n\nimport Generator from './index';\nimport Github from './lib/github';\n\njest.mock('./lib/github');\njest.mock('./lib/npm');\n\nGithub.use2fa = false;\n\nconst runAppGenerator = () => helpers.run(Generator);\n\nbeforeEach(() => jest.clearAllMocks());\n\nconst requiredPrompts = {\n  githubUsername: 'github-username',\n};\n\ntest('destinationRoot', () => {\n  return runAppGenerator()\n    .withPrompts({ ...requiredPrompts, projectName: 'temp' })\n    .then(() => {\n      assert.equal(path.basename(process.cwd()), 'temp');\n    });\n});\n\ntest('default files', () => {\n  return runAppGenerator()\n    .withPrompts(requiredPrompts)\n    .then(() => {\n      assert.file([\n        '.git',\n        '.babelrc',\n        '.editorconfig',\n        '.eslintignore',\n        '.eslintrc',\n        '.gitattributes',\n        '.gitignore',\n        '.npmignore',\n        'license',\n        'package.json',\n        'readme.md',\n        'src/index.js',\n        'src/index.test.js',\n        // githubTemplates\n        'contributing.md',\n        '.github/issue_template.md',\n        '.github/pull_request_template.md',\n        'other/code_of_conduct.md',\n        'other/examples.md',\n        'other/roadmap.md',\n        // travisCI\n        '.travis.yml',\n        // semanticRelease\n        '.commitlintrc.json',\n      ]);\n\n      assert.noFile([\n        '_babelrc',\n        '_editorconfig',\n        '_eslintignore',\n        '_eslintrc',\n        '_gitattributes',\n        '_gitignore',\n        '_travis.yml',\n        '_npmignore',\n        '_github/issue_template.md',\n        '_github/pull_request_template.md',\n        '_commitlintrc.json',\n      ]);\n    });\n});\n\ntest('default files with --noDefaults', () => {\n  return runAppGenerator()\n    .withOptions({ noDefaults: true })\n    .withPrompts(requiredPrompts)\n    .then(() => {\n      assert.file([\n        '.git',\n        '.babelrc',\n        '.editorconfig',\n        '.eslintignore',\n        '.eslintrc',\n        '.gitattributes',\n        '.gitignore',\n        '.npmignore',\n        'license',\n        'package.json',\n        'readme.md',\n        'src/index.js',\n        'src/index.test.js',\n      ]);\n\n      assert.noFile([\n        '.commitlintrc.json',\n        '_babelrc',\n        '_editorconfig',\n        '_eslintignore',\n        '_eslintrc',\n        '_gitattributes',\n        '_gitignore',\n        '_travis.yml',\n        '_npmignore',\n        '_github/issue_template.md',\n        '_github/pull_request_template.md',\n        '_commitlintrc.json',\n        // githubTemplates\n        'contributing.md',\n        '.github/issue_template.md',\n        '.github/pull_request_template.md',\n        'other/code_of_conduct.md',\n        'other/examples.md',\n        'other/roadmap.md',\n        // travisCI\n        '.travis.yml',\n        // semanticRelease\n        '.commitlintrc.json',\n      ]);\n    });\n});\n\ndescribe('prompts', () => {\n  test('projectName', () => {\n    return runAppGenerator()\n      .withPrompts({\n        ...requiredPrompts,\n        githubUsername: 'foo',\n        projectName: 'bar',\n      })\n      .then(() => {\n        assert.jsonFileContent('package.json', {\n          name: 'bar',\n          repository: 'https://github.com/foo/bar',\n        });\n\n        assert.fileContent('.git/config', '[remote \"origin\"]');\n        assert.fileContent('.git/config', 'git@github.com:foo/bar.git');\n\n        assert.fileContent(\n          'readme.md',\n          '[![Package Version](https://img.shields.io/npm/v/bar.svg?style=flat-square)](https://www.npmjs.com/package/bar)'\n        );\n        assert.fileContent(\n          'readme.md',\n          '[![Build Status: Linux](https://img.shields.io/travis/foo/bar/master.svg?style=flat-square)](https://travis-ci.org/foo/bar)'\n        );\n        assert.fileContent(\n          'readme.md',\n          '[![Downloads Status](https://img.shields.io/npm/dm/bar.svg?style=flat-square)](https://npm-stat.com/charts.html?package=bar&from=2016-04-01)'\n        );\n\n        assert.fileContent('readme.md', '# bar');\n        assert.fileContent('readme.md', 'npm install --save bar');\n        assert.fileContent('readme.md', \"const bar = require('bar');\");\n      });\n  });\n\n  test('description', () => {\n    return runAppGenerator()\n      .withPrompts({ ...requiredPrompts, description: 'foo' })\n      .then(() => {\n        assert.jsonFileContent('package.json', {\n          description: 'foo',\n        });\n        assert.fileContent('readme.md', 'foo');\n      });\n  });\n\n  test('name', () => {\n    return runAppGenerator()\n      .withPrompts({ ...requiredPrompts, name: 'foo bar' })\n      .then(() => {\n        assert.jsonFileContent('package.json', {\n          author: {\n            name: 'foo bar',\n          },\n        });\n\n        assert.fileContent('license', 'foo bar');\n        assert.fileContent('readme.md', 'MIT &copy; [foo bar]');\n      });\n  });\n\n  test('email', () => {\n    return runAppGenerator()\n      .withPrompts({ ...requiredPrompts, email: 'foo@bar.com' })\n      .then(() => {\n        assert.jsonFileContent('package.json', {\n          author: {\n            email: 'foo@bar.com',\n          },\n        });\n\n        assert.fileContent('license', 'foo@bar.com');\n      });\n  });\n\n  test('website', () => {\n    return runAppGenerator()\n      .withPrompts({ ...requiredPrompts, website: 'test.com' })\n      .then(() => {\n        assert.jsonFileContent('package.json', {\n          author: {\n            url: 'test.com',\n          },\n        });\n\n        assert.fileContent('readme.md', 'test.com');\n      });\n  });\n\n  test('createGithubRepository with token', () => {\n    const name = 'some-project-name';\n    const description = 'some-description';\n    const githubToken = 'some-token';\n\n    return runAppGenerator()\n      .withOptions({\n        githubToken,\n      })\n      .withPrompts({\n        ...requiredPrompts,\n        createGithubRepository: true,\n        projectName: name,\n        description,\n      })\n      .then(() => {\n        expect(Github).toBeCalledWith({\n          token: `token ${githubToken}`,\n        });\n        expect(Github.prototype.createRepository).toBeCalledWith({\n          name,\n          description,\n        });\n      });\n  });\n\n  test('createGithubRepository with username and password', () => {\n    const name = 'some-project-name';\n    const description = 'some-description';\n    const username = 'some-username';\n    const password = 'some-password';\n\n    return runAppGenerator()\n      .withPrompts({\n        ...requiredPrompts,\n        createGithubRepository: true,\n        projectName: name,\n        description,\n        githubUsername: username,\n        githubPassword: password,\n      })\n      .then(() => {\n        expect(Github).toBeCalledWith({\n          username,\n          password,\n          on2fa: expect.any(Function),\n        });\n        expect(Github.prototype.createRepository).toBeCalledWith({\n          name,\n          description,\n        });\n      });\n  });\n\n  test('createGithubRepository with username, password and 2fa', () => {\n    Github.use2fa = true;\n\n    const name = 'some-project-name';\n    const description = 'some-description';\n    const username = 'some-username';\n    const password = 'some-password';\n    const github2fa = 'github2fa';\n\n    return runAppGenerator()\n      .withPrompts({\n        ...requiredPrompts,\n        createGithubRepository: true,\n        projectName: name,\n        description,\n        githubUsername: username,\n        githubPassword: password,\n        github2fa,\n      })\n      .then(() => {\n        expect(Github).toBeCalledWith({\n          username,\n          password,\n          on2fa: expect.any(Function),\n        });\n        expect(Github.prototype.createRepository).toBeCalledWith({\n          name,\n          description,\n        });\n\n        Github.use2fa = false;\n      });\n  });\n\n  test('no createGithubRepository', () => {\n    return runAppGenerator()\n      .withPrompts({\n        ...requiredPrompts,\n        createGithubRepository: false,\n        travisCI: false,\n        npmDeploy: false,\n        githubUsername: 'some-username',\n        githubPassword: 'some-password',\n        projectName: 'some-project-name',\n      })\n      .then(() => {\n        expect(Github).not.toBeCalled();\n        expect(Github.prototype.createRepository).not.toBeCalled();\n      });\n  });\n\n  test('githubTemplates', () => {\n    return runAppGenerator()\n      .withPrompts({\n        ...requiredPrompts,\n        githubUsername: 'foo',\n        projectName: 'bar',\n        email: 'foo@test.com',\n        githubTemplates: true,\n      })\n      .then(() => {\n        assert.fileContent('contributing.md', 'https://github.com/foo/bar');\n        assert.fileContent(\n          '.github/issue_template.md',\n          /bar version: <!-- run `npm ls bar` -->/\n        );\n        assert.fileContent(\n          '.github/pull_request_template.md',\n          'https://github.com/foo/bar/blob/master/contributing.md'\n        );\n        assert.fileContent('other/code_of_conduct.md', 'foo@test.com');\n      });\n  });\n\n  test('no githubTemplates', () => {\n    return runAppGenerator()\n      .withPrompts({\n        ...requiredPrompts,\n        githubTemplates: false,\n      })\n      .then(() => {\n        assert.noFile([\n          'contributing.md',\n          '.github/issue_template.md',\n          '.github/pull_request_template.md',\n          'other/code_of_conduct.md',\n          'other/examples.md',\n          'other/roadmap.md',\n        ]);\n      });\n  });\n\n  describe('Travis', () => {\n    test('travisCI', () => {\n      return runAppGenerator()\n        .withPrompts({\n          ...requiredPrompts,\n          travisCI: true,\n        })\n        .then(() => {\n          assert.file(['.travis.yml']);\n        });\n    });\n\n    test('no travisCI', () => {\n      return runAppGenerator()\n        .withPrompts({\n          ...requiredPrompts,\n          travisCI: false,\n        })\n        .then(() => {\n          assert.noFile(['.travis.yml']);\n        });\n    });\n\n    test('coveralls', () => {\n      return runAppGenerator()\n        .withPrompts({\n          ...requiredPrompts,\n          travisCI: true,\n          coveralls: true,\n        })\n        .then(() => {\n          assert.fileContent('.travis.yml', 'after_success: yarn coveralls');\n        });\n    });\n\n    test('no coveralls', () => {\n      return runAppGenerator()\n        .withPrompts({\n          ...requiredPrompts,\n          travisCI: true,\n          coveralls: false,\n        })\n        .then(() => {\n          assert.noFileContent('.travis.yml', 'after_success: yarn coveralls');\n        });\n    });\n\n    test('npmDeploy', () => {\n      return runAppGenerator()\n        .withPrompts({\n          ...requiredPrompts,\n          travisCI: true,\n          npmDeploy: true,\n          semanticRelease: false,\n          npmUsername: 'some-username',\n          npmPassword: 'some-password',\n        })\n        .then(() => {\n          assert.noFile(['.commitlintrc.json']);\n\n          assert.fileContent('.travis.yml', 'deploy:');\n          assert.fileContent('.travis.yml', 'provider: npm');\n          assert.fileContent('.travis.yml', 'api_key: $NPM_TOKEN');\n\n          assert.noFileContent('.travis.yml', 'provider: script');\n          assert.noFileContent('.travis.yml', 'yarn semantic-release');\n\n          assert.noFileContent(\n            'package.json',\n            '\"version\": \"0.0.0-semantic-release\"'\n          );\n          assert.noFileContent(\n            'package.json',\n            '\"semantic-release\": \"semantic-release\"'\n          );\n          assert.noFileContent('package.json', '@commitlint/cli');\n          assert.noFileContent(\n            'package.json',\n            '@commitlint/config-conventional'\n          );\n          assert.noFileContent('package.json', '@commitlint/travis-cli');\n          assert.noFileContent(\n            'package.json',\n            '\"path\": \"./node_modules/cz-conventional-changelog\"'\n          );\n        });\n    });\n\n    test('no npmDeploy', () => {\n      return runAppGenerator()\n        .withPrompts({\n          ...requiredPrompts,\n          travisCI: true,\n          npmDeploy: false,\n        })\n        .then(() => {\n          assert.noFile(['.commitlintrc.json']);\n          assert.noFileContent('.travis.yml', 'deploy');\n        });\n    });\n\n    test('npmDeploy with semanticRelease', () => {\n      return runAppGenerator()\n        .withPrompts({\n          ...requiredPrompts,\n          travisCI: true,\n          npmDeploy: true,\n          semanticRelease: true,\n          npmUsername: 'some-username',\n          npmPassword: 'some-password',\n          githubUsername: 'some-username',\n          githubPassword: 'some-password',\n        })\n        .then(() => {\n          assert.file(['.commitlintrc.json']);\n\n          assert.fileContent('.travis.yml', 'deploy:');\n          assert.fileContent('.travis.yml', 'provider: script');\n          assert.fileContent('.travis.yml', 'yarn semantic-release');\n\n          assert.fileContent(\n            'package.json',\n            '\"version\": \"0.0.0-semantic-release\"'\n          );\n          assert.fileContent(\n            'package.json',\n            '\"semantic-release\": \"semantic-release\"'\n          );\n          assert.fileContent('package.json', '@commitlint/cli');\n          assert.fileContent('package.json', '@commitlint/config-conventional');\n          assert.fileContent('package.json', '@commitlint/travis-cli');\n          assert.fileContent(\n            'package.json',\n            '\"path\": \"./node_modules/cz-conventional-changelog\"'\n          );\n        });\n    });\n\n    test('npmDeploy with semanticRelease and w/o createGithubRepository', () => {\n      return runAppGenerator()\n        .withPrompts({\n          ...requiredPrompts,\n          createGithubRepository: false,\n          travisCI: true,\n          npmDeploy: true,\n          semanticRelease: true,\n          npmUsername: 'some-username',\n          npmPassword: 'some-password',\n          githubUsername: 'some-username',\n          githubPassword: 'some-password',\n        })\n        .then(() => {\n          assert.file(['.commitlintrc.json']);\n\n          assert.fileContent('.travis.yml', 'deploy:');\n          assert.fileContent('.travis.yml', 'provider: script');\n          assert.fileContent('.travis.yml', 'yarn semantic-release');\n\n          assert.fileContent(\n            'package.json',\n            '\"version\": \"0.0.0-semantic-release\"'\n          );\n          assert.fileContent(\n            'package.json',\n            '\"semantic-release\": \"semantic-release\"'\n          );\n          assert.fileContent('package.json', '@commitlint/cli');\n          assert.fileContent('package.json', '@commitlint/config-conventional');\n          assert.fileContent('package.json', '@commitlint/travis-cli');\n          assert.fileContent(\n            'package.json',\n            '\"path\": \"./node_modules/cz-conventional-changelog\"'\n          );\n        });\n    });\n  });\n});\n",
+    "static": true,
+    "longname": "/home/travis/build/sharvit/generator-node-mdl/src/app/index.test.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 90,
+    "kind": "function",
+    "name": "runAppGenerator",
+    "memberof": "src/app/index.test.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/app/index.test.js~runAppGenerator",
+    "access": "public",
+    "export": false,
+    "importPath": "generator-node-mdl/src/app/index.test.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "params": [],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 91,
+    "kind": "variable",
+    "name": "requiredPrompts",
+    "memberof": "src/app/index.test.js",
+    "static": true,
+    "longname": "src/app/index.test.js~requiredPrompts",
+    "access": "public",
+    "export": false,
+    "importPath": "generator-node-mdl/src/app/index.test.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "type": {
+      "types": [
+        "{\"githubUsername\": string}"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 92,
+    "kind": "file",
+    "name": "src/app/lib/commander.js",
+    "content": "import chalk from 'chalk';\n\nconst noop = () => undefined;\n\nclass Commander {\n  /**\n   * Commander will run you spawnSync commands\n   * @param {Function} spawnSync function to run you commands with, required\n   * @param {Function} log       function to log you commands with\n   */\n  constructor({ spawnSync = noop, log = noop } = {}) {\n    this.spawnSync = spawnSync;\n    this.log = log;\n  }\n\n  /**\n   * Run commands\n   * @param  {Array}  [commands] array of string commands\n   */\n  run(commands) {\n    if (typeof commands === 'string') {\n      commands = [commands];\n    }\n\n    for (const command of commands) {\n      this._runCommand(command);\n    }\n  }\n\n  _runCommand(command) {\n    const { main, args } = this._parseCommand(command);\n\n    this._logCommand(main, args);\n    this.spawnSync(main, args);\n  }\n\n  _parseCommand(command) {\n    let main;\n    let args;\n\n    if (typeof command === 'string') {\n      [main, ...args] = command.split(' ');\n    } else if (Array.isArray(command)) {\n      [main, ...args] = command;\n    } else {\n      throw new TypeError(\n        `Unsupported command type (${typeof command}): ${command}`\n      );\n    }\n\n    return { main, args };\n  }\n\n  _logCommand(main, args) {\n    this.log(chalk`  {gray ${main} ${args.join(' ')}}`);\n  }\n}\n\nexport default Commander;\n",
+    "static": true,
+    "longname": "/home/travis/build/sharvit/generator-node-mdl/src/app/lib/commander.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 93,
+    "kind": "function",
+    "name": "noop",
+    "memberof": "src/app/lib/commander.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/app/lib/commander.js~noop",
+    "access": "public",
+    "export": false,
+    "importPath": "generator-node-mdl/src/app/lib/commander.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "params": [],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 94,
+    "kind": "class",
+    "name": "Commander",
+    "memberof": "src/app/lib/commander.js",
+    "static": true,
+    "longname": "src/app/lib/commander.js~Commander",
+    "access": "public",
+    "export": true,
+    "importPath": "generator-node-mdl/src/app/lib/commander.js",
+    "importStyle": "Commander",
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "interface": false,
+    "ignore": true
+  },
+  {
+    "__docId__": 95,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/app/lib/commander.js~Commander",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/app/lib/commander.js~Commander#constructor",
+    "access": "public",
+    "description": "Commander will run you spawnSync commands",
+    "lineNumber": 11,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "spawnSync",
+        "description": "function to run you commands with, required"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "log",
+        "description": "function to log you commands with"
+      }
+    ]
+  },
+  {
+    "__docId__": 96,
+    "kind": "member",
+    "name": "spawnSync",
+    "memberof": "src/app/lib/commander.js~Commander",
+    "static": false,
+    "longname": "src/app/lib/commander.js~Commander#spawnSync",
+    "access": "public",
+    "description": null,
+    "lineNumber": 12,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 97,
+    "kind": "member",
+    "name": "log",
+    "memberof": "src/app/lib/commander.js~Commander",
+    "static": false,
+    "longname": "src/app/lib/commander.js~Commander#log",
+    "access": "public",
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 98,
+    "kind": "method",
+    "name": "run",
+    "memberof": "src/app/lib/commander.js~Commander",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/app/lib/commander.js~Commander#run",
+    "access": "public",
+    "description": "Run commands",
+    "lineNumber": 20,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Array"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "commands",
+        "description": "array of string commands"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 99,
+    "kind": "method",
+    "name": "_runCommand",
+    "memberof": "src/app/lib/commander.js~Commander",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/app/lib/commander.js~Commander#_runCommand",
+    "access": "private",
+    "description": null,
+    "lineNumber": 30,
+    "undocument": true,
+    "ignore": true,
+    "params": [
+      {
+        "name": "command",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 100,
+    "kind": "method",
+    "name": "_parseCommand",
+    "memberof": "src/app/lib/commander.js~Commander",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/app/lib/commander.js~Commander#_parseCommand",
+    "access": "private",
+    "description": null,
+    "lineNumber": 37,
+    "undocument": true,
+    "ignore": true,
+    "params": [
+      {
+        "name": "command",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "{\"main\": *, \"args\": *}"
+      ]
+    }
+  },
+  {
+    "__docId__": 101,
+    "kind": "method",
+    "name": "_logCommand",
+    "memberof": "src/app/lib/commander.js~Commander",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/app/lib/commander.js~Commander#_logCommand",
+    "access": "private",
+    "description": null,
+    "lineNumber": 54,
+    "undocument": true,
+    "ignore": true,
+    "params": [
+      {
+        "name": "main",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "args",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 102,
+    "kind": "file",
+    "name": "src/app/lib/commander.test.js",
+    "content": "import chalk from 'chalk';\nimport Commander from './commander';\n\ndescribe('Commander', () => {\n  let commander;\n  const spawnSync = jest.fn();\n  const log = jest.fn();\n\n  beforeEach(() => {\n    spawnSync.mockClear();\n    log.mockClear();\n    commander = new Commander({ spawnSync, log });\n  });\n\n  it('should create an instance with no args', () => {\n    commander = new Commander();\n\n    commander.spawnSync();\n    commander.log();\n\n    expect(typeof commander.spawnSync).toBe('function');\n    expect(typeof commander.log).toBe('function');\n  });\n\n  it('should run commands', () => {\n    commander._runCommand = jest.fn();\n\n    const commands = ['command 1', 'command 2', 'command 3'];\n\n    commander.run(commands);\n\n    for (const [index, command] of commands.entries()) {\n      expect(commander._runCommand).nthCalledWith(index + 1, command);\n    }\n  });\n\n  it('should run one command', () => {\n    commander._runCommand = jest.fn();\n\n    const command = 'some command';\n    commander.run(command);\n\n    expect(commander._runCommand).toBeCalledWith(command);\n  });\n\n  it('should _runCommand', () => {\n    const command = 'some command';\n    const main = 'main';\n    const args = 'args';\n\n    commander._parseCommand = jest\n      .fn()\n      .mockImplementation(command => ({ main, args }));\n    commander._logCommand = jest.fn();\n\n    commander._runCommand(command);\n\n    expect(commander._parseCommand).toBeCalledWith(command);\n    expect(commander._logCommand).toBeCalledWith(main, args);\n    expect(spawnSync).toBeCalledWith(main, args);\n  });\n\n  it('should parse a string command', () => {\n    const command = 'some command with args';\n\n    const { main, args } = commander._parseCommand(command);\n\n    expect(main).toBe('some');\n    expect(args).toEqual(['command', 'with', 'args']);\n  });\n\n  it('should parse an array command', () => {\n    const command = ['some', 'command', 'with', 'args'];\n\n    const { main, args } = commander._parseCommand(command);\n\n    expect(main).toBe('some');\n    expect(args).toEqual(['command', 'with', 'args']);\n  });\n\n  it('should throw error when parse unsupported command type', () => {\n    const command = true;\n\n    expect(() => commander._parseCommand(command)).toThrow(TypeError);\n  });\n\n  it('should log command', () => {\n    const main = 'command';\n    const args = ['arg1', 'arg2', 'arg3'];\n\n    commander._logCommand(main, args);\n\n    expect(log).toBeCalledWith(chalk`  {gray ${main} ${args.join(' ')}}`);\n  });\n});\n",
+    "static": true,
+    "longname": "/home/travis/build/sharvit/generator-node-mdl/src/app/lib/commander.test.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 103,
+    "kind": "file",
+    "name": "src/app/lib/github.js",
+    "content": "import Octokit from '@octokit/rest';\n\nexport default class Github {\n  /**\n   * Github\n   * @param {string}        username github username\n   * @param {string}        password github password\n   * @param {function}      on2fa    async function that should return\n   *                                 two-factor authentication pin (string)\n   */\n  constructor({ token, username, password, on2fa }) {\n    this.githubClient = new Octokit({\n      auth: token || {\n        username,\n        password,\n        on2fa,\n      },\n    });\n  }\n\n  createRepository({ name, description }) {\n    return this.githubClient.repos.createForAuthenticatedUser({\n      name,\n      description,\n    });\n  }\n\n  async createToken(note, scopes) {\n    const {\n      data,\n    } = await this.githubClient.oauthAuthorizations.createAuthorization({\n      note,\n      scopes,\n    });\n\n    return data.token;\n  }\n}\n",
+    "static": true,
+    "longname": "/home/travis/build/sharvit/generator-node-mdl/src/app/lib/github.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 104,
+    "kind": "class",
+    "name": "Github",
+    "memberof": "src/app/lib/github.js",
+    "static": true,
+    "longname": "src/app/lib/github.js~Github",
+    "access": "public",
+    "export": true,
+    "importPath": "generator-node-mdl/src/app/lib/github.js",
+    "importStyle": "Github",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "interface": false,
+    "ignore": true
+  },
+  {
+    "__docId__": 105,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/app/lib/github.js~Github",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/app/lib/github.js~Github#constructor",
+    "access": "public",
+    "description": "Github",
+    "lineNumber": 11,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "username",
+        "description": "github username"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "password",
+        "description": "github password"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "on2fa",
+        "description": "async function that should return\n                                two-factor authentication pin (string)"
+      }
+    ]
+  },
+  {
+    "__docId__": 106,
+    "kind": "member",
+    "name": "githubClient",
+    "memberof": "src/app/lib/github.js~Github",
+    "static": false,
+    "longname": "src/app/lib/github.js~Github#githubClient",
+    "access": "public",
+    "description": null,
+    "lineNumber": 12,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 107,
+    "kind": "method",
+    "name": "createRepository",
+    "memberof": "src/app/lib/github.js~Github",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/app/lib/github.js~Github#createRepository",
+    "access": "public",
+    "description": null,
+    "lineNumber": 21,
+    "undocument": true,
+    "params": [
+      {
+        "name": "objectPattern",
+        "types": [
+          "{\"name\": *, \"description\": *}"
+        ],
+        "defaultRaw": {
+          "name": null,
+          "description": null
+        },
+        "defaultValue": "{\"name\":null,\"description\":null}"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 108,
+    "kind": "method",
+    "name": "createToken",
+    "memberof": "src/app/lib/github.js~Github",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/app/lib/github.js~Github#createToken",
+    "access": "public",
+    "description": null,
+    "lineNumber": 28,
+    "undocument": true,
+    "params": [
+      {
+        "name": "note",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "scopes",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 109,
+    "kind": "file",
+    "name": "src/app/lib/github.test.js",
+    "content": "import Octokit, {\n  createRepoForAuthenticatedUser,\n  createAuthorization,\n  authenticatedUserToken,\n} from '@octokit/rest';\nimport Github from './github';\n\ndescribe('Github', () => {\n  let github;\n  const username = 'some-username';\n  const password = 'some-password';\n  const on2fa = jest.fn();\n\n  beforeEach(() => {\n    Octokit.mockClear();\n    createRepoForAuthenticatedUser.mockClear();\n    createAuthorization.mockClear();\n\n    github = new Github({ username, password, on2fa });\n  });\n\n  it('should create a new Github instance', () => {\n    expect(Octokit).toBeCalledWith({\n      auth: {\n        username,\n        password,\n        on2fa,\n      },\n    });\n  });\n\n  it('should create-repository', () => {\n    const name = 'some-name';\n    const description = 'some-description';\n\n    github.createRepository({ name, description });\n\n    expect(createRepoForAuthenticatedUser).toBeCalledWith({\n      name,\n      description,\n    });\n  });\n\n  it('should create-createToken', async () => {\n    const note = 'some-note';\n    const scopes = 'some-scopes';\n\n    const token = await github.createToken(note, scopes);\n\n    expect(token).toBe(authenticatedUserToken);\n    expect(createAuthorization).toBeCalledWith({\n      note,\n      scopes,\n    });\n  });\n});\n",
+    "static": true,
+    "longname": "/home/travis/build/sharvit/generator-node-mdl/src/app/lib/github.test.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 110,
+    "kind": "file",
+    "name": "src/app/lib/npm.js",
+    "content": "import npmProfile from 'npm-profile';\n\nexport const login = ({ username, password }) =>\n  npmProfile.loginCouch(username, password, {\n    registry: 'https://registry.npmjs.org',\n  });\n",
+    "static": true,
+    "longname": "/home/travis/build/sharvit/generator-node-mdl/src/app/lib/npm.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 111,
+    "kind": "function",
+    "name": "login",
+    "memberof": "src/app/lib/npm.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/app/lib/npm.js~login",
+    "access": "public",
+    "export": true,
+    "importPath": "generator-node-mdl/src/app/lib/npm.js",
+    "importStyle": "{login}",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "params": [
+      {
+        "name": "objectPattern",
+        "types": [
+          "{\"username\": *, \"password\": *}"
+        ],
+        "defaultRaw": {
+          "username": null,
+          "password": null
+        },
+        "defaultValue": "{\"username\":null,\"password\":null}"
+      }
+    ],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 112,
+    "kind": "file",
+    "name": "src/app/lib/npm.test.js",
+    "content": "import npmProfile from 'npm-profile';\nimport { login } from './npm';\n\ndescribe('npm', () => {\n  it('should login', () => {\n    const username = 'some-username';\n    const password = 'some-password';\n\n    login({ username, password });\n\n    expect(npmProfile.loginCouch).toBeCalledWith(username, password, {\n      registry: 'https://registry.npmjs.org',\n    });\n  });\n});\n",
+    "static": true,
+    "longname": "/home/travis/build/sharvit/generator-node-mdl/src/app/lib/npm.test.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 113,
+    "kind": "file",
+    "name": "src/app/options.js",
+    "content": "const options = {\n  projectName: {\n    type: String,\n    desc: 'Project name',\n  },\n  description: {\n    type: String,\n    desc: 'Project description',\n  },\n  name: { type: String, desc: \"Author's name\" },\n  email: { type: String, desc: \"Author's email\" },\n  website: { type: String, desc: \"Author's website\" },\n  githubUsername: { type: String, desc: 'GitHub username' },\n  githubTemplates: {\n    type: Boolean,\n    desc: 'Would you like to make it Github friendly for contributions?',\n  },\n  createGithubRepository: {\n    type: Boolean,\n    desc: 'Let me create a new github repository for you?',\n  },\n  coveralls: {\n    type: Boolean,\n    desc: 'Connect TravisCI to Coveralls?',\n  },\n  travisCI: {\n    type: Boolean,\n    desc: 'Give your project super prowers using Travis CI?',\n  },\n  npmDeploy: {\n    type: Boolean,\n    desc: 'Automatically deploy to npm using TravisCI?',\n  },\n  semanticRelease: {\n    type: Boolean,\n    desc: 'Use semantic-release?',\n  },\n  npmToken: {\n    type: String,\n    desc:\n      'Your npm-token, needed when using with --npmDeploy (https://github.com/sharvit/generator-node-mdl#about-passwords-and-tokens)',\n  },\n  githubToken: {\n    type: String,\n    desc:\n      'Your github-token, needed when using with --createGithubRepository or --semanticRelease (https://github.com/sharvit/generator-node-mdl#about-passwords-and-tokens)',\n  },\n  noDefaults: {\n    type: Boolean,\n    desc: 'Set all the default Boolean optins to false',\n  },\n};\n\nexport default options;\n",
+    "static": true,
+    "longname": "/home/travis/build/sharvit/generator-node-mdl/src/app/options.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 114,
+    "kind": "variable",
+    "name": "options",
+    "memberof": "src/app/options.js",
+    "static": true,
+    "longname": "src/app/options.js~options",
+    "access": "public",
+    "export": true,
+    "importPath": "generator-node-mdl/src/app/options.js",
+    "importStyle": "options",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "{\"projectName\": *, \"description\": *, \"name\": *, \"email\": *, \"website\": *, \"githubUsername\": *, \"githubTemplates\": *, \"createGithubRepository\": *, \"coveralls\": *, \"travisCI\": *, \"npmDeploy\": *, \"semanticRelease\": *, \"npmToken\": *, \"githubToken\": *, \"noDefaults\": *}"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 115,
+    "kind": "file",
+    "name": "src/app/prompter.js",
+    "content": "import camelCase from 'lodash.camelcase';\nimport kebabCase from 'lodash.kebabcase';\nimport chalk from 'chalk';\nimport uuid from 'uuid/v4';\n\nimport Github from './lib/github';\nimport { login as npmLogin } from './lib/npm';\n\nimport options from './options';\nimport prompts from './prompts';\n\nexport default class Prompter {\n  constructor(generator) {\n    this.generator = generator;\n\n    this._setGeneratorOptions();\n  }\n\n  /**\n   * Main prompter method\n   */\n  async prompt() {\n    this._initProps();\n\n    await this._promptGeneral();\n    await this._promptGithub();\n    await this._promptTravis();\n    await this._promptCoveralls();\n    await this._promptNpm();\n    await this._promptSemanticRelease();\n    await this._promptPasswords();\n\n    return this.props;\n  }\n\n  /*\n    Sub prompters\n   */\n\n  async _promptGeneral() {\n    const answers = await this.generator.prompt([\n      this._buildPrompt('projectName', {\n        ...prompts.projectName,\n        default: kebabCase(this.generator.appname),\n        filter: kebabCase,\n      }),\n      this._buildPrompt('description', prompts.description),\n      this._buildPrompt('name', {\n        ...prompts.name,\n        default: this.generator.user.git.name(),\n      }),\n      this._buildPrompt('email', {\n        ...prompts.email,\n        default: this.generator.user.git.email(),\n      }),\n      this._buildPrompt('website', prompts.website),\n    ]);\n\n    this._updatePropsWithAnswers(answers);\n    this.props.camelProject = camelCase(this.props.projectName);\n  }\n\n  async _promptGithub() {\n    const answers = await this.generator.prompt([\n      this._buildPrompt('githubUsername', prompts.githubUsername),\n      this._buildPrompt('githubTemplates', prompts.githubTemplates),\n      this._buildPrompt(\n        'createGithubRepository',\n        prompts.createGithubRepository\n      ),\n    ]);\n\n    this._updatePropsWithAnswers(answers);\n    this.props.repository = `${this.props.githubUsername}/${this.props.projectName}`;\n  }\n\n  async _promptTravis() {\n    const { travisCI } = await this.generator.prompt([\n      this._buildPrompt('travisCI', prompts.travisCI),\n    ]);\n\n    this._updatePropsWithAnswers({ travisCI });\n  }\n\n  async _promptCoveralls() {\n    const { coveralls } = await this.generator.prompt([\n      this._buildPrompt('coveralls', prompts.coveralls),\n    ]);\n\n    this._updatePropsWithAnswers({ coveralls: coveralls || false });\n  }\n\n  async _promptNpm() {\n    const { npmDeploy } = await this.generator.prompt([\n      this._buildPrompt('npmDeploy', prompts.npmDeploy),\n    ]);\n\n    this._updatePropsWithAnswers({\n      npmDeploy: npmDeploy || false,\n    });\n  }\n\n  async _promptSemanticRelease() {\n    const { semanticRelease } = await this.generator.prompt([\n      this._buildPrompt('semanticRelease', prompts.semanticRelease),\n    ]);\n\n    this._updatePropsWithAnswers({\n      semanticRelease: semanticRelease || false,\n    });\n  }\n\n  async _promptPasswords() {\n    const {\n      createGithubRepository,\n      npmDeploy,\n      githubToken,\n      npmToken,\n      travisCI,\n    } = this.props;\n\n    if (createGithubRepository || travisCI) {\n      if (!githubToken) {\n        this._logGithubPasswordRequired();\n        this._logPasswordSafety();\n      }\n      await this._loginToGithub();\n    }\n\n    if (!npmToken && npmDeploy) {\n      this._logNpmPasswordRequired();\n      this._logPasswordSafety();\n      await this._loginToNpm();\n    }\n  }\n\n  /*\n    Login prompters\n   */\n\n  async _loginToNpm() {\n    const { npmUsername, npmPassword } = await this._promptNpmLogin();\n\n    // generate npm-token\n    const { token: npmToken } = await npmLogin({\n      username: npmUsername,\n      password: npmPassword,\n    });\n\n    this.props = { ...this.props, npmToken };\n  }\n\n  async _loginToGithub() {\n    const {\n      githubToken: token,\n      githubUsername: username,\n      semanticRelease,\n      repository,\n    } = this.props;\n\n    if (token) {\n      this.props.github = new Github({ token: `token ${token}` });\n      return;\n    }\n\n    const { githubPassword: password } = await this._promptGithubPassword();\n\n    const note = `${repository}/travis-${uuid().slice(-4)}`;\n    const scopes = semanticRelease\n      ? [\n          'repo',\n          'read:org',\n          'user:email',\n          'repo_deployment',\n          'repo:status',\n          'write:repo_hook',\n        ]\n      : [];\n\n    this.props.github = new Github({\n      username,\n      password,\n      on2fa: this.github2fa.bind(this),\n    });\n    this.props.githubToken = await this.props.github.createToken(note, scopes);\n  }\n\n  _promptNpmLogin() {\n    return this.generator.prompt([\n      {\n        name: 'npmUsername',\n        message: 'Your npm username:',\n        store: true,\n      },\n      {\n        name: 'npmPassword',\n        message: 'Your npm password:',\n        type: 'password',\n      },\n    ]);\n  }\n\n  _promptGithubPassword() {\n    const { githubUsername } = this.props;\n\n    return this.generator.prompt([\n      {\n        name: 'githubPassword',\n        message: `Enter you github password for ${githubUsername}:`,\n        type: 'password',\n      },\n    ]);\n  }\n\n  _promptGithub2fa() {\n    return this.generator.prompt([\n      {\n        name: 'github2fa',\n        message: `Enter your github two-factor authentication Code:`,\n        type: 'password',\n      },\n    ]);\n  }\n\n  async github2fa() {\n    const { github2fa } = await this._promptGithub2fa();\n\n    return github2fa;\n  }\n\n  /*\n    Loggers\n   */\n\n  _logGithubPasswordRequired() {\n    const { createGithubRepository } = this.props;\n\n    if (createGithubRepository) {\n      this.generator.log(\n        '\\nYour github password is required so I can create a github repository for you.'\n      );\n    } else {\n      this.generator.log(\n        '\\nYour github password is required so I can install semantic-release for you.'\n      );\n    }\n  }\n\n  _logNpmPasswordRequired() {\n    this.generator.log(\n      '\\nYour npm username and password is required so I can install an automated npm-deploy for you.'\n    );\n  }\n\n  _logPasswordSafety() {\n    this.generator.log(\n      `${chalk.bold('I will never store your passwords')} 🙌 🙌 🙌 \\n`\n    );\n  }\n\n  /*\n    Helpers\n   */\n\n  _setGeneratorOptions() {\n    for (const [name, { type, desc }] of Object.entries(options)) {\n      this.generator.option(name, { type, desc });\n    }\n  }\n\n  _initProps() {\n    this.props = {};\n\n    for (const optionName of Object.keys(options)) {\n      const { [optionName]: option } = this.generator.options;\n\n      if (option) {\n        this.props[optionName] = option;\n      }\n    }\n  }\n\n  _updatePropsWithAnswers(answers) {\n    for (const [name, value] of Object.entries(answers)) {\n      if (value) {\n        this.props[name] = value;\n      }\n    }\n  }\n\n  _buildPrompt(name, prompt) {\n    const result = { name, message: prompt.desc };\n\n    if (prompt.default) result.default = prompt.default;\n    if (prompt.store) result.store = prompt.store;\n    if (prompt.filter) result.filter = prompt.filter;\n\n    switch (prompt.type) {\n      case Boolean:\n        result.type = 'confirm';\n        result.default = this.props.noDefaults ? false : result.default;\n        break;\n      case String:\n      default:\n        result.type = 'input';\n        break;\n    }\n\n    result.when = () => {\n      if (this.props[name] !== undefined) return false;\n      if (this.props.noDefaults && prompt.type === Boolean) return false;\n\n      if (prompts[name].dependOn) {\n        for (const dependOn of prompts[name].dependOn) {\n          if (!this.props[dependOn]) {\n            return false;\n          }\n        }\n      }\n\n      prompts[name].help && this.generator.log(prompts[name].help());\n      return true;\n    };\n\n    if (prompt.required) {\n      result.validate = input => {\n        if (\n          input === undefined ||\n          (typeof input === 'string' &&\n            input.trim() === '' &&\n            prompt.default === undefined)\n        ) {\n          throw new Error(`${name} is required`);\n        }\n\n        return true;\n      };\n    }\n\n    return result;\n  }\n}\n",
+    "static": true,
+    "longname": "/home/travis/build/sharvit/generator-node-mdl/src/app/prompter.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 116,
+    "kind": "class",
+    "name": "Prompter",
+    "memberof": "src/app/prompter.js",
+    "static": true,
+    "longname": "src/app/prompter.js~Prompter",
+    "access": "public",
+    "export": true,
+    "importPath": "generator-node-mdl/src/app/prompter.js",
+    "importStyle": "Prompter",
+    "description": null,
+    "lineNumber": 12,
+    "undocument": true,
+    "interface": false,
+    "ignore": true
+  },
+  {
+    "__docId__": 117,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/app/prompter.js~Prompter",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/app/prompter.js~Prompter#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "ignore": true
+  },
+  {
+    "__docId__": 118,
+    "kind": "member",
+    "name": "generator",
+    "memberof": "src/app/prompter.js~Prompter",
+    "static": false,
+    "longname": "src/app/prompter.js~Prompter#generator",
+    "access": "public",
+    "description": null,
+    "lineNumber": 14,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 119,
+    "kind": "method",
+    "name": "prompt",
+    "memberof": "src/app/prompter.js~Prompter",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/app/prompter.js~Prompter#prompt",
+    "access": "public",
+    "description": "Main prompter method",
+    "lineNumber": 22,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 120,
+    "kind": "method",
+    "name": "_promptGeneral",
+    "memberof": "src/app/prompter.js~Prompter",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/app/prompter.js~Prompter#_promptGeneral",
+    "access": "private",
+    "description": null,
+    "lineNumber": 40,
+    "undocument": true,
+    "ignore": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 121,
+    "kind": "method",
+    "name": "_promptGithub",
+    "memberof": "src/app/prompter.js~Prompter",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/app/prompter.js~Prompter#_promptGithub",
+    "access": "private",
+    "description": null,
+    "lineNumber": 63,
+    "undocument": true,
+    "ignore": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 122,
+    "kind": "method",
+    "name": "_promptTravis",
+    "memberof": "src/app/prompter.js~Prompter",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/app/prompter.js~Prompter#_promptTravis",
+    "access": "private",
+    "description": null,
+    "lineNumber": 77,
+    "undocument": true,
+    "ignore": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 123,
+    "kind": "method",
+    "name": "_promptCoveralls",
+    "memberof": "src/app/prompter.js~Prompter",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/app/prompter.js~Prompter#_promptCoveralls",
+    "access": "private",
+    "description": null,
+    "lineNumber": 85,
+    "undocument": true,
+    "ignore": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 124,
+    "kind": "method",
+    "name": "_promptNpm",
+    "memberof": "src/app/prompter.js~Prompter",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/app/prompter.js~Prompter#_promptNpm",
+    "access": "private",
+    "description": null,
+    "lineNumber": 93,
+    "undocument": true,
+    "ignore": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 125,
+    "kind": "method",
+    "name": "_promptSemanticRelease",
+    "memberof": "src/app/prompter.js~Prompter",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/app/prompter.js~Prompter#_promptSemanticRelease",
+    "access": "private",
+    "description": null,
+    "lineNumber": 103,
+    "undocument": true,
+    "ignore": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 126,
+    "kind": "method",
+    "name": "_promptPasswords",
+    "memberof": "src/app/prompter.js~Prompter",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/app/prompter.js~Prompter#_promptPasswords",
+    "access": "private",
+    "description": null,
+    "lineNumber": 113,
+    "undocument": true,
+    "ignore": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 127,
+    "kind": "method",
+    "name": "_loginToNpm",
+    "memberof": "src/app/prompter.js~Prompter",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/app/prompter.js~Prompter#_loginToNpm",
+    "access": "private",
+    "description": null,
+    "lineNumber": 141,
+    "undocument": true,
+    "ignore": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 128,
+    "kind": "member",
+    "name": "props",
+    "memberof": "src/app/prompter.js~Prompter",
+    "static": false,
+    "longname": "src/app/prompter.js~Prompter#props",
+    "access": "public",
+    "description": null,
+    "lineNumber": 150,
+    "undocument": true,
+    "type": {
+      "types": [
+        "{...undefined: Object, \"npmToken\": *}"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 129,
+    "kind": "method",
+    "name": "_loginToGithub",
+    "memberof": "src/app/prompter.js~Prompter",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/app/prompter.js~Prompter#_loginToGithub",
+    "access": "private",
+    "description": null,
+    "lineNumber": 153,
+    "undocument": true,
+    "ignore": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 130,
+    "kind": "method",
+    "name": "_promptNpmLogin",
+    "memberof": "src/app/prompter.js~Prompter",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/app/prompter.js~Prompter#_promptNpmLogin",
+    "access": "private",
+    "description": null,
+    "lineNumber": 188,
+    "undocument": true,
+    "ignore": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 131,
+    "kind": "method",
+    "name": "_promptGithubPassword",
+    "memberof": "src/app/prompter.js~Prompter",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/app/prompter.js~Prompter#_promptGithubPassword",
+    "access": "private",
+    "description": null,
+    "lineNumber": 203,
+    "undocument": true,
+    "ignore": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 132,
+    "kind": "method",
+    "name": "_promptGithub2fa",
+    "memberof": "src/app/prompter.js~Prompter",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/app/prompter.js~Prompter#_promptGithub2fa",
+    "access": "private",
+    "description": null,
+    "lineNumber": 215,
+    "undocument": true,
+    "ignore": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 133,
+    "kind": "method",
+    "name": "github2fa",
+    "memberof": "src/app/prompter.js~Prompter",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/app/prompter.js~Prompter#github2fa",
+    "access": "public",
+    "description": null,
+    "lineNumber": 225,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 134,
+    "kind": "method",
+    "name": "_logGithubPasswordRequired",
+    "memberof": "src/app/prompter.js~Prompter",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/app/prompter.js~Prompter#_logGithubPasswordRequired",
+    "access": "private",
+    "description": null,
+    "lineNumber": 235,
+    "undocument": true,
+    "ignore": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 135,
+    "kind": "method",
+    "name": "_logNpmPasswordRequired",
+    "memberof": "src/app/prompter.js~Prompter",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/app/prompter.js~Prompter#_logNpmPasswordRequired",
+    "access": "private",
+    "description": null,
+    "lineNumber": 249,
+    "undocument": true,
+    "ignore": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 136,
+    "kind": "method",
+    "name": "_logPasswordSafety",
+    "memberof": "src/app/prompter.js~Prompter",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/app/prompter.js~Prompter#_logPasswordSafety",
+    "access": "private",
+    "description": null,
+    "lineNumber": 255,
+    "undocument": true,
+    "ignore": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 137,
+    "kind": "method",
+    "name": "_setGeneratorOptions",
+    "memberof": "src/app/prompter.js~Prompter",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/app/prompter.js~Prompter#_setGeneratorOptions",
+    "access": "private",
+    "description": null,
+    "lineNumber": 265,
+    "undocument": true,
+    "ignore": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 138,
+    "kind": "method",
+    "name": "_initProps",
+    "memberof": "src/app/prompter.js~Prompter",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/app/prompter.js~Prompter#_initProps",
+    "access": "private",
+    "description": null,
+    "lineNumber": 271,
+    "undocument": true,
+    "ignore": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 140,
+    "kind": "method",
+    "name": "_updatePropsWithAnswers",
+    "memberof": "src/app/prompter.js~Prompter",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/app/prompter.js~Prompter#_updatePropsWithAnswers",
+    "access": "private",
+    "description": null,
+    "lineNumber": 283,
+    "undocument": true,
+    "ignore": true,
+    "params": [
+      {
+        "name": "answers",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 141,
+    "kind": "method",
+    "name": "_buildPrompt",
+    "memberof": "src/app/prompter.js~Prompter",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/app/prompter.js~Prompter#_buildPrompt",
+    "access": "private",
+    "description": null,
+    "lineNumber": 291,
+    "undocument": true,
+    "ignore": true,
+    "params": [
+      {
+        "name": "name",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "prompt",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 142,
+    "kind": "file",
+    "name": "src/app/prompts.js",
+    "content": "import options from './options';\n\nconst prompts = {\n  projectName: {\n    ...options.projectName,\n    required: true,\n  },\n  description: {\n    ...options.description,\n    required: true,\n    store: true,\n    default: 'Generated by `generator-node-mdl`',\n  },\n  name: {\n    ...options.name,\n    required: true,\n  },\n  email: {\n    ...options.email,\n    required: true,\n  },\n  website: {\n    ...options.website,\n    required: true,\n    store: true,\n    default: 'https://github.com/sharvit/generator-node-mdl',\n  },\n  githubUsername: {\n    ...options.githubUsername,\n    required: true,\n    store: true,\n  },\n  githubTemplates: {\n    ...options.githubTemplates,\n    required: true,\n    store: true,\n  },\n  createGithubRepository: {\n    ...options.createGithubRepository,\n    required: true,\n    store: true,\n  },\n  travisCI: {\n    ...options.travisCI,\n    required: true,\n    store: true,\n    help: () =>\n      '\\nLearn how to use Travis CI: https://docs.travis-ci.com/user/tutorial/#to-get-started-with-travis-ci',\n  },\n  coveralls: {\n    ...options.coveralls,\n    required: true,\n    store: true,\n    dependOn: ['travisCI'],\n    help: () => '\\nLearn how to use Coveralls: https://coveralls.io',\n  },\n  npmDeploy: {\n    ...options.npmDeploy,\n    required: true,\n    store: true,\n    dependOn: ['travisCI'],\n    help: () => '\\nNeed to have an npm account: https://www.npmjs.com/',\n  },\n  semanticRelease: {\n    ...options.semanticRelease,\n    required: true,\n    store: true,\n    dependOn: ['travisCI', 'npmDeploy'],\n    help: () =>\n      '\\nLearn more about semantic-release: https://semantic-release.gitbook.io/semantic-release/',\n  },\n};\n\nexport default prompts;\n",
+    "static": true,
+    "longname": "/home/travis/build/sharvit/generator-node-mdl/src/app/prompts.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 143,
+    "kind": "variable",
+    "name": "prompts",
+    "memberof": "src/app/prompts.js",
+    "static": true,
+    "longname": "src/app/prompts.js~prompts",
+    "access": "public",
+    "export": true,
+    "importPath": "generator-node-mdl/src/app/prompts.js",
+    "importStyle": "prompts",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "type": {
+      "types": [
+        "{\"projectName\": *, \"description\": *, \"name\": *, \"email\": *, \"website\": *, \"githubUsername\": *, \"githubTemplates\": *, \"createGithubRepository\": *, \"travisCI\": *, \"coveralls\": *, \"npmDeploy\": *, \"semanticRelease\": *}"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "kind": "index",
+    "content": "",
+    "longname": "/home/travis/build/sharvit/generator-node-mdl/README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "packageJSON",
+    "content": "{\n  \"name\": \"generator-node-mdl\",\n  \"version\": \"0.0.0-semantic-release\",\n  \"description\": \"Create a Node.js module with ease\",\n  \"license\": \"MIT\",\n  \"preferGlobal\": true,\n  \"repository\": \"https://github.com/sharvit/generator-node-mdl\",\n  \"author\": {\n    \"name\": \"Avi Sharvit\",\n    \"email\": \"sharvita@gmail.com\",\n    \"url\": \"https://sharvit.github.io\"\n  },\n  \"engines\": {\n    \"node\": \">=8\"\n  },\n  \"scripts\": {\n    \"build\": \"yarn build:clean && yarn build:babel && yarn build:templates && yarn build:docs\",\n    \"build:clean\": \"rimraf ./app\",\n    \"build:babel\": \"BABEL_ENV=production babel src --out-dir .\",\n    \"build:templates\": \"./scripts/build-templates.sh\",\n    \"build:docs\": \"esdoc -c .esdoc.json\",\n    \"develop:docs\": \"watch \\\"yarn build:docs\\\" . --ignoreDirectoryPattern='/node_modules|docs|dist|coverage|.git|.nyc*./'\",\n    \"test\": \"jest --no-cache --coverage\",\n    \"test:watch\": \"jest --watch\",\n    \"lint\": \"eslint ./src\",\n    \"lint:commit\": \"commitlint -e\",\n    \"lint:commit-travis\": \"commitlint-travis\",\n    \"coveralls\": \"cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js\",\n    \"commit\": \"git-cz\",\n    \"semantic-release\": \"semantic-release\"\n  },\n  \"files\": [\n    \"app\"\n  ],\n  \"dependencies\": {\n    \"@octokit/rest\": \"^16.28.6\",\n    \"chalk\": \"^2.3.0\",\n    \"command-exists\": \"^1.2.4\",\n    \"find-up\": \"^4.0.0\",\n    \"lodash.camelcase\": \"^4.3.0\",\n    \"lodash.kebabcase\": \"^4.1.1\",\n    \"make-dir\": \"^3.0.0\",\n    \"npm-profile\": \"^4.0.1\",\n    \"uuid\": \"^3.3.2\",\n    \"yeoman-generator\": \"^4.0.1\"\n  },\n  \"optionalDependencies\": {\n    \"commitizen\": \"^4.0.3\",\n    \"cz-conventional-changelog\": \"3.0.2\"\n  },\n  \"devDependencies\": {\n    \"@babel/cli\": \"^7.2.0\",\n    \"@babel/core\": \"^7.2.0\",\n    \"@babel/preset-env\": \"^7.2.0\",\n    \"@commitlint/cli\": \"^8.1.0\",\n    \"@commitlint/config-conventional\": \"^8.1.0\",\n    \"@commitlint/travis-cli\": \"^8.1.0\",\n    \"babel-core\": \"^7.0.0-bridge.0\",\n    \"babel-eslint\": \"^10.0.3\",\n    \"babel-jest\": \"^24.1.0\",\n    \"babel-plugin-add-module-exports\": \"^1.0.2\",\n    \"commitlint-config-cz\": \"^0.12.0\",\n    \"coveralls\": \"^3.0.2\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"eslint\": \"^6.4.0\",\n    \"eslint-config-prettier\": \"^6.0.0\",\n    \"eslint-config-standard\": \"^14.0.0\",\n    \"eslint-plugin-import\": \"^2.14.0\",\n    \"eslint-plugin-node\": \"^10.0.0\",\n    \"eslint-plugin-prettier\": \"^3.0.0\",\n    \"eslint-plugin-promise\": \"^4.0.1\",\n    \"eslint-plugin-standard\": \"^4.0.0\",\n    \"jest\": \"^24.1.0\",\n    \"prettier\": \"^1.15.3\",\n    \"rimraf\": \"^3.0.0\",\n    \"semantic-release\": \"^15.13.1\",\n    \"watch\": \"^1.0.2\",\n    \"yeoman-assert\": \"^3.1.0\",\n    \"yeoman-test\": \"^2.0.0\"\n  },\n  \"jest\": {\n    \"testEnvironment\": \"node\",\n    \"modulePaths\": [\n      \"<rootDir>/src/app\"\n    ],\n    \"testPathIgnorePatterns\": [\n      \"/node_modules/\",\n      \"/templates/\"\n    ]\n  },\n  \"config\": {\n    \"commitizen\": {\n      \"path\": \"./node_modules/cz-conventional-changelog\"\n    }\n  },\n  \"keywords\": [\n    \"yeoman-generator\",\n    \"yeoman\",\n    \"generator\",\n    \"generator-node\",\n    \"automate\",\n    \"automated\",\n    \"easy\",\n    \"boilerplate\",\n    \"scaffold\",\n    \"starter-kit\",\n    \"template\",\n    \"javascript\",\n    \"module\",\n    \"node_module\",\n    \"node-module\",\n    \"node\",\n    \"nodejs\",\n    \"npm\",\n    \"open-source\",\n    \"babel\",\n    \"eslint\",\n    \"jest\",\n    \"prettier\"\n  ]\n}\n",
+    "longname": "/home/travis/build/sharvit/generator-node-mdl/package.json",
+    "name": "package.json",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "manualIndex",
+    "globalIndex": true,
+    "content": "# generator-node-mdl\n\n> Create a Node.js module with ease\n\n[![Package Version](https://img.shields.io/npm/v/generator-node-mdl.svg?style=flat-square)](https://www.npmjs.com/package/generator-node-mdl)\n[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)\n[![Downloads Status](https://img.shields.io/npm/dm/generator-node-mdl.svg?style=flat-square)](https://npm-stat.com/charts.html?package=generator-node-mdl&from=2016-04-01)\n[![Build Status: Linux](https://img.shields.io/travis/sharvit/generator-node-mdl/master.svg?style=flat-square)](https://travis-ci.org/sharvit/generator-node-mdl)\n[![Coverage Status](https://coveralls.io/repos/github/sharvit/generator-node-mdl/badge.svg?branch=master)](https://coveralls.io/github/sharvit/generator-node-mdl?branch=master)\n[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)\n[![dependencies Status](https://david-dm.org/sharvit/generator-node-mdl/status.svg)](https://david-dm.org/sharvit/generator-node-mdl)\n[![devDependencies Status](https://david-dm.org/sharvit/generator-node-mdl/dev-status.svg)](https://david-dm.org/sharvit/generator-node-mdl?type=dev)\n[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)\n[![MIT License](https://img.shields.io/npm/l/stack-overflow-copy-paste.svg?style=flat-square)](http://opensource.org/licenses/MIT) [![Greenkeeper badge](https://badges.greenkeeper.io/sharvit/generator-node-mdl.svg)](https://greenkeeper.io/)\n\n\n## Why\n\n- Generates a simple but _ready to start_ project\n- Includes only necessary tools\n- Monitors repo quality through helpful badges\n- [Supports ES2015+ using Babel 7](https://babeljs.io)\n- [Jest testing framework](https://facebook.github.io/jest)\n- Sensible [ESLint](http://eslint.org) config extends [standard](https://github.com/standard/eslint-config-standard) and [Prettier](https://github.com/prettier/eslint-plugin-prettier)\n- Automates code reformatting using [Prettier](https://github.com/prettier/prettier)\n- [Travis CI](https://travis-ci.org) configuration _(optional)_\n- [Coveralls](http://coveralls.io) configuration _(optional)_\n- Automatically deploy to [npm registry](https://www.npmjs.com) with [Travis CI](https://travis-ci.org)  _(optional)_\n- Automates versioning releases with [semantic-release](https://github.com/semantic-release/semantic-release) and [commitizen](https://github.com/commitizen/cz-cli)  _(optional)_\n- Friendly for contributions using [Issue, Pull Request, and Contributing templates](https://github.com/blog/2111-issue-and-pull-request-templates) and some extras _(optional)_\n\n## Installation\n\n```sh\nnpm install --global yo generator-node-mdl\n```\n\n## Usage\n\n```sh\nyo node-mdl\n# answer questions\n```\n\nWith the most basic options, youʼll get a project structured like this:\n\n```sh\n$ tree\n.\n├── .github\n│   ├── issue_template.md\n│   └── pull_request_template.md\n├── other\n│   ├── code_of_conduct.md\n│   ├── examples.md\n│   └── roadmap.md\n├── src\n│   ├── index.js\n│   └── index.test.js\n├── .babelrc\n├── .editorconfig\n├── .eslintignore\n├── .eslintrc\n├── .gitattributes\n├── .gitignore\n├── .npmignore\n├── .travis.yml\n├── contributing.md\n├── license\n├── package.json\n├── readme.md\n└── yarn.lock\n```\n\nLess boilerplate 🎉\n\n## Options\n\nThere are 2 ways to supply your data to this generator.\nThe obvious way is runnin `yo node-mdl` and answer all questions. You can bypass questions by passing options as arguments.\n\nRun `yo node-mdl --help` to see the different options.\n\n## About passwords and tokens\n\nThis project contain some features that will make your life easier when setting up a new open-source project. Based on your choices, you may be asked to supply some of your accounts usernames and passwords (github, npm, etc...) so this project will automatically produce tokens for those accounts and save them to your TravisCI as secured enviorment variables if needed. You can bypass those questions by manually creating tokens and supply them using options as arguments.\n\n1. `--npmToken my-token` is needed when using with `--npmDeploy`.\n\n   Your token will end up in `TravisCI` as a secured enviorment variables called `NPM_TOKEN`.\n\n   [creating and viewing npm authentication tokens](https://docs.npmjs.com/creating-and-viewing-authentication-tokens)\n\n2. `--githubToken my-token` is needed when using with `--createGithubRepository` or with `--travisCI`.\n\n   [creating and viewing github authentication tokens](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line)\n\n   - When using with `--createGithubRepository` your token doesn't need to contain any scope.\n\n   - When using with `--travisCI` but without `--semanticRelease` your token doesn't need to contain any scope.\n\n   - When using with `--travisCI` and with `--semanticRelease` your token need to contain the following scopes:\n     - `repo`\n     - `read:org`\n     - `user:email`\n     - `repo_deployment`\n     - `repo:status`\n     - `write:repo_hook`\n\n## FAQ\n\n### How to upgrade existing project scaffolded with Yeoman?\n\nRead how to do it [here](https://stackoverflow.com/a/18500003).\n\n## Forked from\n\n[generator-oss](https://github.com/luftywiranda13/generator-node-oss) － Supports ES2015+ and [XO](https://github.com/xojs/xo) by default\n\n## Related\n\n- [generator-bunny](https://github.com/luftywiranda13/generator-bunny) － Supports ES2015+ and [Flow](https://flow.org) by default\n- [generator-kcd-oss](https://github.com/kentcdodds/generator-kcd-oss) － Lots of features but many things left untouched\n- [generator-nm](https://github.com/sindresorhus/generator-nm) － A way simpler Yeoman generator\n\n## License\n\nMIT &copy; [Avi Sharvit](https://sharvit.github.io)\n",
+    "longname": "/home/travis/build/sharvit/generator-node-mdl/readme.md",
+    "name": "./readme.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "manual",
+    "longname": "/home/travis/build/sharvit/generator-node-mdl/contributing.md",
+    "name": "./contributing.md",
+    "content": "# Contributing\n\nContributions are always welcome, no matter how large or small.\n\n**Working on your first Pull Request?** You can learn how from this _free_ series [How to Contribute to an Open Source Project on GitHub](https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github)\n\n## Code of Conduct\n\nBy participating, you are expected to uphold this [Contributor Covenant Code of Conduct](./other/code_of_conduct.md). Please report unacceptable behavior to [sharvita@gmail.com](mailto:sharvita@gmail.com).\n\n## Project setup\n\nFirst, [fork](https://guides.github.com/activities/forking) then clone the repo:\n\n```sh\ngit clone https://github.com/your-username/generator-node-mdl\ncd generator-node-mdl\ngit remote add upstream https://github.com/sharvit/generator-node-mdl\n```\n\nInstall dependencies:\n\n```sh\nyarn\n```\n\nRun test suits to validate the project is working:\n\n```sh\nyarn test\n```\n\nRun linter to validate the project code:\n\n```sh\nyarn lint\n# to fix linting errors\nyarn lint --fix\n```\n\nRun linter to validate your commit message:\n\n```sh\nyarn lint:commit\n```\n\n## Creating Pull Requests\n\n1. Create a branch:\n\n```sh\ngit checkout -b my-branch\n```\n\n2. Happy Hacking 🎉: Start hacking and creating code changes.\n\n3. Commit your changes:\n\n`generator-node-mdl` uses [commitizen](https://github.com/commitizen/cz-cli) to create commit messages so [semantic-release](https://github.com/semantic-release/semantic-release) can automatically create releases.\n\n```sh\ngit add .\nyarn commit\n# answer the questions\n```\n\n4. Push your changes:\n\n```sh\ngit push origin my-branch\n```\n\n5. Open [this project on GitHub](https://github.com/sharvit/generator-node-mdl), then click “Compare & pull request”.\n\n## Help needed\n\nPlease checkout the [`roadmap.md`](./other/roadmap.md) and the open issues.\n\nAlso, please watch the repo and respond to questions/bug reports/feature requests, Thanks!\n",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "manual",
+    "longname": "/home/travis/build/sharvit/generator-node-mdl/other/code_of_conduct.md",
+    "name": "./other/code_of_conduct.md",
+    "content": "# Contributor Covenant Code of Conduct\n\n## Our Pledge\n\nIn the interest of fostering an open and welcoming environment, we as contributors and maintainers pledge to making participation in our project and our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.\n\n## Our Standards\n\nExamples of behavior that contributes to creating a positive environment include:\n\n* Using welcoming and inclusive language\n* Being respectful of differing viewpoints and experiences\n* Gracefully accepting constructive criticism\n* Focusing on what is best for the community\n* Showing empathy towards other community members\n\nExamples of unacceptable behavior by participants include:\n\n* The use of sexualized language or imagery and unwelcome sexual attention or advances\n* Trolling, insulting/derogatory comments, and personal or political attacks\n* Public or private harassment\n* Publishing others‘ private information, such as a physical or electronic address, without explicit permission\n* Other conduct which could reasonably be considered inappropriate in a professional setting\n\n## Our Responsibilities\n\nProject maintainers are responsible for clarifying the standards of acceptable behavior and are expected to take appropriate and fair corrective action in response to any instances of unacceptable behavior.\n\nProject maintainers have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, or to ban temporarily or permanently any contributor for other behaviors that they deem inappropriate, threatening, offensive, or harmful.\n\n## Scope\n\nThis Code of Conduct applies both within project spaces and in public spaces when an individual is representing the project or its community. Examples of representing a project or community include using an official project e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event. Representation of a project may be further defined and clarified by project maintainers.\n\n## Enforcement\n\nInstances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team at [sharvita@gmail.com](mailto:sharvita@gmail.com). All complaints will be reviewed and investigated and will result in a response that is deemed necessary and appropriate to the circumstances. The project team is obligated to maintain confidentiality with regard to the reporter of an incident. Further details of specific enforcement policies may be posted separately.\n\nProject maintainers who do not follow or enforce the Code of Conduct in good faith may face temporary or permanent repercussions as determined by other members of the project‘s leadership.\n\n## Attribution\n\nThis Code of Conduct is adapted from the [Contributor Covenant][homepage], version 1.4, available at [http://contributor-covenant.org/version/1/4][version]\n\n[homepage]: http://contributor-covenant.org\n[version]: http://contributor-covenant.org/version/1/4/\n",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "manual",
+    "longname": "/home/travis/build/sharvit/generator-node-mdl/other/roadmap.md",
+    "name": "./other/roadmap.md",
+    "content": "# Project Roadmap\n\nThis is where we‘ll define a few things about the library‘s goals.\n\nWe haven‘t filled this out yet though. Care to help? See [`contributing.md`](../contributing.md)\n\n## Want to do\n\n## Might do\n\n## Won‘t do\n\n- Won't do webpack\n- Won't do XO\n",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "__docId__": 144,
+    "kind": "testFile",
+    "name": "src/app/index.test.js",
+    "content": "import path from 'path';\nimport assert from 'yeoman-assert';\nimport helpers from 'yeoman-test';\n\nimport Generator from './index';\nimport Github from './lib/github';\n\njest.mock('./lib/github');\njest.mock('./lib/npm');\n\nGithub.use2fa = false;\n\nconst runAppGenerator = () => helpers.run(Generator);\n\nbeforeEach(() => jest.clearAllMocks());\n\nconst requiredPrompts = {\n  githubUsername: 'github-username',\n};\n\ntest('destinationRoot', () => {\n  return runAppGenerator()\n    .withPrompts({ ...requiredPrompts, projectName: 'temp' })\n    .then(() => {\n      assert.equal(path.basename(process.cwd()), 'temp');\n    });\n});\n\ntest('default files', () => {\n  return runAppGenerator()\n    .withPrompts(requiredPrompts)\n    .then(() => {\n      assert.file([\n        '.git',\n        '.babelrc',\n        '.editorconfig',\n        '.eslintignore',\n        '.eslintrc',\n        '.gitattributes',\n        '.gitignore',\n        '.npmignore',\n        'license',\n        'package.json',\n        'readme.md',\n        'src/index.js',\n        'src/index.test.js',\n        // githubTemplates\n        'contributing.md',\n        '.github/issue_template.md',\n        '.github/pull_request_template.md',\n        'other/code_of_conduct.md',\n        'other/examples.md',\n        'other/roadmap.md',\n        // travisCI\n        '.travis.yml',\n        // semanticRelease\n        '.commitlintrc.json',\n      ]);\n\n      assert.noFile([\n        '_babelrc',\n        '_editorconfig',\n        '_eslintignore',\n        '_eslintrc',\n        '_gitattributes',\n        '_gitignore',\n        '_travis.yml',\n        '_npmignore',\n        '_github/issue_template.md',\n        '_github/pull_request_template.md',\n        '_commitlintrc.json',\n      ]);\n    });\n});\n\ntest('default files with --noDefaults', () => {\n  return runAppGenerator()\n    .withOptions({ noDefaults: true })\n    .withPrompts(requiredPrompts)\n    .then(() => {\n      assert.file([\n        '.git',\n        '.babelrc',\n        '.editorconfig',\n        '.eslintignore',\n        '.eslintrc',\n        '.gitattributes',\n        '.gitignore',\n        '.npmignore',\n        'license',\n        'package.json',\n        'readme.md',\n        'src/index.js',\n        'src/index.test.js',\n      ]);\n\n      assert.noFile([\n        '.commitlintrc.json',\n        '_babelrc',\n        '_editorconfig',\n        '_eslintignore',\n        '_eslintrc',\n        '_gitattributes',\n        '_gitignore',\n        '_travis.yml',\n        '_npmignore',\n        '_github/issue_template.md',\n        '_github/pull_request_template.md',\n        '_commitlintrc.json',\n        // githubTemplates\n        'contributing.md',\n        '.github/issue_template.md',\n        '.github/pull_request_template.md',\n        'other/code_of_conduct.md',\n        'other/examples.md',\n        'other/roadmap.md',\n        // travisCI\n        '.travis.yml',\n        // semanticRelease\n        '.commitlintrc.json',\n      ]);\n    });\n});\n\ndescribe('prompts', () => {\n  test('projectName', () => {\n    return runAppGenerator()\n      .withPrompts({\n        ...requiredPrompts,\n        githubUsername: 'foo',\n        projectName: 'bar',\n      })\n      .then(() => {\n        assert.jsonFileContent('package.json', {\n          name: 'bar',\n          repository: 'https://github.com/foo/bar',\n        });\n\n        assert.fileContent('.git/config', '[remote \"origin\"]');\n        assert.fileContent('.git/config', 'git@github.com:foo/bar.git');\n\n        assert.fileContent(\n          'readme.md',\n          '[![Package Version](https://img.shields.io/npm/v/bar.svg?style=flat-square)](https://www.npmjs.com/package/bar)'\n        );\n        assert.fileContent(\n          'readme.md',\n          '[![Build Status: Linux](https://img.shields.io/travis/foo/bar/master.svg?style=flat-square)](https://travis-ci.org/foo/bar)'\n        );\n        assert.fileContent(\n          'readme.md',\n          '[![Downloads Status](https://img.shields.io/npm/dm/bar.svg?style=flat-square)](https://npm-stat.com/charts.html?package=bar&from=2016-04-01)'\n        );\n\n        assert.fileContent('readme.md', '# bar');\n        assert.fileContent('readme.md', 'npm install --save bar');\n        assert.fileContent('readme.md', \"const bar = require('bar');\");\n      });\n  });\n\n  test('description', () => {\n    return runAppGenerator()\n      .withPrompts({ ...requiredPrompts, description: 'foo' })\n      .then(() => {\n        assert.jsonFileContent('package.json', {\n          description: 'foo',\n        });\n        assert.fileContent('readme.md', 'foo');\n      });\n  });\n\n  test('name', () => {\n    return runAppGenerator()\n      .withPrompts({ ...requiredPrompts, name: 'foo bar' })\n      .then(() => {\n        assert.jsonFileContent('package.json', {\n          author: {\n            name: 'foo bar',\n          },\n        });\n\n        assert.fileContent('license', 'foo bar');\n        assert.fileContent('readme.md', 'MIT &copy; [foo bar]');\n      });\n  });\n\n  test('email', () => {\n    return runAppGenerator()\n      .withPrompts({ ...requiredPrompts, email: 'foo@bar.com' })\n      .then(() => {\n        assert.jsonFileContent('package.json', {\n          author: {\n            email: 'foo@bar.com',\n          },\n        });\n\n        assert.fileContent('license', 'foo@bar.com');\n      });\n  });\n\n  test('website', () => {\n    return runAppGenerator()\n      .withPrompts({ ...requiredPrompts, website: 'test.com' })\n      .then(() => {\n        assert.jsonFileContent('package.json', {\n          author: {\n            url: 'test.com',\n          },\n        });\n\n        assert.fileContent('readme.md', 'test.com');\n      });\n  });\n\n  test('createGithubRepository with token', () => {\n    const name = 'some-project-name';\n    const description = 'some-description';\n    const githubToken = 'some-token';\n\n    return runAppGenerator()\n      .withOptions({\n        githubToken,\n      })\n      .withPrompts({\n        ...requiredPrompts,\n        createGithubRepository: true,\n        projectName: name,\n        description,\n      })\n      .then(() => {\n        expect(Github).toBeCalledWith({\n          token: `token ${githubToken}`,\n        });\n        expect(Github.prototype.createRepository).toBeCalledWith({\n          name,\n          description,\n        });\n      });\n  });\n\n  test('createGithubRepository with username and password', () => {\n    const name = 'some-project-name';\n    const description = 'some-description';\n    const username = 'some-username';\n    const password = 'some-password';\n\n    return runAppGenerator()\n      .withPrompts({\n        ...requiredPrompts,\n        createGithubRepository: true,\n        projectName: name,\n        description,\n        githubUsername: username,\n        githubPassword: password,\n      })\n      .then(() => {\n        expect(Github).toBeCalledWith({\n          username,\n          password,\n          on2fa: expect.any(Function),\n        });\n        expect(Github.prototype.createRepository).toBeCalledWith({\n          name,\n          description,\n        });\n      });\n  });\n\n  test('createGithubRepository with username, password and 2fa', () => {\n    Github.use2fa = true;\n\n    const name = 'some-project-name';\n    const description = 'some-description';\n    const username = 'some-username';\n    const password = 'some-password';\n    const github2fa = 'github2fa';\n\n    return runAppGenerator()\n      .withPrompts({\n        ...requiredPrompts,\n        createGithubRepository: true,\n        projectName: name,\n        description,\n        githubUsername: username,\n        githubPassword: password,\n        github2fa,\n      })\n      .then(() => {\n        expect(Github).toBeCalledWith({\n          username,\n          password,\n          on2fa: expect.any(Function),\n        });\n        expect(Github.prototype.createRepository).toBeCalledWith({\n          name,\n          description,\n        });\n\n        Github.use2fa = false;\n      });\n  });\n\n  test('no createGithubRepository', () => {\n    return runAppGenerator()\n      .withPrompts({\n        ...requiredPrompts,\n        createGithubRepository: false,\n        travisCI: false,\n        npmDeploy: false,\n        githubUsername: 'some-username',\n        githubPassword: 'some-password',\n        projectName: 'some-project-name',\n      })\n      .then(() => {\n        expect(Github).not.toBeCalled();\n        expect(Github.prototype.createRepository).not.toBeCalled();\n      });\n  });\n\n  test('githubTemplates', () => {\n    return runAppGenerator()\n      .withPrompts({\n        ...requiredPrompts,\n        githubUsername: 'foo',\n        projectName: 'bar',\n        email: 'foo@test.com',\n        githubTemplates: true,\n      })\n      .then(() => {\n        assert.fileContent('contributing.md', 'https://github.com/foo/bar');\n        assert.fileContent(\n          '.github/issue_template.md',\n          /bar version: <!-- run `npm ls bar` -->/\n        );\n        assert.fileContent(\n          '.github/pull_request_template.md',\n          'https://github.com/foo/bar/blob/master/contributing.md'\n        );\n        assert.fileContent('other/code_of_conduct.md', 'foo@test.com');\n      });\n  });\n\n  test('no githubTemplates', () => {\n    return runAppGenerator()\n      .withPrompts({\n        ...requiredPrompts,\n        githubTemplates: false,\n      })\n      .then(() => {\n        assert.noFile([\n          'contributing.md',\n          '.github/issue_template.md',\n          '.github/pull_request_template.md',\n          'other/code_of_conduct.md',\n          'other/examples.md',\n          'other/roadmap.md',\n        ]);\n      });\n  });\n\n  describe('Travis', () => {\n    test('travisCI', () => {\n      return runAppGenerator()\n        .withPrompts({\n          ...requiredPrompts,\n          travisCI: true,\n        })\n        .then(() => {\n          assert.file(['.travis.yml']);\n        });\n    });\n\n    test('no travisCI', () => {\n      return runAppGenerator()\n        .withPrompts({\n          ...requiredPrompts,\n          travisCI: false,\n        })\n        .then(() => {\n          assert.noFile(['.travis.yml']);\n        });\n    });\n\n    test('coveralls', () => {\n      return runAppGenerator()\n        .withPrompts({\n          ...requiredPrompts,\n          travisCI: true,\n          coveralls: true,\n        })\n        .then(() => {\n          assert.fileContent('.travis.yml', 'after_success: yarn coveralls');\n        });\n    });\n\n    test('no coveralls', () => {\n      return runAppGenerator()\n        .withPrompts({\n          ...requiredPrompts,\n          travisCI: true,\n          coveralls: false,\n        })\n        .then(() => {\n          assert.noFileContent('.travis.yml', 'after_success: yarn coveralls');\n        });\n    });\n\n    test('npmDeploy', () => {\n      return runAppGenerator()\n        .withPrompts({\n          ...requiredPrompts,\n          travisCI: true,\n          npmDeploy: true,\n          semanticRelease: false,\n          npmUsername: 'some-username',\n          npmPassword: 'some-password',\n        })\n        .then(() => {\n          assert.noFile(['.commitlintrc.json']);\n\n          assert.fileContent('.travis.yml', 'deploy:');\n          assert.fileContent('.travis.yml', 'provider: npm');\n          assert.fileContent('.travis.yml', 'api_key: $NPM_TOKEN');\n\n          assert.noFileContent('.travis.yml', 'provider: script');\n          assert.noFileContent('.travis.yml', 'yarn semantic-release');\n\n          assert.noFileContent(\n            'package.json',\n            '\"version\": \"0.0.0-semantic-release\"'\n          );\n          assert.noFileContent(\n            'package.json',\n            '\"semantic-release\": \"semantic-release\"'\n          );\n          assert.noFileContent('package.json', '@commitlint/cli');\n          assert.noFileContent(\n            'package.json',\n            '@commitlint/config-conventional'\n          );\n          assert.noFileContent('package.json', '@commitlint/travis-cli');\n          assert.noFileContent(\n            'package.json',\n            '\"path\": \"./node_modules/cz-conventional-changelog\"'\n          );\n        });\n    });\n\n    test('no npmDeploy', () => {\n      return runAppGenerator()\n        .withPrompts({\n          ...requiredPrompts,\n          travisCI: true,\n          npmDeploy: false,\n        })\n        .then(() => {\n          assert.noFile(['.commitlintrc.json']);\n          assert.noFileContent('.travis.yml', 'deploy');\n        });\n    });\n\n    test('npmDeploy with semanticRelease', () => {\n      return runAppGenerator()\n        .withPrompts({\n          ...requiredPrompts,\n          travisCI: true,\n          npmDeploy: true,\n          semanticRelease: true,\n          npmUsername: 'some-username',\n          npmPassword: 'some-password',\n          githubUsername: 'some-username',\n          githubPassword: 'some-password',\n        })\n        .then(() => {\n          assert.file(['.commitlintrc.json']);\n\n          assert.fileContent('.travis.yml', 'deploy:');\n          assert.fileContent('.travis.yml', 'provider: script');\n          assert.fileContent('.travis.yml', 'yarn semantic-release');\n\n          assert.fileContent(\n            'package.json',\n            '\"version\": \"0.0.0-semantic-release\"'\n          );\n          assert.fileContent(\n            'package.json',\n            '\"semantic-release\": \"semantic-release\"'\n          );\n          assert.fileContent('package.json', '@commitlint/cli');\n          assert.fileContent('package.json', '@commitlint/config-conventional');\n          assert.fileContent('package.json', '@commitlint/travis-cli');\n          assert.fileContent(\n            'package.json',\n            '\"path\": \"./node_modules/cz-conventional-changelog\"'\n          );\n        });\n    });\n\n    test('npmDeploy with semanticRelease and w/o createGithubRepository', () => {\n      return runAppGenerator()\n        .withPrompts({\n          ...requiredPrompts,\n          createGithubRepository: false,\n          travisCI: true,\n          npmDeploy: true,\n          semanticRelease: true,\n          npmUsername: 'some-username',\n          npmPassword: 'some-password',\n          githubUsername: 'some-username',\n          githubPassword: 'some-password',\n        })\n        .then(() => {\n          assert.file(['.commitlintrc.json']);\n\n          assert.fileContent('.travis.yml', 'deploy:');\n          assert.fileContent('.travis.yml', 'provider: script');\n          assert.fileContent('.travis.yml', 'yarn semantic-release');\n\n          assert.fileContent(\n            'package.json',\n            '\"version\": \"0.0.0-semantic-release\"'\n          );\n          assert.fileContent(\n            'package.json',\n            '\"semantic-release\": \"semantic-release\"'\n          );\n          assert.fileContent('package.json', '@commitlint/cli');\n          assert.fileContent('package.json', '@commitlint/config-conventional');\n          assert.fileContent('package.json', '@commitlint/travis-cli');\n          assert.fileContent(\n            'package.json',\n            '\"path\": \"./node_modules/cz-conventional-changelog\"'\n          );\n        });\n    });\n  });\n});\n",
+    "static": true,
+    "longname": "/home/travis/build/sharvit/generator-node-mdl/src/app/index.test.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 145,
+    "kind": "test",
+    "name": "test0",
+    "testId": 0,
+    "memberof": "src/app/index.test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "src/app/index.test.js~test0",
+    "access": null,
+    "description": "destinationRoot",
+    "lineNumber": 21
+  },
+  {
+    "__docId__": 146,
+    "kind": "test",
+    "name": "test1",
+    "testId": 1,
+    "memberof": "src/app/index.test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "src/app/index.test.js~test1",
+    "access": null,
+    "description": "default files",
+    "lineNumber": 29
+  },
+  {
+    "__docId__": 147,
+    "kind": "test",
+    "name": "test2",
+    "testId": 2,
+    "memberof": "src/app/index.test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "src/app/index.test.js~test2",
+    "access": null,
+    "description": "default files with --noDefaults",
+    "lineNumber": 76
+  },
+  {
+    "__docId__": 148,
+    "kind": "test",
+    "name": "describe3",
+    "testId": 3,
+    "memberof": "src/app/index.test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "src/app/index.test.js~describe3",
+    "access": null,
+    "description": "prompts",
+    "lineNumber": 125
+  },
+  {
+    "__docId__": 149,
+    "kind": "test",
+    "name": "test4",
+    "testId": 4,
+    "memberof": "src/app/index.test.js~describe3",
+    "testDepth": 1,
+    "static": true,
+    "longname": "src/app/index.test.js~describe3.test4",
+    "access": null,
+    "description": "projectName",
+    "lineNumber": 126
+  },
+  {
+    "__docId__": 150,
+    "kind": "test",
+    "name": "test5",
+    "testId": 5,
+    "memberof": "src/app/index.test.js~describe3",
+    "testDepth": 1,
+    "static": true,
+    "longname": "src/app/index.test.js~describe3.test5",
+    "access": null,
+    "description": "description",
+    "lineNumber": 161
+  },
+  {
+    "__docId__": 151,
+    "kind": "test",
+    "name": "test6",
+    "testId": 6,
+    "memberof": "src/app/index.test.js~describe3",
+    "testDepth": 1,
+    "static": true,
+    "longname": "src/app/index.test.js~describe3.test6",
+    "access": null,
+    "description": "name",
+    "lineNumber": 172
+  },
+  {
+    "__docId__": 152,
+    "kind": "test",
+    "name": "test7",
+    "testId": 7,
+    "memberof": "src/app/index.test.js~describe3",
+    "testDepth": 1,
+    "static": true,
+    "longname": "src/app/index.test.js~describe3.test7",
+    "access": null,
+    "description": "email",
+    "lineNumber": 187
+  },
+  {
+    "__docId__": 153,
+    "kind": "test",
+    "name": "test8",
+    "testId": 8,
+    "memberof": "src/app/index.test.js~describe3",
+    "testDepth": 1,
+    "static": true,
+    "longname": "src/app/index.test.js~describe3.test8",
+    "access": null,
+    "description": "website",
+    "lineNumber": 201
+  },
+  {
+    "__docId__": 154,
+    "kind": "test",
+    "name": "test9",
+    "testId": 9,
+    "memberof": "src/app/index.test.js~describe3",
+    "testDepth": 1,
+    "static": true,
+    "longname": "src/app/index.test.js~describe3.test9",
+    "access": null,
+    "description": "createGithubRepository with token",
+    "lineNumber": 215
+  },
+  {
+    "__docId__": 155,
+    "kind": "test",
+    "name": "test10",
+    "testId": 10,
+    "memberof": "src/app/index.test.js~describe3",
+    "testDepth": 1,
+    "static": true,
+    "longname": "src/app/index.test.js~describe3.test10",
+    "access": null,
+    "description": "createGithubRepository with username and password",
+    "lineNumber": 241
+  },
+  {
+    "__docId__": 156,
+    "kind": "test",
+    "name": "test11",
+    "testId": 11,
+    "memberof": "src/app/index.test.js~describe3",
+    "testDepth": 1,
+    "static": true,
+    "longname": "src/app/index.test.js~describe3.test11",
+    "access": null,
+    "description": "createGithubRepository with username, password and 2fa",
+    "lineNumber": 269
+  },
+  {
+    "__docId__": 157,
+    "kind": "test",
+    "name": "test12",
+    "testId": 12,
+    "memberof": "src/app/index.test.js~describe3",
+    "testDepth": 1,
+    "static": true,
+    "longname": "src/app/index.test.js~describe3.test12",
+    "access": null,
+    "description": "no createGithubRepository",
+    "lineNumber": 303
+  },
+  {
+    "__docId__": 158,
+    "kind": "test",
+    "name": "test13",
+    "testId": 13,
+    "memberof": "src/app/index.test.js~describe3",
+    "testDepth": 1,
+    "static": true,
+    "longname": "src/app/index.test.js~describe3.test13",
+    "access": null,
+    "description": "githubTemplates",
+    "lineNumber": 320
+  },
+  {
+    "__docId__": 159,
+    "kind": "test",
+    "name": "test14",
+    "testId": 14,
+    "memberof": "src/app/index.test.js~describe3",
+    "testDepth": 1,
+    "static": true,
+    "longname": "src/app/index.test.js~describe3.test14",
+    "access": null,
+    "description": "no githubTemplates",
+    "lineNumber": 343
+  },
+  {
+    "__docId__": 160,
+    "kind": "test",
+    "name": "describe15",
+    "testId": 15,
+    "memberof": "src/app/index.test.js~describe3",
+    "testDepth": 1,
+    "static": true,
+    "longname": "src/app/index.test.js~describe3.describe15",
+    "access": null,
+    "description": "Travis",
+    "lineNumber": 361
+  },
+  {
+    "__docId__": 161,
+    "kind": "test",
+    "name": "test16",
+    "testId": 16,
+    "memberof": "src/app/index.test.js~describe3.describe15",
+    "testDepth": 2,
+    "static": true,
+    "longname": "src/app/index.test.js~describe3.describe15.test16",
+    "access": null,
+    "description": "travisCI",
+    "lineNumber": 362
+  },
+  {
+    "__docId__": 162,
+    "kind": "test",
+    "name": "test17",
+    "testId": 17,
+    "memberof": "src/app/index.test.js~describe3.describe15",
+    "testDepth": 2,
+    "static": true,
+    "longname": "src/app/index.test.js~describe3.describe15.test17",
+    "access": null,
+    "description": "no travisCI",
+    "lineNumber": 373
+  },
+  {
+    "__docId__": 163,
+    "kind": "test",
+    "name": "test18",
+    "testId": 18,
+    "memberof": "src/app/index.test.js~describe3.describe15",
+    "testDepth": 2,
+    "static": true,
+    "longname": "src/app/index.test.js~describe3.describe15.test18",
+    "access": null,
+    "description": "coveralls",
+    "lineNumber": 384
+  },
+  {
+    "__docId__": 164,
+    "kind": "test",
+    "name": "test19",
+    "testId": 19,
+    "memberof": "src/app/index.test.js~describe3.describe15",
+    "testDepth": 2,
+    "static": true,
+    "longname": "src/app/index.test.js~describe3.describe15.test19",
+    "access": null,
+    "description": "no coveralls",
+    "lineNumber": 396
+  },
+  {
+    "__docId__": 165,
+    "kind": "test",
+    "name": "test20",
+    "testId": 20,
+    "memberof": "src/app/index.test.js~describe3.describe15",
+    "testDepth": 2,
+    "static": true,
+    "longname": "src/app/index.test.js~describe3.describe15.test20",
+    "access": null,
+    "description": "npmDeploy",
+    "lineNumber": 408
+  },
+  {
+    "__docId__": 166,
+    "kind": "test",
+    "name": "test21",
+    "testId": 21,
+    "memberof": "src/app/index.test.js~describe3.describe15",
+    "testDepth": 2,
+    "static": true,
+    "longname": "src/app/index.test.js~describe3.describe15.test21",
+    "access": null,
+    "description": "no npmDeploy",
+    "lineNumber": 449
+  },
+  {
+    "__docId__": 167,
+    "kind": "test",
+    "name": "test22",
+    "testId": 22,
+    "memberof": "src/app/index.test.js~describe3.describe15",
+    "testDepth": 2,
+    "static": true,
+    "longname": "src/app/index.test.js~describe3.describe15.test22",
+    "access": null,
+    "description": "npmDeploy with semanticRelease",
+    "lineNumber": 462
+  },
+  {
+    "__docId__": 168,
+    "kind": "test",
+    "name": "test23",
+    "testId": 23,
+    "memberof": "src/app/index.test.js~describe3.describe15",
+    "testDepth": 2,
+    "static": true,
+    "longname": "src/app/index.test.js~describe3.describe15.test23",
+    "access": null,
+    "description": "npmDeploy with semanticRelease and w/o createGithubRepository",
+    "lineNumber": 499
+  },
+  {
+    "__docId__": 169,
+    "kind": "testFile",
+    "name": "src/app/lib/commander.test.js",
+    "content": "import chalk from 'chalk';\nimport Commander from './commander';\n\ndescribe('Commander', () => {\n  let commander;\n  const spawnSync = jest.fn();\n  const log = jest.fn();\n\n  beforeEach(() => {\n    spawnSync.mockClear();\n    log.mockClear();\n    commander = new Commander({ spawnSync, log });\n  });\n\n  it('should create an instance with no args', () => {\n    commander = new Commander();\n\n    commander.spawnSync();\n    commander.log();\n\n    expect(typeof commander.spawnSync).toBe('function');\n    expect(typeof commander.log).toBe('function');\n  });\n\n  it('should run commands', () => {\n    commander._runCommand = jest.fn();\n\n    const commands = ['command 1', 'command 2', 'command 3'];\n\n    commander.run(commands);\n\n    for (const [index, command] of commands.entries()) {\n      expect(commander._runCommand).nthCalledWith(index + 1, command);\n    }\n  });\n\n  it('should run one command', () => {\n    commander._runCommand = jest.fn();\n\n    const command = 'some command';\n    commander.run(command);\n\n    expect(commander._runCommand).toBeCalledWith(command);\n  });\n\n  it('should _runCommand', () => {\n    const command = 'some command';\n    const main = 'main';\n    const args = 'args';\n\n    commander._parseCommand = jest\n      .fn()\n      .mockImplementation(command => ({ main, args }));\n    commander._logCommand = jest.fn();\n\n    commander._runCommand(command);\n\n    expect(commander._parseCommand).toBeCalledWith(command);\n    expect(commander._logCommand).toBeCalledWith(main, args);\n    expect(spawnSync).toBeCalledWith(main, args);\n  });\n\n  it('should parse a string command', () => {\n    const command = 'some command with args';\n\n    const { main, args } = commander._parseCommand(command);\n\n    expect(main).toBe('some');\n    expect(args).toEqual(['command', 'with', 'args']);\n  });\n\n  it('should parse an array command', () => {\n    const command = ['some', 'command', 'with', 'args'];\n\n    const { main, args } = commander._parseCommand(command);\n\n    expect(main).toBe('some');\n    expect(args).toEqual(['command', 'with', 'args']);\n  });\n\n  it('should throw error when parse unsupported command type', () => {\n    const command = true;\n\n    expect(() => commander._parseCommand(command)).toThrow(TypeError);\n  });\n\n  it('should log command', () => {\n    const main = 'command';\n    const args = ['arg1', 'arg2', 'arg3'];\n\n    commander._logCommand(main, args);\n\n    expect(log).toBeCalledWith(chalk`  {gray ${main} ${args.join(' ')}}`);\n  });\n});\n",
+    "static": true,
+    "longname": "/home/travis/build/sharvit/generator-node-mdl/src/app/lib/commander.test.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 170,
+    "kind": "test",
+    "name": "describe24",
+    "testId": 24,
+    "memberof": "src/app/lib/commander.test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "src/app/lib/commander.test.js~describe24",
+    "access": null,
+    "description": "Commander",
+    "lineNumber": 4
+  },
+  {
+    "__docId__": 171,
+    "kind": "test",
+    "name": "it25",
+    "testId": 25,
+    "memberof": "src/app/lib/commander.test.js~describe24",
+    "testDepth": 1,
+    "static": true,
+    "longname": "src/app/lib/commander.test.js~describe24.it25",
+    "access": null,
+    "description": "should create an instance with no args",
+    "lineNumber": 15
+  },
+  {
+    "__docId__": 172,
+    "kind": "test",
+    "name": "it26",
+    "testId": 26,
+    "memberof": "src/app/lib/commander.test.js~describe24",
+    "testDepth": 1,
+    "static": true,
+    "longname": "src/app/lib/commander.test.js~describe24.it26",
+    "access": null,
+    "description": "should run commands",
+    "lineNumber": 25
+  },
+  {
+    "__docId__": 173,
+    "kind": "test",
+    "name": "it27",
+    "testId": 27,
+    "memberof": "src/app/lib/commander.test.js~describe24",
+    "testDepth": 1,
+    "static": true,
+    "longname": "src/app/lib/commander.test.js~describe24.it27",
+    "access": null,
+    "description": "should run one command",
+    "lineNumber": 37
+  },
+  {
+    "__docId__": 174,
+    "kind": "test",
+    "name": "it28",
+    "testId": 28,
+    "memberof": "src/app/lib/commander.test.js~describe24",
+    "testDepth": 1,
+    "static": true,
+    "longname": "src/app/lib/commander.test.js~describe24.it28",
+    "access": null,
+    "description": "should _runCommand",
+    "lineNumber": 46
+  },
+  {
+    "__docId__": 175,
+    "kind": "test",
+    "name": "it29",
+    "testId": 29,
+    "memberof": "src/app/lib/commander.test.js~describe24",
+    "testDepth": 1,
+    "static": true,
+    "longname": "src/app/lib/commander.test.js~describe24.it29",
+    "access": null,
+    "description": "should parse a string command",
+    "lineNumber": 63
+  },
+  {
+    "__docId__": 176,
+    "kind": "test",
+    "name": "it30",
+    "testId": 30,
+    "memberof": "src/app/lib/commander.test.js~describe24",
+    "testDepth": 1,
+    "static": true,
+    "longname": "src/app/lib/commander.test.js~describe24.it30",
+    "access": null,
+    "description": "should parse an array command",
+    "lineNumber": 72
+  },
+  {
+    "__docId__": 177,
+    "kind": "test",
+    "name": "it31",
+    "testId": 31,
+    "memberof": "src/app/lib/commander.test.js~describe24",
+    "testDepth": 1,
+    "static": true,
+    "longname": "src/app/lib/commander.test.js~describe24.it31",
+    "access": null,
+    "description": "should throw error when parse unsupported command type",
+    "lineNumber": 81
+  },
+  {
+    "__docId__": 178,
+    "kind": "test",
+    "name": "it32",
+    "testId": 32,
+    "memberof": "src/app/lib/commander.test.js~describe24",
+    "testDepth": 1,
+    "static": true,
+    "longname": "src/app/lib/commander.test.js~describe24.it32",
+    "access": null,
+    "description": "should log command",
+    "lineNumber": 87
+  },
+  {
+    "__docId__": 179,
+    "kind": "testFile",
+    "name": "src/app/lib/github.test.js",
+    "content": "import Octokit, {\n  createRepoForAuthenticatedUser,\n  createAuthorization,\n  authenticatedUserToken,\n} from '@octokit/rest';\nimport Github from './github';\n\ndescribe('Github', () => {\n  let github;\n  const username = 'some-username';\n  const password = 'some-password';\n  const on2fa = jest.fn();\n\n  beforeEach(() => {\n    Octokit.mockClear();\n    createRepoForAuthenticatedUser.mockClear();\n    createAuthorization.mockClear();\n\n    github = new Github({ username, password, on2fa });\n  });\n\n  it('should create a new Github instance', () => {\n    expect(Octokit).toBeCalledWith({\n      auth: {\n        username,\n        password,\n        on2fa,\n      },\n    });\n  });\n\n  it('should create-repository', () => {\n    const name = 'some-name';\n    const description = 'some-description';\n\n    github.createRepository({ name, description });\n\n    expect(createRepoForAuthenticatedUser).toBeCalledWith({\n      name,\n      description,\n    });\n  });\n\n  it('should create-createToken', async () => {\n    const note = 'some-note';\n    const scopes = 'some-scopes';\n\n    const token = await github.createToken(note, scopes);\n\n    expect(token).toBe(authenticatedUserToken);\n    expect(createAuthorization).toBeCalledWith({\n      note,\n      scopes,\n    });\n  });\n});\n",
+    "static": true,
+    "longname": "/home/travis/build/sharvit/generator-node-mdl/src/app/lib/github.test.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 180,
+    "kind": "test",
+    "name": "describe33",
+    "testId": 33,
+    "memberof": "src/app/lib/github.test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "src/app/lib/github.test.js~describe33",
+    "access": null,
+    "description": "Github",
+    "lineNumber": 8
+  },
+  {
+    "__docId__": 181,
+    "kind": "test",
+    "name": "it34",
+    "testId": 34,
+    "memberof": "src/app/lib/github.test.js~describe33",
+    "testDepth": 1,
+    "static": true,
+    "longname": "src/app/lib/github.test.js~describe33.it34",
+    "access": null,
+    "description": "should create a new Github instance",
+    "lineNumber": 22
+  },
+  {
+    "__docId__": 182,
+    "kind": "test",
+    "name": "it35",
+    "testId": 35,
+    "memberof": "src/app/lib/github.test.js~describe33",
+    "testDepth": 1,
+    "static": true,
+    "longname": "src/app/lib/github.test.js~describe33.it35",
+    "access": null,
+    "description": "should create-repository",
+    "lineNumber": 32
+  },
+  {
+    "__docId__": 183,
+    "kind": "test",
+    "name": "it36",
+    "testId": 36,
+    "memberof": "src/app/lib/github.test.js~describe33",
+    "testDepth": 1,
+    "static": true,
+    "longname": "src/app/lib/github.test.js~describe33.it36",
+    "access": null,
+    "description": "should create-createToken",
+    "lineNumber": 44
+  },
+  {
+    "__docId__": 184,
+    "kind": "testFile",
+    "name": "src/app/lib/npm.test.js",
+    "content": "import npmProfile from 'npm-profile';\nimport { login } from './npm';\n\ndescribe('npm', () => {\n  it('should login', () => {\n    const username = 'some-username';\n    const password = 'some-password';\n\n    login({ username, password });\n\n    expect(npmProfile.loginCouch).toBeCalledWith(username, password, {\n      registry: 'https://registry.npmjs.org',\n    });\n  });\n});\n",
+    "static": true,
+    "longname": "/home/travis/build/sharvit/generator-node-mdl/src/app/lib/npm.test.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 185,
+    "kind": "test",
+    "name": "describe37",
+    "testId": 37,
+    "memberof": "src/app/lib/npm.test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "src/app/lib/npm.test.js~describe37",
+    "access": null,
+    "description": "npm",
+    "lineNumber": 4
+  },
+  {
+    "__docId__": 186,
+    "kind": "test",
+    "name": "it38",
+    "testId": 38,
+    "memberof": "src/app/lib/npm.test.js~describe37",
+    "testDepth": 1,
+    "static": true,
+    "longname": "src/app/lib/npm.test.js~describe37.it38",
+    "access": null,
+    "description": "should login",
+    "lineNumber": 5
+  }
+]

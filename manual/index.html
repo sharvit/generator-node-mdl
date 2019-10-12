@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../">
+  <title data-ice="title">Manual | generator-node-mdl</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Create a Node.js module with ease"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="generator-node-mdl"><meta property="twitter:description" content="Create a Node.js module with ease"></head>
+<body class="layout-container manual-root manual-index" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/sharvit/generator-node-mdl"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div class="manual-toc-root">
+  
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/contributing.html"><a href="manual/contributing.html" data-ice="link">Contributing</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/contributing.html"><a href="manual/contributing.html#code-of-conduct" data-ice="link">Code of Conduct</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/contributing.html"><a href="manual/contributing.html#project-setup" data-ice="link">Project setup</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/contributing.html"><a href="manual/contributing.html#creating-pull-requests" data-ice="link">Creating Pull Requests</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/contributing.html"><a href="manual/contributing.html#help-needed" data-ice="link">Help needed</a></li>
+</ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/code_of_conduct.html"><a href="manual/code_of_conduct.html" data-ice="link">Contributor Covenant Code of Conduct</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/code_of_conduct.html"><a href="manual/code_of_conduct.html#our-pledge" data-ice="link">Our Pledge</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/code_of_conduct.html"><a href="manual/code_of_conduct.html#our-standards" data-ice="link">Our Standards</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/code_of_conduct.html"><a href="manual/code_of_conduct.html#our-responsibilities" data-ice="link">Our Responsibilities</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/code_of_conduct.html"><a href="manual/code_of_conduct.html#scope" data-ice="link">Scope</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/code_of_conduct.html"><a href="manual/code_of_conduct.html#enforcement" data-ice="link">Enforcement</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/code_of_conduct.html"><a href="manual/code_of_conduct.html#attribution" data-ice="link">Attribution</a></li>
+</ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/roadmap.html"><a href="manual/roadmap.html" data-ice="link">Project Roadmap</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/roadmap.html"><a href="manual/roadmap.html#want-to-do" data-ice="link">Want to do</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/roadmap.html"><a href="manual/roadmap.html#might-do" data-ice="link">Might do</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/roadmap.html"><a href="manual/roadmap.html#won&#x2018;t-do" data-ice="link">Won&#x2018;t do</a></li>
+</ul>
+  </div>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div class="github-markdown">
+  <div class="manual-user-index" data-ice="manualUserIndex"><h1 id="generator-node-mdl">generator-node-mdl</h1><blockquote>
+<p>Create a Node.js module with ease</p>
+</blockquote>
+<p><a href="https://www.npmjs.com/package/generator-node-mdl"><img src="https://img.shields.io/npm/v/generator-node-mdl.svg?style=flat-square" alt="Package Version"></a>
+<a href="https://github.com/semantic-release/semantic-release"><img src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg" alt="semantic-release"></a>
+<a href="https://npm-stat.com/charts.html?package=generator-node-mdl&amp;from=2016-04-01"><img src="https://img.shields.io/npm/dm/generator-node-mdl.svg?style=flat-square" alt="Downloads Status"></a>
+<a href="https://travis-ci.org/sharvit/generator-node-mdl"><img src="https://img.shields.io/travis/sharvit/generator-node-mdl/master.svg?style=flat-square" alt="Build Status: Linux"></a>
+<a href="https://coveralls.io/github/sharvit/generator-node-mdl?branch=master"><img src="https://coveralls.io/repos/github/sharvit/generator-node-mdl/badge.svg?branch=master" alt="Coverage Status"></a>
+<a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome"></a>
+<a href="https://david-dm.org/sharvit/generator-node-mdl"><img src="https://david-dm.org/sharvit/generator-node-mdl/status.svg" alt="dependencies Status"></a>
+<a href="https://david-dm.org/sharvit/generator-node-mdl?type=dev"><img src="https://david-dm.org/sharvit/generator-node-mdl/dev-status.svg" alt="devDependencies Status"></a>
+<a href="https://github.com/prettier/prettier"><img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square" alt="code style: prettier"></a>
+<a href="http://opensource.org/licenses/MIT"><img src="https://img.shields.io/npm/l/stack-overflow-copy-paste.svg?style=flat-square" alt="MIT License"></a> <a href="https://greenkeeper.io/"><img src="https://badges.greenkeeper.io/sharvit/generator-node-mdl.svg" alt="Greenkeeper badge"></a></p>
+<h2 id="why">Why</h2><ul>
+<li>Generates a simple but <em>ready to start</em> project</li>
+<li>Includes only necessary tools</li>
+<li>Monitors repo quality through helpful badges</li>
+<li><a href="https://babeljs.io">Supports ES2015+ using Babel 7</a></li>
+<li><a href="https://facebook.github.io/jest">Jest testing framework</a></li>
+<li>Sensible <a href="http://eslint.org">ESLint</a> config extends <a href="https://github.com/standard/eslint-config-standard">standard</a> and <a href="https://github.com/prettier/eslint-plugin-prettier">Prettier</a></li>
+<li>Automates code reformatting using <a href="https://github.com/prettier/prettier">Prettier</a></li>
+<li><a href="https://travis-ci.org">Travis CI</a> configuration <em>(optional)</em></li>
+<li><a href="http://coveralls.io">Coveralls</a> configuration <em>(optional)</em></li>
+<li>Automatically deploy to <a href="https://www.npmjs.com">npm registry</a> with <a href="https://travis-ci.org">Travis CI</a>  <em>(optional)</em></li>
+<li>Automates versioning releases with <a href="https://github.com/semantic-release/semantic-release">semantic-release</a> and <a href="https://github.com/commitizen/cz-cli">commitizen</a>  <em>(optional)</em></li>
+<li>Friendly for contributions using <a href="https://github.com/blog/2111-issue-and-pull-request-templates">Issue, Pull Request, and Contributing templates</a> and some extras <em>(optional)</em></li>
+</ul>
+<h2 id="installation">Installation</h2><pre><code class="lang-sh"><code class="source-code prettyprint">npm install --global yo generator-node-mdl</code>
+</code></pre>
+<h2 id="usage">Usage</h2><pre><code class="lang-sh"><code class="source-code prettyprint">yo node-mdl
+# answer questions</code>
+</code></pre>
+<p>With the most basic options, you&#x2BC;ll get a project structured like this:</p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">$ tree
+.
+&#x251C;&#x2500;&#x2500; .github
+&#x2502;   &#x251C;&#x2500;&#x2500; issue_template.md
+&#x2502;   &#x2514;&#x2500;&#x2500; pull_request_template.md
+&#x251C;&#x2500;&#x2500; other
+&#x2502;   &#x251C;&#x2500;&#x2500; code_of_conduct.md
+&#x2502;   &#x251C;&#x2500;&#x2500; examples.md
+&#x2502;   &#x2514;&#x2500;&#x2500; roadmap.md
+&#x251C;&#x2500;&#x2500; src
+&#x2502;   &#x251C;&#x2500;&#x2500; index.js
+&#x2502;   &#x2514;&#x2500;&#x2500; index.test.js
+&#x251C;&#x2500;&#x2500; .babelrc
+&#x251C;&#x2500;&#x2500; .editorconfig
+&#x251C;&#x2500;&#x2500; .eslintignore
+&#x251C;&#x2500;&#x2500; .eslintrc
+&#x251C;&#x2500;&#x2500; .gitattributes
+&#x251C;&#x2500;&#x2500; .gitignore
+&#x251C;&#x2500;&#x2500; .npmignore
+&#x251C;&#x2500;&#x2500; .travis.yml
+&#x251C;&#x2500;&#x2500; contributing.md
+&#x251C;&#x2500;&#x2500; license
+&#x251C;&#x2500;&#x2500; package.json
+&#x251C;&#x2500;&#x2500; readme.md
+&#x2514;&#x2500;&#x2500; yarn.lock</code>
+</code></pre>
+<p>Less boilerplate &#x1F389;</p>
+<h2 id="options">Options</h2><p>There are 2 ways to supply your data to this generator.
+The obvious way is runnin <code>yo node-mdl</code> and answer all questions. You can bypass questions by passing options as arguments.</p>
+<p>Run <code>yo node-mdl --help</code> to see the different options.</p>
+<h2 id="about-passwords-and-tokens">About passwords and tokens</h2><p>This project contain some features that will make your life easier when setting up a new open-source project. Based on your choices, you may be asked to supply some of your accounts usernames and passwords (github, npm, etc...) so this project will automatically produce tokens for those accounts and save them to your TravisCI as secured enviorment variables if needed. You can bypass those questions by manually creating tokens and supply them using options as arguments.</p>
+<ol>
+<li><p><code>--npmToken my-token</code> is needed when using with <code>--npmDeploy</code>.</p>
+<p>Your token will end up in <code>TravisCI</code> as a secured enviorment variables called <code>NPM_TOKEN</code>.</p>
+<p><a href="https://docs.npmjs.com/creating-and-viewing-authentication-tokens">creating and viewing npm authentication tokens</a></p>
+</li>
+<li><p><code>--githubToken my-token</code> is needed when using with <code>--createGithubRepository</code> or with <code>--travisCI</code>.</p>
+<p><a href="https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line">creating and viewing github authentication tokens</a></p>
+<ul>
+<li><p>When using with <code>--createGithubRepository</code> your token doesn&apos;t need to contain any scope.</p>
+</li>
+<li><p>When using with <code>--travisCI</code> but without <code>--semanticRelease</code> your token doesn&apos;t need to contain any scope.</p>
+</li>
+<li><p>When using with <code>--travisCI</code> and with <code>--semanticRelease</code> your token need to contain the following scopes:</p>
+<ul>
+<li><code>repo</code></li>
+<li><code>read:org</code></li>
+<li><code>user:email</code></li>
+<li><code>repo_deployment</code></li>
+<li><code>repo:status</code></li>
+<li><code>write:repo_hook</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="faq">FAQ</h2><h3 id="how-to-upgrade-existing-project-scaffolded-with-yeoman-">How to upgrade existing project scaffolded with Yeoman?</h3><p>Read how to do it <a href="https://stackoverflow.com/a/18500003">here</a>.</p>
+<h2 id="forked-from">Forked from</h2><p><a href="https://github.com/luftywiranda13/generator-node-oss">generator-oss</a> &#xFF0D; Supports ES2015+ and <a href="https://github.com/xojs/xo">XO</a> by default</p>
+<h2 id="related">Related</h2><ul>
+<li><a href="https://github.com/luftywiranda13/generator-bunny">generator-bunny</a> &#xFF0D; Supports ES2015+ and <a href="https://flow.org">Flow</a> by default</li>
+<li><a href="https://github.com/kentcdodds/generator-kcd-oss">generator-kcd-oss</a> &#xFF0D; Lots of features but many things left untouched</li>
+<li><a href="https://github.com/sindresorhus/generator-nm">generator-nm</a> &#xFF0D; A way simpler Yeoman generator</li>
+</ul>
+<h2 id="license">License</h2><p>MIT &#xA9; <a href="https://sharvit.github.io">Avi Sharvit</a></p>
+</div>
+
+  
+
+  <div class="manual-cards">
+    
+  <div class="manual-card-wrap" data-ice="cards">
+      <div class="manual-card">
+        <div data-ice="card"><h1>Contributing</h1><p>Contributions are always welcome, no matter how large or small.</p><p><strong>Working on your first Pull Request?</strong> You can learn how from this <em>free</em> series <a href="https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github">How to Contribute to an Open Source Project on GitHub</a></p><h2>Code of Conduct</h2><p>By participating, you are expected to uphold this <a href="./manual/./other/code_of_conduct.md">Contributor Covenant Code of Conduct</a>. Please report unacceptable behavior to <a href="./manual/mailto:sharvita@gmail.com">sharvita@gmail.com</a>.</p><h2>Project setup</h2><p>First, <a href="https://guides.github.com/activities/forking">fork</a> then clone the repo:</p><pre><code class="lang-sh"><code class="source-code prettyprint">git clone https://github.com/your-username/generator-node-mdl
+cd generator-node-mdl
+git remote add upstream https://github.com/sharvit/generator-node-mdl</code>
+</code></pre><p>Install dependencies:</p><pre><code class="lang-sh"><code class="source-code prettyprint">yarn</code>
+</code></pre><p>Run test suits to validate the project is working:</p><pre><code class="lang-sh"><code class="source-code prettyprint">yarn test</code>
+</code></pre><p>Run linter to validate the project code:</p><pre><code class="lang-sh"><code class="source-code prettyprint">yarn lint
+# to fix linting errors
+yarn lint --fix</code>
+</code></pre><p>Run linter to validate your commit message:</p><pre><code class="lang-sh"><code class="source-code prettyprint">yarn lint:commit</code>
+</code></pre><h2>Creating Pull Requests</h2><ol>
+<li>Create a branch:</li>
+</ol><pre><code class="lang-sh"><code class="source-code prettyprint">git checkout -b my-branch</code>
+</code></pre><ol>
+<li><p>Happy Hacking &#x1F389;: Start hacking and creating code changes.</p>
+</li>
+<li><p>Commit your changes:</p>
+</li>
+</ol><p><code>generator-node-mdl</code> uses <a href="https://github.com/commitizen/cz-cli">commitizen</a> to create commit messages so <a href="https://github.com/semantic-release/semantic-release">semantic-release</a> can automatically create releases.</p><pre><code class="lang-sh"><code class="source-code prettyprint">git add .
+yarn commit
+# answer the questions</code>
+</code></pre><ol>
+<li>Push your changes:</li>
+</ol><pre><code class="lang-sh"><code class="source-code prettyprint">git push origin my-branch</code>
+</code></pre><ol>
+<li>Open <a href="https://github.com/sharvit/generator-node-mdl">this project on GitHub</a>, then click &#x201C;Compare &amp; pull request&#x201D;.</li>
+</ol><h2>Help needed</h2><p>Please checkout the <a href="./manual/./other/roadmap.md"><code>roadmap.md</code></a> and the open issues.</p><p>Also, please watch the repo and respond to questions/bug reports/feature requests, Thanks!</p></div>
+        <a data-ice="link" href="manual/contributing.html"></a>
+      </div>
+    </div>
+<div class="manual-card-wrap" data-ice="cards">
+      <div class="manual-card">
+        <div data-ice="card"><h1>Contributor Covenant Code of Conduct</h1><h2>Our Pledge</h2><p>In the interest of fostering an open and welcoming environment, we as contributors and maintainers pledge to making participation in our project and our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.</p><h2>Our Standards</h2><p>Examples of behavior that contributes to creating a positive environment include:</p><ul>
+<li>Using welcoming and inclusive language</li>
+<li>Being respectful of differing viewpoints and experiences</li>
+<li>Gracefully accepting constructive criticism</li>
+<li>Focusing on what is best for the community</li>
+<li>Showing empathy towards other community members</li>
+</ul><p>Examples of unacceptable behavior by participants include:</p><ul>
+<li>The use of sexualized language or imagery and unwelcome sexual attention or advances</li>
+<li>Trolling, insulting/derogatory comments, and personal or political attacks</li>
+<li>Public or private harassment</li>
+<li>Publishing others&#x2018; private information, such as a physical or electronic address, without explicit permission</li>
+<li>Other conduct which could reasonably be considered inappropriate in a professional setting</li>
+</ul><h2>Our Responsibilities</h2><p>Project maintainers are responsible for clarifying the standards of acceptable behavior and are expected to take appropriate and fair corrective action in response to any instances of unacceptable behavior.</p><p>Project maintainers have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, or to ban temporarily or permanently any contributor for other behaviors that they deem inappropriate, threatening, offensive, or harmful.</p><h2>Scope</h2><p>This Code of Conduct applies both within project spaces and in public spaces when an individual is representing the project or its community. Examples of representing a project or community include using an official project e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event. Representation of a project may be further defined and clarified by project maintainers.</p><h2>Enforcement</h2><p>Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team at <a href="./manual/mailto:sharvita@gmail.com">sharvita@gmail.com</a>. All complaints will be reviewed and investigated and will result in a response that is deemed necessary and appropriate to the circumstances. The project team is obligated to maintain confidentiality with regard to the reporter of an incident. Further details of specific enforcement policies may be posted separately.</p><p>Project maintainers who do not follow or enforce the Code of Conduct in good faith may face temporary or permanent repercussions as determined by other members of the project&#x2018;s leadership.</p><h2>Attribution</h2><p>This Code of Conduct is adapted from the <a href="http://contributor-covenant.org">Contributor Covenant</a>, version 1.4, available at <a href="http://contributor-covenant.org/version/1/4/">http://contributor-covenant.org/version/1/4</a></p></div>
+        <a data-ice="link" href="manual/code_of_conduct.html"></a>
+      </div>
+    </div>
+<div class="manual-card-wrap" data-ice="cards">
+      <div class="manual-card">
+        <div data-ice="card"><h1>Project Roadmap</h1><p>This is where we&#x2018;ll define a few things about the library&#x2018;s goals.</p><p>We haven&#x2018;t filled this out yet though. Care to help? See <a href="./manual/../contributing.md"><code>contributing.md</code></a></p><h2>Want to do</h2><h2>Might do</h2><h2>Won&#x2018;t do</h2><ul>
+<li>Won&apos;t do webpack</li>
+<li>Won&apos;t do XO</li>
+</ul></div>
+        <a data-ice="link" href="manual/roadmap.html"></a>
+      </div>
+    </div>
+</div>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

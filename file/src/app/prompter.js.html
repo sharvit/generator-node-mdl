@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/app/prompter.js | generator-node-mdl</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Create a Node.js module with ease"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="generator-node-mdl"><meta property="twitter:description" content="Create a Node.js module with ease"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/sharvit/generator-node-mdl"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  </ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/app/prompter.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import camelCase from &apos;lodash.camelcase&apos;;
+import kebabCase from &apos;lodash.kebabcase&apos;;
+import chalk from &apos;chalk&apos;;
+import uuid from &apos;uuid/v4&apos;;
+
+import Github from &apos;./lib/github&apos;;
+import { login as npmLogin } from &apos;./lib/npm&apos;;
+
+import options from &apos;./options&apos;;
+import prompts from &apos;./prompts&apos;;
+
+export default class Prompter {
+  constructor(generator) {
+    this.generator = generator;
+
+    this._setGeneratorOptions();
+  }
+
+  /**
+   * Main prompter method
+   */
+  async prompt() {
+    this._initProps();
+
+    await this._promptGeneral();
+    await this._promptGithub();
+    await this._promptTravis();
+    await this._promptCoveralls();
+    await this._promptNpm();
+    await this._promptSemanticRelease();
+    await this._promptPasswords();
+
+    return this.props;
+  }
+
+  /*
+    Sub prompters
+   */
+
+  async _promptGeneral() {
+    const answers = await this.generator.prompt([
+      this._buildPrompt(&apos;projectName&apos;, {
+        ...prompts.projectName,
+        default: kebabCase(this.generator.appname),
+        filter: kebabCase,
+      }),
+      this._buildPrompt(&apos;description&apos;, prompts.description),
+      this._buildPrompt(&apos;name&apos;, {
+        ...prompts.name,
+        default: this.generator.user.git.name(),
+      }),
+      this._buildPrompt(&apos;email&apos;, {
+        ...prompts.email,
+        default: this.generator.user.git.email(),
+      }),
+      this._buildPrompt(&apos;website&apos;, prompts.website),
+    ]);
+
+    this._updatePropsWithAnswers(answers);
+    this.props.camelProject = camelCase(this.props.projectName);
+  }
+
+  async _promptGithub() {
+    const answers = await this.generator.prompt([
+      this._buildPrompt(&apos;githubUsername&apos;, prompts.githubUsername),
+      this._buildPrompt(&apos;githubTemplates&apos;, prompts.githubTemplates),
+      this._buildPrompt(
+        &apos;createGithubRepository&apos;,
+        prompts.createGithubRepository
+      ),
+    ]);
+
+    this._updatePropsWithAnswers(answers);
+    this.props.repository = `${this.props.githubUsername}/${this.props.projectName}`;
+  }
+
+  async _promptTravis() {
+    const { travisCI } = await this.generator.prompt([
+      this._buildPrompt(&apos;travisCI&apos;, prompts.travisCI),
+    ]);
+
+    this._updatePropsWithAnswers({ travisCI });
+  }
+
+  async _promptCoveralls() {
+    const { coveralls } = await this.generator.prompt([
+      this._buildPrompt(&apos;coveralls&apos;, prompts.coveralls),
+    ]);
+
+    this._updatePropsWithAnswers({ coveralls: coveralls || false });
+  }
+
+  async _promptNpm() {
+    const { npmDeploy } = await this.generator.prompt([
+      this._buildPrompt(&apos;npmDeploy&apos;, prompts.npmDeploy),
+    ]);
+
+    this._updatePropsWithAnswers({
+      npmDeploy: npmDeploy || false,
+    });
+  }
+
+  async _promptSemanticRelease() {
+    const { semanticRelease } = await this.generator.prompt([
+      this._buildPrompt(&apos;semanticRelease&apos;, prompts.semanticRelease),
+    ]);
+
+    this._updatePropsWithAnswers({
+      semanticRelease: semanticRelease || false,
+    });
+  }
+
+  async _promptPasswords() {
+    const {
+      createGithubRepository,
+      npmDeploy,
+      githubToken,
+      npmToken,
+      travisCI,
+    } = this.props;
+
+    if (createGithubRepository || travisCI) {
+      if (!githubToken) {
+        this._logGithubPasswordRequired();
+        this._logPasswordSafety();
+      }
+      await this._loginToGithub();
+    }
+
+    if (!npmToken &amp;&amp; npmDeploy) {
+      this._logNpmPasswordRequired();
+      this._logPasswordSafety();
+      await this._loginToNpm();
+    }
+  }
+
+  /*
+    Login prompters
+   */
+
+  async _loginToNpm() {
+    const { npmUsername, npmPassword } = await this._promptNpmLogin();
+
+    // generate npm-token
+    const { token: npmToken } = await npmLogin({
+      username: npmUsername,
+      password: npmPassword,
+    });
+
+    this.props = { ...this.props, npmToken };
+  }
+
+  async _loginToGithub() {
+    const {
+      githubToken: token,
+      githubUsername: username,
+      semanticRelease,
+      repository,
+    } = this.props;
+
+    if (token) {
+      this.props.github = new Github({ token: `token ${token}` });
+      return;
+    }
+
+    const { githubPassword: password } = await this._promptGithubPassword();
+
+    const note = `${repository}/travis-${uuid().slice(-4)}`;
+    const scopes = semanticRelease
+      ? [
+          &apos;repo&apos;,
+          &apos;read:org&apos;,
+          &apos;user:email&apos;,
+          &apos;repo_deployment&apos;,
+          &apos;repo:status&apos;,
+          &apos;write:repo_hook&apos;,
+        ]
+      : [];
+
+    this.props.github = new Github({
+      username,
+      password,
+      on2fa: this.github2fa.bind(this),
+    });
+    this.props.githubToken = await this.props.github.createToken(note, scopes);
+  }
+
+  _promptNpmLogin() {
+    return this.generator.prompt([
+      {
+        name: &apos;npmUsername&apos;,
+        message: &apos;Your npm username:&apos;,
+        store: true,
+      },
+      {
+        name: &apos;npmPassword&apos;,
+        message: &apos;Your npm password:&apos;,
+        type: &apos;password&apos;,
+      },
+    ]);
+  }
+
+  _promptGithubPassword() {
+    const { githubUsername } = this.props;
+
+    return this.generator.prompt([
+      {
+        name: &apos;githubPassword&apos;,
+        message: `Enter you github password for ${githubUsername}:`,
+        type: &apos;password&apos;,
+      },
+    ]);
+  }
+
+  _promptGithub2fa() {
+    return this.generator.prompt([
+      {
+        name: &apos;github2fa&apos;,
+        message: `Enter your github two-factor authentication Code:`,
+        type: &apos;password&apos;,
+      },
+    ]);
+  }
+
+  async github2fa() {
+    const { github2fa } = await this._promptGithub2fa();
+
+    return github2fa;
+  }
+
+  /*
+    Loggers
+   */
+
+  _logGithubPasswordRequired() {
+    const { createGithubRepository } = this.props;
+
+    if (createGithubRepository) {
+      this.generator.log(
+        &apos;\nYour github password is required so I can create a github repository for you.&apos;
+      );
+    } else {
+      this.generator.log(
+        &apos;\nYour github password is required so I can install semantic-release for you.&apos;
+      );
+    }
+  }
+
+  _logNpmPasswordRequired() {
+    this.generator.log(
+      &apos;\nYour npm username and password is required so I can install an automated npm-deploy for you.&apos;
+    );
+  }
+
+  _logPasswordSafety() {
+    this.generator.log(
+      `${chalk.bold(&apos;I will never store your passwords&apos;)} &#x1F64C; &#x1F64C; &#x1F64C; \n`
+    );
+  }
+
+  /*
+    Helpers
+   */
+
+  _setGeneratorOptions() {
+    for (const [name, { type, desc }] of Object.entries(options)) {
+      this.generator.option(name, { type, desc });
+    }
+  }
+
+  _initProps() {
+    this.props = {};
+
+    for (const optionName of Object.keys(options)) {
+      const { [optionName]: option } = this.generator.options;
+
+      if (option) {
+        this.props[optionName] = option;
+      }
+    }
+  }
+
+  _updatePropsWithAnswers(answers) {
+    for (const [name, value] of Object.entries(answers)) {
+      if (value) {
+        this.props[name] = value;
+      }
+    }
+  }
+
+  _buildPrompt(name, prompt) {
+    const result = { name, message: prompt.desc };
+
+    if (prompt.default) result.default = prompt.default;
+    if (prompt.store) result.store = prompt.store;
+    if (prompt.filter) result.filter = prompt.filter;
+
+    switch (prompt.type) {
+      case Boolean:
+        result.type = &apos;confirm&apos;;
+        result.default = this.props.noDefaults ? false : result.default;
+        break;
+      case String:
+      default:
+        result.type = &apos;input&apos;;
+        break;
+    }
+
+    result.when = () =&gt; {
+      if (this.props[name] !== undefined) return false;
+      if (this.props.noDefaults &amp;&amp; prompt.type === Boolean) return false;
+
+      if (prompts[name].dependOn) {
+        for (const dependOn of prompts[name].dependOn) {
+          if (!this.props[dependOn]) {
+            return false;
+          }
+        }
+      }
+
+      prompts[name].help &amp;&amp; this.generator.log(prompts[name].help());
+      return true;
+    };
+
+    if (prompt.required) {
+      result.validate = input =&gt; {
+        if (
+          input === undefined ||
+          (typeof input === &apos;string&apos; &amp;&amp;
+            input.trim() === &apos;&apos; &amp;&amp;
+            prompt.default === undefined)
+        ) {
+          throw new Error(`${name} is required`);
+        }
+
+        return true;
+      };
+    }
+
+    return result;
+  }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>
