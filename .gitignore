@@ -2,6 +2,9 @@
 app
 !src/app
 
+# Docs
+docs
+
 # Logs
 logs
 *.log

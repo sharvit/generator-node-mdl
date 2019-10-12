@@ -1,6 +1,7 @@
 **/templates/**
 ./app/
 coverage/
+docs/
 package-lock.json
 package.json
 yarn.lock

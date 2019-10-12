@@ -2,6 +2,9 @@
 src
 scripts
 
+# Docs
+docs
+
 # Logs
 logs
 *.log

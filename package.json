@@ -14,10 +14,12 @@
     "node": ">=8"
   },
   "scripts": {
-    "build": "yarn build:clean && yarn build:babel && yarn build:templates",
+    "build": "yarn build:clean && yarn build:babel && yarn build:templates && yarn build:docs",
     "build:clean": "rimraf ./app",
     "build:babel": "BABEL_ENV=production babel src --out-dir .",
     "build:templates": "./scripts/build-templates.sh",
+    "build:docs": "esdoc -c .esdoc.json",
+    "develop:docs": "watch \"yarn build:docs\" . --ignoreDirectoryPattern='/node_modules|docs|dist|coverage|.git|.nyc*./'",
     "test": "jest --no-cache --coverage",
     "test:watch": "jest --watch",
     "lint": "eslint ./src",
@@ -59,6 +61,9 @@
     "babel-plugin-add-module-exports": "^1.0.2",
     "commitlint-config-cz": "^0.12.0",
     "coveralls": "^3.0.2",
+    "esdoc": "^1.1.0",
+    "esdoc-ecmascript-proposal-plugin": "^1.0.0",
+    "esdoc-standard-plugin": "^1.0.0",
     "eslint": "^6.4.0",
     "eslint-config-prettier": "^6.0.0",
     "eslint-config-standard": "^14.0.0",
@@ -71,6 +76,7 @@
     "prettier": "^1.15.3",
     "rimraf": "^3.0.0",
     "semantic-release": "^15.13.1",
+    "watch": "^1.0.2",
     "yeoman-assert": "^3.1.0",
     "yeoman-test": "^2.0.0"
   },
