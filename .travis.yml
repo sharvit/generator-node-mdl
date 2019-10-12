@@ -22,9 +22,14 @@ jobs:
       node_js: 12
       script: yarn build
       deploy:
-        provider: script
-        skip_cleanup: true
-        script: yarn semantic-release
+        - provider: script
+          skip_cleanup: true
+          script: yarn semantic-release
+        - provider: pages
+          skip_cleanup: true
+          github_token: $GH_TOKEN
+          local_dir: ./docs
+          keep_history: true
     - stage: deploy node-mdl-starter
       if: tag =~ ^v AND type = push
       node_js: 12
