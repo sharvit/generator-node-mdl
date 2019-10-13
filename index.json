@@ -2367,7 +2367,7 @@
     "kind": "manual",
     "longname": "/home/travis/build/sharvit/generator-node-mdl/other/roadmap.md",
     "name": "./other/roadmap.md",
-    "content": "# Project Roadmap\n\nThis is where we‘ll define a few things about the library‘s goals.\n\nWe haven‘t filled this out yet though. Care to help? See [`contributing.md`](../contributing.md)\n\n## Want to do\n\n## Might do\n\n## Won‘t do\n\n- Won't do webpack\n- Won't do XO\n",
+    "content": "# Project Roadmap\n\nThis is where we‘ll define a few things about the library‘s goals.\n\nWe haven‘t filled this out yet though. Care to help? See [`contributing.md`](../contributing.md)\n\n## Want to do\n\n## Might do\n\n- Webpack\n\n## Won‘t do\n\n- Won't do XO\n",
     "static": true,
     "access": "public"
   },
