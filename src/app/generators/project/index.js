@@ -45,6 +45,10 @@ export default class extends BaseGenerator {
         templatePath: 'config/jest.config.js',
         destinationPath: 'config/jest.config.js',
       },
+      {
+        templatePath: 'config/webpack.config.js',
+        destinationPath: 'config/webpack.config.js',
+      },
     ];
 
     if (this.options.esdoc) {
