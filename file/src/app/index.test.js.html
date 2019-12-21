@@ -78,10 +78,11 @@ test(&apos;default files&apos;, () =&gt; {
         &apos;license&apos;,
         &apos;package.json&apos;,
         &apos;readme.md&apos;,
+        &apos;config/jest.config.js&apos;,
         &apos;src/index.js&apos;,
         &apos;src/index.test.js&apos;,
         // esdoc
-        &apos;.esdoc.json&apos;,
+        &apos;config/esdoc.config.js&apos;,
         // githubTemplates
         &apos;contributing.md&apos;,
         &apos;.github/issue_template.md&apos;,
@@ -92,7 +93,7 @@ test(&apos;default files&apos;, () =&gt; {
         // travisCI
         &apos;.travis.yml&apos;,
         // semanticRelease
-        &apos;.commitlintrc.json&apos;,
+        &apos;config/commitlint.config.js&apos;,
       ]);
 
       assert.noFile([
@@ -129,12 +130,13 @@ test(&apos;default files with --noDefaults&apos;, () =&gt; {
         &apos;license&apos;,
         &apos;package.json&apos;,
         &apos;readme.md&apos;,
+        &apos;config/jest.config.js&apos;,
         &apos;src/index.js&apos;,
         &apos;src/index.test.js&apos;,
       ]);
 
       assert.noFile([
-        &apos;.commitlintrc.json&apos;,
+        &apos;config/commitlint.config.js&apos;,
         &apos;_babelrc&apos;,
         &apos;_editorconfig&apos;,
         &apos;_eslintignore&apos;,
@@ -148,7 +150,7 @@ test(&apos;default files with --noDefaults&apos;, () =&gt; {
         &apos;_commitlintrc.json&apos;,
         // esdoc
         &apos;_esdoc.json&apos;,
-        &apos;.esdoc.json&apos;,
+        &apos;config/esdoc.config.js&apos;,
         // githubTemplates
         &apos;contributing.md&apos;,
         &apos;.github/issue_template.md&apos;,
@@ -159,7 +161,7 @@ test(&apos;default files with --noDefaults&apos;, () =&gt; {
         // travisCI
         &apos;.travis.yml&apos;,
         // semanticRelease
-        &apos;.commitlintrc.json&apos;,
+        &apos;config/commitlint.config.js&apos;,
       ]);
     });
 });
@@ -366,7 +368,7 @@ describe(&apos;prompts&apos;, () =&gt; {
         esdoc: true,
       })
       .then(() =&gt; {
-        assert.file([&apos;.esdoc.json&apos;]);
+        assert.file([&apos;config/esdoc.config.js&apos;]);
         assert.fileContent(&apos;package.json&apos;, &apos;build:docs&apos;);
         assert.fileContent(&apos;package.json&apos;, &apos;esdoc&apos;);
         assert.fileContent(&apos;package.json&apos;, &apos;esdoc-standard-plugin&apos;);
@@ -381,7 +383,7 @@ describe(&apos;prompts&apos;, () =&gt; {
         esdoc: false,
       })
       .then(() =&gt; {
-        assert.noFile([&apos;.esdoc.json&apos;]);
+        assert.noFile([&apos;config/esdoc.config.js&apos;]);
         assert.noFileContent(&apos;package.json&apos;, &apos;build:docs&apos;);
         assert.noFileContent(&apos;package.json&apos;, &apos;esdoc&apos;);
         assert.noFileContent(&apos;package.json&apos;, &apos;esdoc-standard-plugin&apos;);
@@ -512,7 +514,7 @@ describe(&apos;prompts&apos;, () =&gt; {
           npmPassword: &apos;some-password&apos;,
         })
         .then(() =&gt; {
-          assert.noFile([&apos;.commitlintrc.json&apos;]);
+          assert.noFile([&apos;config/commitlint.config.js&apos;]);
 
           assert.fileContent(&apos;.travis.yml&apos;, &apos;deploy:&apos;);
           assert.fileContent(&apos;.travis.yml&apos;, &apos;provider: npm&apos;);
@@ -550,7 +552,7 @@ describe(&apos;prompts&apos;, () =&gt; {
           npmDeploy: false,
         })
         .then(() =&gt; {
-          assert.noFile([&apos;.commitlintrc.json&apos;]);
+          assert.noFile([&apos;config/commitlint.config.js&apos;]);
           assert.noFileContent(&apos;.travis.yml&apos;, &apos;deploy&apos;);
         });
     });
@@ -568,7 +570,7 @@ describe(&apos;prompts&apos;, () =&gt; {
           githubPassword: &apos;some-password&apos;,
         })
         .then(() =&gt; {
-          assert.file([&apos;.commitlintrc.json&apos;]);
+          assert.file([&apos;config/commitlint.config.js&apos;]);
 
           assert.fileContent(&apos;.travis.yml&apos;, &apos;deploy:&apos;);
           assert.fileContent(&apos;.travis.yml&apos;, &apos;provider: script&apos;);
@@ -606,7 +608,7 @@ describe(&apos;prompts&apos;, () =&gt; {
           githubPassword: &apos;some-password&apos;,
         })
         .then(() =&gt; {
-          assert.file([&apos;.commitlintrc.json&apos;]);
+          assert.file([&apos;config/commitlint.config.js&apos;]);
 
           assert.fileContent(&apos;.travis.yml&apos;, &apos;deploy:&apos;);
           assert.fileContent(&apos;.travis.yml&apos;, &apos;provider: script&apos;);
