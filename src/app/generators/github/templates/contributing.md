@@ -83,7 +83,7 @@ git commit
 git push origin my-branch
 ```
 
-Open this project on [GitHub](https://github.com/sharvit/generator-node-mdl), then click “Compare & pull request”.
+Open this project on [GitHub](https://github.com/<%= githubUsername %>/<%= projectName %>), then click “Compare & pull request”.
 
 ## Help needed
 
