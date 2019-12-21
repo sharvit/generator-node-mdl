@@ -6,6 +6,5 @@
         "targets": { "node": 8 }
       }
     ]
-  ],
-  "plugins": ["add-module-exports"]
+  ]
 }

@@ -43,6 +43,7 @@ test('default files', () => {
         'package.json',
         'readme.md',
         'config/jest.config.js',
+        'config/webpack.config.js',
         'src/index.js',
         'src/index.test.js',
         // esdoc
@@ -95,6 +96,7 @@ test('default files with --noDefaults', () => {
         'package.json',
         'readme.md',
         'config/jest.config.js',
+        'config/webpack.config.js',
         'src/index.js',
         'src/index.test.js',
       ]);
