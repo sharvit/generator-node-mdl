@@ -42,10 +42,11 @@ test('default files', () => {
         'license',
         'package.json',
         'readme.md',
+        'config/jest.config.js',
         'src/index.js',
         'src/index.test.js',
         // esdoc
-        '.esdoc.json',
+        'config/esdoc.config.js',
         // githubTemplates
         'contributing.md',
         '.github/issue_template.md',
@@ -56,7 +57,7 @@ test('default files', () => {
         // travisCI
         '.travis.yml',
         // semanticRelease
-        '.commitlintrc.json',
+        'config/commitlint.config.js',
       ]);
 
       assert.noFile([
@@ -93,12 +94,13 @@ test('default files with --noDefaults', () => {
         'license',
         'package.json',
         'readme.md',
+        'config/jest.config.js',
         'src/index.js',
         'src/index.test.js',
       ]);
 
       assert.noFile([
-        '.commitlintrc.json',
+        'config/commitlint.config.js',
         '_babelrc',
         '_editorconfig',
         '_eslintignore',
@@ -112,7 +114,7 @@ test('default files with --noDefaults', () => {
         '_commitlintrc.json',
         // esdoc
         '_esdoc.json',
-        '.esdoc.json',
+        'config/esdoc.config.js',
         // githubTemplates
         'contributing.md',
         '.github/issue_template.md',
@@ -123,7 +125,7 @@ test('default files with --noDefaults', () => {
         // travisCI
         '.travis.yml',
         // semanticRelease
-        '.commitlintrc.json',
+        'config/commitlint.config.js',
       ]);
     });
 });
@@ -330,7 +332,7 @@ describe('prompts', () => {
         esdoc: true,
       })
       .then(() => {
-        assert.file(['.esdoc.json']);
+        assert.file(['config/esdoc.config.js']);
         assert.fileContent('package.json', 'build:docs');
         assert.fileContent('package.json', 'esdoc');
         assert.fileContent('package.json', 'esdoc-standard-plugin');
@@ -345,7 +347,7 @@ describe('prompts', () => {
         esdoc: false,
       })
       .then(() => {
-        assert.noFile(['.esdoc.json']);
+        assert.noFile(['config/esdoc.config.js']);
         assert.noFileContent('package.json', 'build:docs');
         assert.noFileContent('package.json', 'esdoc');
         assert.noFileContent('package.json', 'esdoc-standard-plugin');
@@ -476,7 +478,7 @@ describe('prompts', () => {
           npmPassword: 'some-password',
         })
         .then(() => {
-          assert.noFile(['.commitlintrc.json']);
+          assert.noFile(['config/commitlint.config.js']);
 
           assert.fileContent('.travis.yml', 'deploy:');
           assert.fileContent('.travis.yml', 'provider: npm');
@@ -514,7 +516,7 @@ describe('prompts', () => {
           npmDeploy: false,
         })
         .then(() => {
-          assert.noFile(['.commitlintrc.json']);
+          assert.noFile(['config/commitlint.config.js']);
           assert.noFileContent('.travis.yml', 'deploy');
         });
     });
@@ -532,7 +534,7 @@ describe('prompts', () => {
           githubPassword: 'some-password',
         })
         .then(() => {
-          assert.file(['.commitlintrc.json']);
+          assert.file(['config/commitlint.config.js']);
 
           assert.fileContent('.travis.yml', 'deploy:');
           assert.fileContent('.travis.yml', 'provider: script');
@@ -570,7 +572,7 @@ describe('prompts', () => {
           githubPassword: 'some-password',
         })
         .then(() => {
-          assert.file(['.commitlintrc.json']);
+          assert.file(['config/commitlint.config.js']);
 
           assert.fileContent('.travis.yml', 'deploy:');
           assert.fileContent('.travis.yml', 'provider: script');

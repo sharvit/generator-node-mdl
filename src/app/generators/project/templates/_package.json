@@ -17,14 +17,14 @@
     "prebuild": "rimraf dist",
     "build": "<%= runScriptCommand %> build:babel<% if (esdoc) { %> && <%= runScriptCommand %> build:docs<% } %>",
     "build:babel": "babel src --out-dir dist --ignore **/*.test.js",<% if (esdoc) { %>
-    "build:docs": "esdoc -c .esdoc.json",
+    "build:docs": "esdoc -c ./config/esdoc.config.js",
     "develop:docs": "watch \"<%= runScriptCommand %> build:docs\" . --ignoreDirectoryPattern='/node_modules|docs|dist|coverage|.git|.nyc*./'",<% } %>
-    "test:watch": "jest --watch",
-    "test": "jest --coverage",<% if (coveralls) { %>
+    "test:watch": "jest --config ./config/jest.config.js --watch",
+    "test": "jest --config ./config/jest.config.js --coverage",<% if (coveralls) { %>
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",<% } %>
     "lint": "eslint ./src"<% if (semanticRelease) { %>,
-    "lint:commit": "commitlint -e",
-    "lint:commit-travis": "commitlint-travis",
+    "lint:commit": "commitlint -e --config ./config/commitlint.config.js",
+    "lint:commit-travis": "commitlint-travis --config ./config/commitlint.config.js",
     "commit": "git-cz",
     "semantic-release": "semantic-release"<% } %>
   },
@@ -63,16 +63,7 @@
   "optionalDependencies": {<% if (semanticRelease) { %>
     "cz-conventional-changelog": "^3.0.2",<% } %>
     "semantic-release": "^15.13.1"
-  },<% } %>
-  "jest": {
-    "testEnvironment": "node",
-    "transform": {
-      "^.+\\.js$": "babel-jest"
-    },
-    "collectCoverageFrom": [
-      "src/**/*.js"
-    ]
-  },<% if (semanticRelease) { %>
+  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"

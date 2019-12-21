@@ -41,19 +41,23 @@ export default class extends BaseGenerator {
       { templatePath: 'license', destinationPath: 'license' },
       { templatePath: 'readme.md', destinationPath: 'readme.md' },
       { templatePath: 'src', destinationPath: 'src' },
+      {
+        templatePath: 'config/jest.config.js',
+        destinationPath: 'config/jest.config.js',
+      },
     ];
 
     if (this.options.esdoc) {
       templatesToCopy.push({
-        templatePath: '_esdoc.json',
-        destinationPath: '.esdoc.json',
+        templatePath: 'config/esdoc.config.js',
+        destinationPath: 'config/esdoc.config.js',
       });
     }
 
     if (this.options.npmDeploy && this.options.semanticRelease) {
       templatesToCopy.push({
-        templatePath: '_commitlintrc.json',
-        destinationPath: '.commitlintrc.json',
+        templatePath: 'config/commitlint.config.js',
+        destinationPath: 'config/commitlint.config.js',
       });
     }
 
