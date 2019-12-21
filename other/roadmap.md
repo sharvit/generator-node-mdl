@@ -8,6 +8,8 @@ We haven‘t filled this out yet though. Care to help? See [`contributing.md`](.
 
 ## Might do
 
+- Give option to generate cli tools
+
 ## Won‘t do
 
 - Won't do XO
