@@ -15726,10 +15726,10 @@
                                                     }
                                                   },
                                                   "extra": {
-                                                    "rawValue": "build:docs",
-                                                    "raw": "'build:docs'"
+                                                    "rawValue": "docs:build",
+                                                    "raw": "'docs:build'"
                                                   },
-                                                  "value": "build:docs"
+                                                  "value": "docs:build"
                                                 }
                                               ]
                                             }
@@ -16092,10 +16092,10 @@
                                                     }
                                                   },
                                                   "extra": {
-                                                    "rawValue": "yarn build:docs",
-                                                    "raw": "'yarn build:docs'"
+                                                    "rawValue": "yarn docs:build",
+                                                    "raw": "'yarn docs:build'"
                                                   },
-                                                  "value": "yarn build:docs"
+                                                  "value": "yarn docs:build"
                                                 }
                                               ]
                                             }
@@ -62100,7 +62100,7 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "build:docs",
+      "value": "docs:build",
       "start": 8887,
       "end": 8899,
       "loc": {
@@ -62802,7 +62802,7 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "yarn build:docs",
+      "value": "yarn docs:build",
       "start": 9070,
       "end": 9087,
       "loc": {

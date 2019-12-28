@@ -371,10 +371,10 @@ describe(&apos;prompts&apos;, () =&gt; {
       })
       .then(() =&gt; {
         assert.file([&apos;config/esdoc.config.js&apos;]);
-        assert.fileContent(&apos;package.json&apos;, &apos;build:docs&apos;);
+        assert.fileContent(&apos;package.json&apos;, &apos;docs:build&apos;);
         assert.fileContent(&apos;package.json&apos;, &apos;esdoc&apos;);
         assert.fileContent(&apos;package.json&apos;, &apos;esdoc-standard-plugin&apos;);
-        assert.fileContent(&apos;contributing.md&apos;, &apos;yarn build:docs&apos;);
+        assert.fileContent(&apos;contributing.md&apos;, &apos;yarn docs:build&apos;);
       });
   });
 
