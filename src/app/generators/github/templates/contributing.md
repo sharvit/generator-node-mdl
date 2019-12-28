@@ -37,11 +37,13 @@ Build the project:
 ```sh
 yarn build
 # only build the dist folder from source
-yarn build:babel<%if (esdoc) { %>
+yarn webpack:build
+# build webpack with a development mode and watch files
+yarn webpack:develop<%if (esdoc) { %>
 # only build the docs using esdocs
-yarn build:docs
+yarn docs:build
 # build docs in watch mode
-yarn develop:docs<% } %>
+yarn docs:develop<% } %>
 ```
 
 Run linter to validate the project code:

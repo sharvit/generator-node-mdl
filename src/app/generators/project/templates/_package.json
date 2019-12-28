@@ -15,10 +15,11 @@
   },
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "<%= runScriptCommand %> build:webpack<% if (esdoc) { %> && <%= runScriptCommand %> build:docs<% } %>",
-    "build:webpack": "webpack --config ./config/webpack.config.js",<% if (esdoc) { %>
-    "build:docs": "esdoc -c ./config/esdoc.config.js",
-    "develop:docs": "watch \"<%= runScriptCommand %> build:docs\" . --ignoreDirectoryPattern='/node_modules|docs|dist|coverage|.git|.nyc*./'",<% } %>
+    "build": "<%= runScriptCommand %> webpack:build<% if (esdoc) { %> && <%= runScriptCommand %> docs:build<% } %>",
+    "webpack:build": "webpack --mode production --config ./config/webpack.config.js",
+    "webpack:develop": "webpack --mode development --watch --watch-poll --config ./config/webpack.config.js",<% if (esdoc) { %>
+    "docs:build": "esdoc -c ./config/esdoc.config.js",
+    "docs:develop": "watch \"<%= runScriptCommand %> docs:build\" . --ignoreDirectoryPattern='/node_modules|docs|dist|coverage|.git|.nyc*./'",<% } %>
     "test:watch": "jest --config ./config/jest.config.js --watch",
     "test": "jest --config ./config/jest.config.js --coverage",<% if (coveralls) { %>
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",<% } %>
