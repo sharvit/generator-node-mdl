@@ -32,6 +32,37 @@ const <%= camelProject %> = require('<%= projectName %>');
 //=> some text
 ```
 
+## Usage
+
+```js
+import <%= camelProject %>, { isEven, isOdd } from '<%= projectName %>';
+
+<%= camelProject %>('some text');
+//=> some text
+
+isEven(8);
+//=> true
+isEven(9);
+//=> false
+isOdd(8);
+//=> false
+isOdd(9);
+//=> true
+```
+
+If you are not able to use `es-modules`, you can use `require` instead of `import`
+```js
+const { default: <%= camelProject %>, isEven, isOdd } = require('<%= projectName %>');
+```
+
+To use it directly inside a browser, load it via a script `tag`:
+```html
+<script type="text/javascript" src="./node_modules/<%= projectName %>/dist/index.js"></script>
+<script type="text/javascript">
+  const { default: <%= camelProject %>, isEven, isOdd } = window['<%= projectName %>'];
+</script>
+```
+
 ## Related
 
 // TODO
