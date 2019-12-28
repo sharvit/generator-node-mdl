@@ -6,6 +6,7 @@ describe('node-mdl-starter', () => {
     expect(<%= camelProject %>()).toBe('No args passed!');
   });
 
+  /** @test {isEven} */
   test('isEven', () => {
     for (let i = 0; i < 20; i += 2) {
       expect(isEven(i)).toBe(true);
@@ -18,6 +19,7 @@ describe('node-mdl-starter', () => {
     expect(() => isEven('not-a-number')).toThrow(TypeError);
   });
 
+  /** @test {isOdd} */
   test('isOdd', () => {
     for (let i = 0; i < 20; i += 2) {
       expect(isOdd(i)).toBe(false);
