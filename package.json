@@ -11,7 +11,7 @@
     "url": "https://sharvit.github.io"
   },
   "engines": {
-    "node": ">=8"
+    "node": ">=10"
   },
   "scripts": {
     "build": "yarn build:clean && yarn build:babel && yarn build:templates && yarn build:docs",
@@ -44,10 +44,6 @@
     "uuid": "^3.3.2",
     "yeoman-generator": "^4.0.1"
   },
-  "optionalDependencies": {
-    "commitizen": "^4.0.3",
-    "cz-conventional-changelog": "3.1.0"
-  },
   "devDependencies": {
     "@babel/cli": "^7.2.0",
     "@babel/core": "^7.2.0",
@@ -59,8 +55,10 @@
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.1.0",
     "babel-plugin-add-module-exports": "^1.0.2",
+    "commitizen": "^4.0.3",
     "commitlint-config-cz": "^0.12.0",
     "coveralls": "^3.0.2",
+    "cz-conventional-changelog": "^3.1.0",
     "esdoc": "^1.1.0",
     "esdoc-ecmascript-proposal-plugin": "^1.0.0",
     "esdoc-standard-plugin": "^1.0.0",
@@ -75,7 +73,7 @@
     "jest": "^24.1.0",
     "prettier": "^1.15.3",
     "rimraf": "^3.0.0",
-    "semantic-release": "^15.13.1",
+    "semantic-release": "^17.0.2",
     "watch": "^1.0.2",
     "yeoman-assert": "^3.1.0",
     "yeoman-test": "^2.0.0"
