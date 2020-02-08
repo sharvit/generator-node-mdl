@@ -8,7 +8,7 @@ import Github from './lib/github';
 jest.mock('./lib/github');
 jest.mock('./lib/npm');
 
-Github.use2fa = false;
+Github.on2Fa = false;
 
 const runAppGenerator = () => helpers.run(Generator);
 
@@ -222,12 +222,12 @@ describe('prompts', () => {
       });
   });
 
-  test('createGithubRepository with token', () => {
+  test('createGithubRepository with token', async () => {
     const name = 'some-project-name';
     const description = 'some-description';
     const githubToken = 'some-token';
 
-    return runAppGenerator()
+    await runAppGenerator()
       .withOptions({
         githubToken,
       })
@@ -236,48 +236,59 @@ describe('prompts', () => {
         createGithubRepository: true,
         projectName: name,
         description,
-      })
-      .then(() => {
-        expect(Github).toBeCalledWith({
-          token: `token ${githubToken}`,
-        });
-        expect(Github.prototype.createRepository).toBeCalledWith({
-          name,
-          description,
-        });
       });
+
+    expect(Github).toBeCalledWith({
+      token: githubToken,
+    });
+    expect(Github.prototype.authenticate).toBeCalled();
+    expect(Github.prototype.createRepository).toBeCalledWith({
+      name,
+      description,
+    });
   });
 
-  test('createGithubRepository with username and password', () => {
+  test('createGithubRepository with username and password', async () => {
     const name = 'some-project-name';
     const description = 'some-description';
     const username = 'some-username';
     const password = 'some-password';
 
-    return runAppGenerator()
-      .withPrompts({
-        ...requiredPrompts,
-        createGithubRepository: true,
-        projectName: name,
-        description,
-        githubUsername: username,
-        githubPassword: password,
-      })
-      .then(() => {
-        expect(Github).toBeCalledWith({
-          username,
-          password,
-          on2fa: expect.any(Function),
-        });
-        expect(Github.prototype.createRepository).toBeCalledWith({
-          name,
-          description,
-        });
-      });
+    await runAppGenerator().withPrompts({
+      ...requiredPrompts,
+      createGithubRepository: true,
+      projectName: name,
+      description,
+      githubUsername: username,
+      githubPassword: password,
+    });
+
+    expect(Github).toBeCalledWith({
+      username,
+      password,
+      on2Fa: expect.any(Function),
+      note: expect.stringMatching(
+        /some-username\/some-project-name\/travis-\w{4}/
+      ),
+      noteUrl: 'https://github.com/sharvit/generator-node-mdl',
+      scopes: [
+        'repo',
+        'read:org',
+        'user:email',
+        'repo_deployment',
+        'repo:status',
+        'write:repo_hook',
+      ],
+    });
+    expect(Github.prototype.authenticate).toBeCalled();
+    expect(Github.prototype.createRepository).toBeCalledWith({
+      name,
+      description,
+    });
   });
 
-  test('createGithubRepository with username, password and 2fa', () => {
-    Github.use2fa = true;
+  test('createGithubRepository with username, password and 2fa', async () => {
+    Github.on2Fa = true;
 
     const name = 'some-project-name';
     const description = 'some-description';
@@ -285,29 +296,40 @@ describe('prompts', () => {
     const password = 'some-password';
     const github2fa = 'github2fa';
 
-    return runAppGenerator()
-      .withPrompts({
-        ...requiredPrompts,
-        createGithubRepository: true,
-        projectName: name,
-        description,
-        githubUsername: username,
-        githubPassword: password,
-        github2fa,
-      })
-      .then(() => {
-        expect(Github).toBeCalledWith({
-          username,
-          password,
-          on2fa: expect.any(Function),
-        });
-        expect(Github.prototype.createRepository).toBeCalledWith({
-          name,
-          description,
-        });
+    await runAppGenerator().withPrompts({
+      ...requiredPrompts,
+      createGithubRepository: true,
+      projectName: name,
+      description,
+      githubUsername: username,
+      githubPassword: password,
+      github2fa,
+    });
 
-        Github.use2fa = false;
-      });
+    expect(Github).toBeCalledWith({
+      username,
+      password,
+      on2Fa: expect.any(Function),
+      note: expect.stringMatching(
+        /some-username\/some-project-name\/travis-\w{4}/
+      ),
+      noteUrl: 'https://github.com/sharvit/generator-node-mdl',
+      scopes: [
+        'repo',
+        'read:org',
+        'user:email',
+        'repo_deployment',
+        'repo:status',
+        'write:repo_hook',
+      ],
+    });
+    expect(Github.prototype.authenticate).toBeCalled();
+    expect(Github.prototype.createRepository).toBeCalledWith({
+      name,
+      description,
+    });
+
+    Github.on2Fa = false;
   });
 
   test('no createGithubRepository', () => {
