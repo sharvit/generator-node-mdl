@@ -1,8 +1,8 @@
-const Github = jest.fn(function({ on2fa }) {
-  this._on2fa = function() {
-    if (Github.use2fa && !this._on2faCalled) {
-      this._on2faCalled = true;
-      return on2fa();
+const Github = jest.fn(function({ on2Fa }) {
+  this._on2Fa = function() {
+    if (Github.use2fa && !this._on2FaCalled) {
+      this._on2FaCalled = true;
+      return on2Fa();
     }
   };
 });
@@ -10,15 +10,15 @@ const Github = jest.fn(function({ on2fa }) {
 Github.use2fa = false;
 
 Github.prototype.createRepository = jest.fn(async function() {
-  await this._on2fa();
+  await this._on2Fa();
 
   return {
     data: { html_url: 'some-html-url' },
   };
 });
 
-Github.prototype.createToken = jest.fn(async function(repository) {
-  await this._on2fa();
+Github.prototype.authenticate = jest.fn(async function() {
+  await this._on2Fa();
 
   return 'some-token';
 });

@@ -1,12 +1,11 @@
 export const authenticatedUserToken = 'some-token';
-export const createAuthorization = jest
+export const auth = jest
   .fn()
-  .mockResolvedValue({ data: { token: authenticatedUserToken } });
+  .mockResolvedValue({ token: authenticatedUserToken });
+
 export const createRepoForAuthenticatedUser = jest.fn();
 
-const mock = jest.fn().mockImplementation(() => ({
+export const Octokit = jest.fn().mockImplementation(() => ({
+  auth,
   repos: { createForAuthenticatedUser: createRepoForAuthenticatedUser },
-  oauthAuthorizations: { createAuthorization },
 }));
-
-export default mock;

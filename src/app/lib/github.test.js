@@ -1,37 +1,54 @@
-import Octokit, {
+import {
+  Octokit,
+  auth,
   createRepoForAuthenticatedUser,
-  createAuthorization,
   authenticatedUserToken,
 } from '@octokit/rest';
+import { createTokenAuth } from '@octokit/auth-token';
+import { createBasicAuth } from '@octokit/auth-basic';
 import Github from './github';
 
 describe('Github', () => {
-  let github;
-  const username = 'some-username';
-  const password = 'some-password';
-  const on2fa = jest.fn();
-
   beforeEach(() => {
     Octokit.mockClear();
+    auth.mockClear();
     createRepoForAuthenticatedUser.mockClear();
-    createAuthorization.mockClear();
-
-    github = new Github({ username, password, on2fa });
   });
 
-  it('should create a new Github instance', () => {
+  it('should create a new Github instance with token', () => {
+    new Github({ token: authenticatedUserToken }); // eslint-disable-line no-new
+
+    expect(Octokit).toBeCalledWith({
+      auth: authenticatedUserToken,
+      authStrategy: createTokenAuth,
+    });
+  });
+
+  it('should create a new Github instance with basic auth', () => {
+    const username = 'some-username';
+    const password = 'some-password';
+    const on2Fa = jest.fn();
+    const note = 'some note';
+    const noteUrl = 'some-note-url';
+    const scopes = ['some', 'scopes'];
+
+    new Github({ username, password, on2Fa, note, noteUrl, scopes }); // eslint-disable-line no-new
+
     expect(Octokit).toBeCalledWith({
       auth: {
         username,
         password,
-        on2fa,
+        on2Fa,
+        token: { note, scopes, noteUrl },
       },
+      authStrategy: createBasicAuth,
     });
   });
 
   it('should create-repository', () => {
     const name = 'some-name';
     const description = 'some-description';
+    const github = new Github({ token: authenticatedUserToken });
 
     github.createRepository({ name, description });
 
@@ -41,16 +58,11 @@ describe('Github', () => {
     });
   });
 
-  it('should create-createToken', async () => {
-    const note = 'some-note';
-    const scopes = 'some-scopes';
-
-    const token = await github.createToken(note, scopes);
+  it('should authenticate', async () => {
+    const github = new Github({ token: authenticatedUserToken });
+    const token = await github.authenticate();
 
     expect(token).toBe(authenticatedUserToken);
-    expect(createAuthorization).toBeCalledWith({
-      note,
-      scopes,
-    });
+    expect(auth).toBeCalled();
   });
 });

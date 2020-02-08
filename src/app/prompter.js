@@ -168,13 +168,15 @@ export default class Prompter {
     } = this.props;
 
     if (token) {
-      this.props.github = new Github({ token: `token ${token}` });
+      this.props.github = new Github({ token });
+      await this.props.github.authenticate();
       return;
     }
 
     const { githubPassword: password } = await this._promptGithubPassword();
 
     const note = `${repository}/travis-${uuid().slice(-4)}`;
+    const noteUrl = 'https://github.com/sharvit/generator-node-mdl';
     const scopes = semanticRelease
       ? [
           'repo',
@@ -189,9 +191,12 @@ export default class Prompter {
     this.props.github = new Github({
       username,
       password,
-      on2fa: this.github2fa.bind(this),
+      note,
+      noteUrl,
+      scopes,
+      on2Fa: (...args) => this.github2fa(...args),
     });
-    this.props.githubToken = await this.props.github.createToken(note, scopes);
+    this.props.githubToken = await this.props.github.authenticate();
   }
 
   _promptNpmLogin() {
