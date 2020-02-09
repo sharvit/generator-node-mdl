@@ -344,7 +344,7 @@ export default class Prompter {
             input.trim() === '' &&
             prompt.default === undefined)
         ) {
-          throw new Error(`${name} is required`);
+          return `${name} is required`;
         }
 
         return true;
