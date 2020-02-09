@@ -91,19 +91,19 @@ window.esdocSearchIndex = [
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber29",
+    "test-file/src/app/index.test.js.html#lineNumber31",
     "default files",
     "test"
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber81",
+    "test-file/src/app/index.test.js.html#lineNumber80",
     "default files with --noDefaults",
     "test"
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber21",
+    "test-file/src/app/index.test.js.html#lineNumber22",
     "destinationRoot",
     "test"
   ],
@@ -121,152 +121,158 @@ window.esdocSearchIndex = [
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber135",
+    "test-file/src/app/index.test.js.html#lineNumber144",
     "prompts",
     "test"
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber423",
+    "test-file/src/app/index.test.js.html#lineNumber418",
     "prompts Travis",
     "test"
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber470",
+    "test-file/src/app/index.test.js.html#lineNumber457",
     "prompts Travis coveralls",
     "test"
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber446",
+    "test-file/src/app/index.test.js.html#lineNumber437",
     "prompts Travis esdoc",
     "test"
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber458",
+    "test-file/src/app/index.test.js.html#lineNumber447",
     "prompts Travis esdoc",
     "test"
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber482",
+    "test-file/src/app/index.test.js.html#lineNumber467",
     "prompts Travis no coveralls",
     "test"
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber535",
+    "test-file/src/app/index.test.js.html#lineNumber513",
     "prompts Travis no npmDeploy",
     "test"
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber435",
+    "test-file/src/app/index.test.js.html#lineNumber428",
     "prompts Travis no travisCI",
     "test"
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber494",
+    "test-file/src/app/index.test.js.html#lineNumber477",
     "prompts Travis npmDeploy",
     "test"
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber548",
+    "test-file/src/app/index.test.js.html#lineNumber524",
     "prompts Travis npmDeploy with semanticRelease",
     "test"
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber585",
+    "test-file/src/app/index.test.js.html#lineNumber556",
     "prompts Travis npmDeploy with semanticRelease and w/o createGithubRepository",
     "test"
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber424",
+    "test-file/src/app/index.test.js.html#lineNumber419",
     "prompts Travis travisCI",
     "test"
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber225",
+    "test-file/src/app/index.test.js.html#lineNumber230",
     "prompts createGithubRepository with token",
     "test"
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber251",
+    "test-file/src/app/index.test.js.html#lineNumber256",
     "prompts createGithubRepository with username and password",
     "test"
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber290",
+    "test-file/src/app/index.test.js.html#lineNumber295",
     "prompts createGithubRepository with username, password and 2fa",
     "test"
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber171",
+    "test-file/src/app/index.test.js.html#lineNumber175",
     "prompts description",
     "test"
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber197",
+    "test-file/src/app/index.test.js.html#lineNumber202",
     "prompts email",
     "test"
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber352",
+    "test-file/src/app/index.test.js.html#lineNumber355",
     "prompts esdoc",
     "test"
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber382",
+    "test-file/src/app/index.test.js.html#lineNumber381",
     "prompts githubTemplates",
     "test"
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber182",
+    "test-file/src/app/index.test.js.html#lineNumber187",
     "prompts name",
     "test"
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber335",
+    "test-file/src/app/index.test.js.html#lineNumber340",
     "prompts no createGithubRepository",
     "test"
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber367",
+    "test-file/src/app/index.test.js.html#lineNumber368",
     "prompts no esdoc",
     "test"
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber405",
+    "test-file/src/app/index.test.js.html#lineNumber402",
     "prompts no githubTemplates",
     "test"
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber136",
+    "test-file/src/app/index.test.js.html#lineNumber145",
     "prompts projectName",
     "test"
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber211",
+    "test-file/src/app/index.test.js.html#lineNumber216",
     "prompts website",
+    "test"
+  ],
+  [
+    "",
+    "test-file/src/app/index.test.js.html#lineNumber132",
+    "remove .yo-rc.json if exists",
     "test"
   ],
   [
