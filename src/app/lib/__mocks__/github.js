@@ -1,5 +1,5 @@
 const Github = jest.fn(function({ on2Fa }) {
-  this._on2Fa = function() {
+  this._on2Fa = () => {
     if (Github.use2fa && !this._on2FaCalled) {
       this._on2FaCalled = true;
       return on2Fa();

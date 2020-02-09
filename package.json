@@ -20,7 +20,7 @@
     "build:templates": "./scripts/build-templates.sh",
     "build:docs": "esdoc -c .esdoc.json",
     "develop:docs": "watch \"yarn build:docs\" . --ignoreDirectoryPattern='/node_modules|docs|dist|coverage|.git|.nyc*./'",
-    "test": "jest --no-cache --coverage",
+    "test": "jest --coverage",
     "test:watch": "jest --watch",
     "lint": "eslint ./src",
     "lint:commit": "commitlint -e",
