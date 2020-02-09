@@ -29,45 +29,63 @@
 <nav class="navigation" data-ice="nav"><div>
   <ul>
     
-  </ul>
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#app-lib">app/lib</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/app/lib/github.js~Github.html">Github</a></span></span></li>
+</ul>
 </div>
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/app/lib/github.test.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import Octokit, {
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import {
+  Octokit,
+  auth,
   createRepoForAuthenticatedUser,
-  createAuthorization,
   authenticatedUserToken,
 } from &apos;@octokit/rest&apos;;
+import { createTokenAuth } from &apos;@octokit/auth-token&apos;;
+import { createBasicAuth } from &apos;@octokit/auth-basic&apos;;
 import Github from &apos;./github&apos;;
 
 describe(&apos;Github&apos;, () =&gt; {
-  let github;
-  const username = &apos;some-username&apos;;
-  const password = &apos;some-password&apos;;
-  const on2fa = jest.fn();
-
   beforeEach(() =&gt; {
     Octokit.mockClear();
+    auth.mockClear();
     createRepoForAuthenticatedUser.mockClear();
-    createAuthorization.mockClear();
-
-    github = new Github({ username, password, on2fa });
   });
 
-  it(&apos;should create a new Github instance&apos;, () =&gt; {
+  it(&apos;should create a new Github instance with token&apos;, () =&gt; {
+    new Github({ token: authenticatedUserToken }); // eslint-disable-line no-new
+
+    expect(Octokit).toBeCalledWith({
+      auth: authenticatedUserToken,
+      authStrategy: createTokenAuth,
+    });
+  });
+
+  it(&apos;should create a new Github instance with basic auth&apos;, () =&gt; {
+    const username = &apos;some-username&apos;;
+    const password = &apos;some-password&apos;;
+    const on2Fa = jest.fn();
+    const note = &apos;some note&apos;;
+    const noteUrl = &apos;some-note-url&apos;;
+    const scopes = [&apos;some&apos;, &apos;scopes&apos;];
+
+    new Github({ username, password, on2Fa, note, noteUrl, scopes }); // eslint-disable-line no-new
+
     expect(Octokit).toBeCalledWith({
       auth: {
         username,
         password,
-        on2fa,
+        on2Fa,
+        token: { note, scopes, noteUrl },
       },
+      authStrategy: createBasicAuth,
     });
   });
 
   it(&apos;should create-repository&apos;, () =&gt; {
     const name = &apos;some-name&apos;;
     const description = &apos;some-description&apos;;
+    const github = new Github({ token: authenticatedUserToken });
 
     github.createRepository({ name, description });
 
@@ -77,17 +95,12 @@ describe(&apos;Github&apos;, () =&gt; {
     });
   });
 
-  it(&apos;should create-createToken&apos;, async () =&gt; {
-    const note = &apos;some-note&apos;;
-    const scopes = &apos;some-scopes&apos;;
-
-    const token = await github.createToken(note, scopes);
+  it(&apos;should authenticate&apos;, async () =&gt; {
+    const github = new Github({ token: authenticatedUserToken });
+    const token = await github.authenticate();
 
     expect(token).toBe(authenticatedUserToken);
-    expect(createAuthorization).toBeCalledWith({
-      note,
-      scopes,
-    });
+    expect(auth).toBeCalled();
   });
 });
 </code></pre>

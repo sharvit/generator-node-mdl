@@ -1,5 +1,11 @@
 window.esdocSearchIndex = [
   [
+    "generator-node-mdl/src/app/lib/github.js~github",
+    "class/src/app/lib/github.js~Github.html",
+    "<span>Github</span> <span class=\"search-result-import-path\">generator-node-mdl/src/app/lib/github.js</span>",
+    "class"
+  ],
+  [
     "",
     "test-file/src/app/lib/commander.test.js.html#lineNumber4",
     "Commander",
@@ -55,25 +61,31 @@ window.esdocSearchIndex = [
   ],
   [
     "",
-    "test-file/src/app/lib/github.test.js.html#lineNumber8",
+    "test-file/src/app/lib/github.test.js.html#lineNumber11",
     "Github",
     "test"
   ],
   [
     "",
-    "test-file/src/app/lib/github.test.js.html#lineNumber22",
-    "Github should create a new Github instance",
+    "test-file/src/app/lib/github.test.js.html#lineNumber61",
+    "Github should authenticate",
     "test"
   ],
   [
     "",
-    "test-file/src/app/lib/github.test.js.html#lineNumber44",
-    "Github should create-createToken",
+    "test-file/src/app/lib/github.test.js.html#lineNumber27",
+    "Github should create a new Github instance with basic auth",
     "test"
   ],
   [
     "",
-    "test-file/src/app/lib/github.test.js.html#lineNumber32",
+    "test-file/src/app/lib/github.test.js.html#lineNumber18",
+    "Github should create a new Github instance with token",
+    "test"
+  ],
+  [
+    "",
+    "test-file/src/app/lib/github.test.js.html#lineNumber48",
     "Github should create-repository",
     "test"
   ],
@@ -115,67 +127,67 @@ window.esdocSearchIndex = [
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber401",
+    "test-file/src/app/index.test.js.html#lineNumber423",
     "prompts Travis",
     "test"
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber448",
+    "test-file/src/app/index.test.js.html#lineNumber470",
     "prompts Travis coveralls",
     "test"
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber424",
+    "test-file/src/app/index.test.js.html#lineNumber446",
     "prompts Travis esdoc",
     "test"
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber436",
+    "test-file/src/app/index.test.js.html#lineNumber458",
     "prompts Travis esdoc",
     "test"
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber460",
+    "test-file/src/app/index.test.js.html#lineNumber482",
     "prompts Travis no coveralls",
     "test"
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber513",
+    "test-file/src/app/index.test.js.html#lineNumber535",
     "prompts Travis no npmDeploy",
     "test"
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber413",
+    "test-file/src/app/index.test.js.html#lineNumber435",
     "prompts Travis no travisCI",
     "test"
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber472",
+    "test-file/src/app/index.test.js.html#lineNumber494",
     "prompts Travis npmDeploy",
     "test"
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber526",
+    "test-file/src/app/index.test.js.html#lineNumber548",
     "prompts Travis npmDeploy with semanticRelease",
     "test"
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber563",
+    "test-file/src/app/index.test.js.html#lineNumber585",
     "prompts Travis npmDeploy with semanticRelease and w/o createGithubRepository",
     "test"
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber402",
+    "test-file/src/app/index.test.js.html#lineNumber424",
     "prompts Travis travisCI",
     "test"
   ],
@@ -193,7 +205,7 @@ window.esdocSearchIndex = [
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber279",
+    "test-file/src/app/index.test.js.html#lineNumber290",
     "prompts createGithubRepository with username, password and 2fa",
     "test"
   ],
@@ -211,13 +223,13 @@ window.esdocSearchIndex = [
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber330",
+    "test-file/src/app/index.test.js.html#lineNumber352",
     "prompts esdoc",
     "test"
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber360",
+    "test-file/src/app/index.test.js.html#lineNumber382",
     "prompts githubTemplates",
     "test"
   ],
@@ -229,19 +241,19 @@ window.esdocSearchIndex = [
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber313",
+    "test-file/src/app/index.test.js.html#lineNumber335",
     "prompts no createGithubRepository",
     "test"
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber345",
+    "test-file/src/app/index.test.js.html#lineNumber367",
     "prompts no esdoc",
     "test"
   ],
   [
     "",
-    "test-file/src/app/index.test.js.html#lineNumber383",
+    "test-file/src/app/index.test.js.html#lineNumber405",
     "prompts no githubTemplates",
     "test"
   ],
@@ -604,6 +616,12 @@ window.esdocSearchIndex = [
     "file/src/app/lib/github.js.html",
     "src/app/lib/github.js",
     "file"
+  ],
+  [
+    "src/app/lib/github.js~github#constructor",
+    "class/src/app/lib/github.js~Github.html#instance-constructor-constructor",
+    "src/app/lib/github.js~Github#constructor",
+    "method"
   ],
   [
     "src/app/lib/github.test.js",

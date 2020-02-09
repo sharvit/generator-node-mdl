@@ -1,7 +1,7 @@
 {
-  "coverage": "4.93%",
+  "coverage": "6.17%",
   "expectCount": 81,
-  "actualCount": 4,
+  "actualCount": 5,
   "files": {
     "src/app/generators/base-generator.js": {
       "expectCount": 2,
@@ -92,12 +92,11 @@
     },
     "src/app/lib/github.js": {
       "expectCount": 5,
-      "actualCount": 1,
+      "actualCount": 2,
       "undocumentLines": [
-        3,
-        12,
-        21,
-        28
+        28,
+        34,
+        40
       ]
     },
     "src/app/lib/npm.js": {
@@ -132,17 +131,17 @@
         150,
         159,
         162,
-        197,
-        212,
-        224,
-        234,
-        244,
-        258,
-        264,
-        274,
-        280,
-        292,
-        300
+        202,
+        217,
+        229,
+        239,
+        249,
+        263,
+        269,
+        279,
+        285,
+        297,
+        305
       ]
     },
     "src/app/prompts.js": {
