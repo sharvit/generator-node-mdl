@@ -21,7 +21,7 @@ export default class extends BaseGenerator {
 
   configuring() {
     if (path.basename(this.destinationRoot()) !== this.options.projectName) {
-      return makeDir(this.options.projectName).then(path => {
+      return makeDir(this.options.projectName).then((path) => {
         this.destinationRoot(path);
         this.log(chalk`\nGenerating a new project in {green ${path}}\n`);
       });

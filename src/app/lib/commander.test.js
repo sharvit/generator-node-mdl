@@ -50,7 +50,7 @@ describe('Commander', () => {
 
     commander._parseCommand = jest
       .fn()
-      .mockImplementation(command => ({ main, args }));
+      .mockImplementation((command) => ({ main, args }));
     commander._logCommand = jest.fn();
 
     commander._runCommand(command);

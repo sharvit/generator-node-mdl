@@ -1,4 +1,4 @@
-const Github = jest.fn(function({ on2Fa }) {
+const Github = jest.fn(function ({ on2Fa }) {
   this._on2Fa = () => {
     if (Github.use2fa && !this._on2FaCalled) {
       this._on2FaCalled = true;
@@ -9,7 +9,7 @@ const Github = jest.fn(function({ on2Fa }) {
 
 Github.use2fa = false;
 
-Github.prototype.createRepository = jest.fn(async function() {
+Github.prototype.createRepository = jest.fn(async function () {
   await this._on2Fa();
 
   return {
@@ -17,7 +17,7 @@ Github.prototype.createRepository = jest.fn(async function() {
   };
 });
 
-Github.prototype.authenticate = jest.fn(async function() {
+Github.prototype.authenticate = jest.fn(async function () {
   await this._on2Fa();
 
   return 'some-token';
