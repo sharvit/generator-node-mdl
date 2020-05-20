@@ -1,7 +1,7 @@
 import camelCase from 'lodash.camelcase';
 import kebabCase from 'lodash.kebabcase';
 import chalk from 'chalk';
-import uuid from 'uuid/v4';
+import { v4 as uuid } from 'uuid';
 
 import Github from './lib/github';
 import { login as npmLogin } from './lib/npm';
