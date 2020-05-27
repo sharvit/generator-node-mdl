@@ -47,7 +47,7 @@
     "yeoman-generator": "^4.0.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.2.0",
+    "@babel/cli": "^7.10.1",
     "@babel/core": "^7.2.0",
     "@babel/preset-env": "^7.2.0",
     "@commitlint/cli": "^8.1.0",
