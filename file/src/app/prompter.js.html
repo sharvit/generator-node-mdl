@@ -374,7 +374,7 @@ export default class Prompter {
     };
 
     if (prompt.required) {
-      result.validate = input =&gt; {
+      result.validate = (input) =&gt; {
         if (
           input === undefined ||
           (typeof input === &apos;string&apos; &amp;&amp;

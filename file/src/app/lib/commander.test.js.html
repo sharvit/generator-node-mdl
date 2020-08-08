@@ -87,7 +87,7 @@ describe(&apos;Commander&apos;, () =&gt; {
 
     commander._parseCommand = jest
       .fn()
-      .mockImplementation(command =&gt; ({ main, args }));
+      .mockImplementation((command) =&gt; ({ main, args }));
     commander._logCommand = jest.fn();
 
     commander._runCommand(command);

@@ -169,7 +169,7 @@ test(&apos;default files with --noDefaults&apos;, async () =&gt; {
 test(&apos;remove .yo-rc.json if exists&apos;, async () =&gt; {
   await runAppGenerator()
     .withPrompts(requiredPrompts)
-    .inTmpDir(function(dir) {
+    .inTmpDir(function (dir) {
       // `dir` is the path to the new temporary directory
       fs.writeFileSync(path.join(dir, &apos;.yo-rc.json&apos;), &apos;{}&apos;);
     });
