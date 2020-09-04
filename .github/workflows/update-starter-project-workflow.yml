@@ -1,0 +1,38 @@
+name: generator-node-mdl ci
+
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+  update-starter-project:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_USERNAME: sharvit
+      GITHUB_NAME: "Avi Sharvit"
+      GITHUB_EMAIL: sharvita@gmail.com
+      GITHUB_WEBSITE: "https://sharvit.github.io"
+      PROJECT_NAME: node-mdl-starter
+      STARTER_GH_TOKEN: ${{ secrets.STARTER_GH_TOKEN }}
+      STARTER_NPM_TOKEN: ${{ secrets.STARTER_NPM_TOKEN }}
+      GIT_REF: $GITHUB_REF
+    steps:
+      - name: Use Node.js 12
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: Configure git
+        run:
+          - git config --global user.email "${GITHUB_EMAIL}"
+          - git config --global user.name "${GITHUB_NAME}"
+      - name: Checkout generator-node-mdl
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Install the generator
+        run: yarn global add yo generator-node-mdl
+      - name: Build starter project
+        run: ./scripts/build-node-mdl-starter.sh
+      - name: Deploy starter project
+        run: ./scripts/deploy-node-mdl-starter.sh
