@@ -1,0 +1,80 @@
+name: Main Workflow
+
+on: ["push", "pull_request"]
+
+env:
+  GITHUB_NAME: "Avi Sharvit"
+  GITHUB_EMAIL: sharvita@gmail.com
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+jobs:
+
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        nodejs-version: [10.x, 12.x, 14.x]
+    steps:
+      - name: Configure git globals
+        shell: bash
+        run: |
+          git config --global user.email "${GITHUB_EMAIL}"
+          git config --global user.name "${GITHUB_NAME}"
+      - name: Use Node.js ${{ matrix.nodejs-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.nodejs-version }}
+      - name: Checkout generator-node-mdl
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Prepare project
+        uses: ./.github/actions/prepare-action
+      - name: Lint
+        run: yarn lint
+      - name: Lint commit message
+        uses: wagoid/commitlint-github-action@v1
+        with:
+          configFile: .commitlintrc.json
+      - name: Test
+        run: yarn test
+      - name: Upload coverage report to Coveralls (Parallel)
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          flag-name: nodejs-v${{ matrix.node-version }}
+          parallel: true
+
+  finish-coveralls:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Coveralls Finished
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.github_token }}
+          parallel-finished: true
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: Checkout generator-node-mdl
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Prepare project
+        uses: ./.github/actions/prepare-action
+      - name: Semantic Release
+        run: yarn semantic-release
+      - name: Deploy Docs
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/master'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs

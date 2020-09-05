@@ -1,0 +1,19 @@
+name: Prepare
+
+description: Prepare project
+
+inputs:
+  nodejs-version:
+    description: Nodejs version to use
+    required: true
+    default: 12.x
+
+runs:
+  using: "composite"
+  steps:
+    - name: Install dependencies
+      shell: bash
+      run: yarn
+    - name: Build
+      shell: bash
+      run: yarn build
